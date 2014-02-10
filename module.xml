@@ -1,0 +1,23 @@
+<module>
+	<rawname>presencestate</rawname>
+        <repo>commercial</repo>
+	<name>Presence State</name>
+	<version>2.11.0</version>
+	<publisher>FreePBX</publisher>
+	<license>GPLv2+</license>
+	<category>Admin</category>
+	<description>Manage list of presence states.</description>
+	<menuitems>
+		<presencestate needsenginedb="yes">Presence State</presencestate>
+	</menuitems>
+	<depends>
+		<module>restapi</module>
+		<phpversion>5.3.0</phpversion>
+	</depends>
+	<changelog>
+		2.11.0 Initial release
+	</changelog>
+	<supported>
+		<version>2.11</version>
+	</supported>
+</module>
