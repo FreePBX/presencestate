@@ -1,6 +1,6 @@
 <module>
 	<rawname>presencestate</rawname>
-        <repo>commercial</repo>
+	<repo>standard</repo>
 	<name>Presence State</name>
 	<version>2.11.0</version>
 	<publisher>FreePBX</publisher>
@@ -11,7 +11,6 @@
 		<presencestate needsenginedb="yes">Presence State</presencestate>
 	</menuitems>
 	<depends>
-		<module>restapi</module>
 		<phpversion>5.3.0</phpversion>
 	</depends>
 	<changelog>
