@@ -9,6 +9,13 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `presencestate_list` (
  PRIMARY KEY (`id`)
 );';
 
+$sql[] = 'CREATE TABLE IF NOT EXISTS `presencestate_prefs` (
+ `extension` varchar(20) NOT NULL,
+ `item_id` int(11) NOT NULL,
+ `pref` varchar(25),
+ PRIMARY KEY (`extension`, `item_id`)
+);';
+
 /* Check for first install */
 $q = $db->query('SELECT * FROM presencestate_list;');
 if (DB::isError($q)) {

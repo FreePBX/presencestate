@@ -24,7 +24,7 @@ switch ($vars['action']) {
 		$vars['action'] = '';
 		break;
 	case 'save':
-		$vars['id'] = presencestate_item_put($vars);
+		$vars['id'] = presencestate_item_set($vars);
 		break;
 }
 

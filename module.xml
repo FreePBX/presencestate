@@ -1,8 +1,8 @@
 <module>
 	<rawname>presencestate</rawname>
-        <repo>commercial</repo>
+	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>2.11.0</version>
+	<version>2.11.1</version>
 	<publisher>FreePBX</publisher>
 	<license>GPLv2+</license>
 	<category>Admin</category>
@@ -11,10 +11,10 @@
 		<presencestate needsenginedb="yes">Presence State</presencestate>
 	</menuitems>
 	<depends>
-		<module>restapi</module>
 		<phpversion>5.3.0</phpversion>
 	</depends>
 	<changelog>
+		2.11.1 Add Presence State preferences.
 		2.11.0 Initial release
 	</changelog>
 	<supported>
