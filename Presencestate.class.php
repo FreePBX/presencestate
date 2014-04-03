@@ -30,6 +30,20 @@ class Presencestate implements BMO {
 
 	}
 
+	public function presencestatePrefsGet($extension) {
+		return presencestate_prefs_get($extension);
+	}
+
+	public function presencestatePrefsSetMultiple($extension, $array) {
+		foreach($array as $id => $val) {
+			$this->presencestatePrefsSet($extension, array('id'=>$id,'pref'=>$val));
+		}
+	}
+
+	public function presencestatePrefsSet($extension, $vars) {
+		presencestate_prefs_set($extension, $vars);
+	}
+
 	public function getAllTypes() {
 		return presencestate_types_get();
 	}

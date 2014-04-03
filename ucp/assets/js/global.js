@@ -3,9 +3,16 @@ var Presencestate_poll = function(data) {
 	//NOT_SET | UNAVAILABLE | AVAILABLE | AWAY | XA | CHAT | DND
 	if(data.status) {
 		var stateHTML = '';
-		//Presencestate_switch(data.presence.State,data.presence.Message);
+		Presencestate_switch(data.presence.State,data.presence.Message);
 	}
 };
+
+$(document).ready(function()
+{
+	$(window).bind("beforeunload", function() {
+		console.log('ok')
+	});
+});
 
 var Presencestate_switch = function(type,message) {
 	var output = {text: 'Not Set', image: '_offline'};
