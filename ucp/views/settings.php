@@ -4,7 +4,7 @@
 		<div id="message" class="alert" style="display:none;"></div>
 		<form role="form">
 			<div class="form-group">
-				<label for="startsessionstatus"><?php echo _('On Login Set Status to') ?>:</label><br/>
+				<label for="startsessionstatus"><?php echo _('On UCP Login Set Status to') ?>:</label><br/>
 				<select name="startsessionstatus" id="startsessionstatus">
 					<option value="0">Do Not Change</option>
 					<?php foreach($states as $state) { ?>
@@ -13,7 +13,7 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="endsessionstatus"><?php echo _('On Browser Close Set Status to') ?>:</label><br/>
+				<label for="endsessionstatus"><?php echo _('On Browser Close or UCP Logout Set Status to') ?>:</label><br/>
 				<select name="endsessionstatus" id="endsessionstatus">
 					<option value="0">Do Not Change</option>
 					<?php foreach($states as $state) { ?>
@@ -22,10 +22,11 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label><?php echo _('Define Actions on States') ?>:</label><br/>
+				<label><?php echo _('Define Actions on A Status Change') ?>:</label><br/>
 				<div class="state-group">
 					<?php foreach($states as $state) { ?>
-						<label for="<?php echo $state['type']?>-<?php echo $state['id']?>"><?php echo $state['nice'] ?>:</label>
+						<label for="<?php echo $state['type']?>-<?php echo $state['id']?>"><?php echo $state['nice'] ?>:</label><br/>
+						<?php if(!empty($state['message'])) {?><div class="message">(<?php echo $state['message']; ?>)</div><?php } ?>
 						<select class="event" name="<?php echo $state['id']?>" id="<?php echo $state['type']?>-<?php echo $state['id']?>">
 							<?php foreach($actions as $action => $display) { ?>
 								<option value="<?php echo $action?>" <?php echo ($action == $state['pref']) ? 'selected' : '' ?>><?php echo $display?></option>

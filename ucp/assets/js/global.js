@@ -1,16 +1,23 @@
 var presenceStates = {};
+var presenceSpecials = {startsessionstatus: null, endsessionstatus: null};
 var Presencestate_poll = function(data) {
-	//NOT_SET | UNAVAILABLE | AVAILABLE | AWAY | XA | CHAT | DND
 	if(data.status) {
 		var stateHTML = '';
 		Presencestate_switch(data.presence.State,data.presence.Message);
 	}
 };
 
-$(document).ready(function()
-{
+$(document).ready(function() {
 	$(window).bind("beforeunload", function() {
-		console.log('ok')
+		if(presenceSpecials.endsessionstatus !== null) {
+			$.ajax({
+				url: 'index.php?quietmode=1&module=presencestate&command=set',
+				type: 'POST',
+				data: {state: presenceSpecials.endsessionstatus.id},
+				async: false, //block the browser from closing to send our request, hacky I know
+				timeout: 2000
+			});
+		}
 	});
 });
 
@@ -50,12 +57,19 @@ var Presencestate_switch = function(type,message) {
 	var niceState = (presenceStates[type] !== '') ? presenceStates[type] : output.text;
 	var display = (message !== '') ? niceState + ' - <span class="message">' + message + '</span>' : niceState;
 	$('#status-message').html(display);
-	Presencestate_buildmenu();
+	Presencestate_buildmenu(false);
 };
 
-var Presencestate_buildmenu = function() {
+var Presencestate_buildmenu = function(loggedin) {
 	$.get( "index.php?quietmode=1&module=presencestate&command=statuses", {}, function( data ) {
 		if(data.status) {
+			presenceSpecials.startsessionstatus = data.startsessionstatus;
+			presenceSpecials.endsessionstatus = data.endsessionstatus;
+			if(loggedin && presenceSpecials.startsessionstatus !== null) {
+				$.post( "index.php?quietmode=1&module=presencestate&command=set", {state: presenceSpecials.startsessionstatus.id}, function( data ) {
+					Presencestate_switch(data.State,data.Message);
+				});
+			}
 			var status = '';
 			var state = 'Not Set';
 			var subtype = '';
@@ -95,7 +109,7 @@ var Presencestate_buildmenu = function() {
 			var stateHTML = '<div class="presence-item active" data-id="0"><img src="modules/Presencestate/assets/images/status'+status+'.png">'+niceState+'<span class="message">'+messageP+'</span></div><hr>';
 			$.each(data.states, function(index, value) {
 				presenceStates[value.type] = value.nice;
-				if(data.presence.State == value.type && data.presence.Message == value.message) {
+				if(data.presence.State == value.type && (value.message === null || data.presence.Message == value.message)) {
 					return true;
 				}
 				var message = (value.message !== null) && (value.message !== '') ? '('+value.message+')' : '';
@@ -158,5 +172,5 @@ var Presencestate_buildmenu = function() {
 };
 
 $(document).bind('loggedIn', function( event ) {
-	Presencestate_buildmenu();
+	Presencestate_buildmenu(true);
 });

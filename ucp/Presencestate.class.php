@@ -39,6 +39,28 @@ class Presencestate extends Modules{
 		foreach($this->states as &$state) {
 			$state['nice'] = $this->types[$state['type']];
 		}
+		uasort($this->states, array($this,'sort'));
+	}
+
+	private function sort($a,$b) {
+		$t = array_keys($this->types);
+		return array_search($a['type'],$t) > array_search($b['type'],$t);
+	}
+
+	function logout() {
+		if(!empty($this->device)) {
+			$user = $this->UCP->User->getUser();
+			$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
+			if(!empty($state) && !empty($this->states[$state])) {
+				$type = $this->states[$state]['type'];
+				$message = !empty($this->states[$state]['message']) ? $this->states[$state]['message'] : '';
+				$this->UCP->FreePBX->astman->set_global($this->UCP->FreePBX->Config->get_conf_setting('AST_FUNC_PRESENCE_STATE') . '(CustomPresence:' . $this->device . ')', '"'.$type . ',,' . $message.'"');
+			}
+		}
+	}
+
+	function login() {
+
 	}
 
 	function getDisplay() {
@@ -52,6 +74,9 @@ class Presencestate extends Modules{
 			$pref['pref'] = $tmp;
 			$pref['niceMessage'] = !empty($pref['message']) ? ' - '.$pref['message'] : '';
 		}
+
+		usort($displayvars['states'], array($this,'sort'));
+
 		$displayvars['actions'] = array(
 			"" => _("Do Nothing"),
 			"dnd" => _('Do Not Disturb'),
@@ -115,11 +140,14 @@ class Presencestate extends Modules{
 				$this->UCP->setSetting($user['username'],$this->module,'startsessionstatus',$_POST['startsessionstatus']);
 				$this->UCP->setSetting($user['username'],$this->module,'endsessionstatus',$_POST['endsessionstatus']);
 				$this->UCP->FreePBX->Presencestate->presencestatePrefsSetMultiple($this->device,$_POST['events']);
-				return array("status" => true, "message" => "ok");
+
+				$startsessionstatus = !empty($_POST['startsessionstatus']) && !empty($this->states[$_POST['startsessionstatus']]) ? $this->states[$_POST['startsessionstatus']] : null;
+				$endsessionstatus = !empty($_POST['endsessionstatus']) && !empty($this->states[$_POST['endsessionstatus']]) ? $this->states[$_POST['endsessionstatus']] : null;
+
+				return array("status" => true, "message" => "ok", "startsessionstatus" => $startsessionstatus, "endsessionstatus" => $endsessionstatus);
 			case 'set':
 				$state = !empty($_POST['state']) ? $_POST['state'] : null;
 				if(!empty($this->device) && !empty($state)) {
-					$states = $this->UCP->FreePBX->Presencestate->getAllStates();
 					$type = $this->states[$state]['type'];
 					$message = !empty($this->states[$state]['message']) ? $this->states[$state]['message'] : '';
 					$this->UCP->FreePBX->astman->set_global($this->UCP->FreePBX->Config->get_conf_setting('AST_FUNC_PRESENCE_STATE') . '(CustomPresence:' . $this->device . ')', '"'.$type . ',,' . $message.'"');
@@ -130,12 +158,20 @@ class Presencestate extends Modules{
 				//PresenceState
 				//NOT_SET | UNAVAILABLE | AVAILABLE | AWAY | XA | CHAT | DND
 				if(!empty($this->device)) {
+					$user = $this->UCP->User->getUser();
+
 					$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
 					$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
 					$return['status'] = true;
 					$return['presence'] = $t;
 					$return['presence']['niceState'] = $this->types[$t['State']];
-					$return['states'] = $this->states;
+					$return['states'] = array_values($this->states);
+
+					$state = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
+					$return['startsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
+
+					$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
+					$return['endsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
 				}
 				return $return;
 			default:

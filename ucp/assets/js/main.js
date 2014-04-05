@@ -27,6 +27,8 @@ var Presencestate = new function() {
 				$('#message').fadeIn( "slow", function() {
 					setTimeout(function() { $('#message').fadeOut("slow"); }, 2000);
 				});
+				presenceSpecials.endsessionstatus = data.endsessionstatus
+				presenceSpecials.startsessionstatus = data.startsessionstatus
 			} else {
 				$('#message').addClass('alert-error');
 				$('#message').text(data.message);
