@@ -9,7 +9,7 @@ var Presencestate_poll = function(data) {
 
 $(document).ready(function() {
 	$(window).bind("beforeunload", function() {
-		if(presenceSpecials.endsessionstatus !== null) {
+		if(presenceSpecials.endsessionstatus !== null && navigator.onLine) {
 			$.ajax({
 				url: 'index.php?quietmode=1&module=presencestate&command=set',
 				type: 'POST',
@@ -61,6 +61,8 @@ var Presencestate_switch = function(type,message) {
 };
 
 var Presencestate_buildmenu = function(loggedin) {
+	//build and update menu system
+	//TODO: should get this from the poller instead of calling it
 	$.get( "index.php?quietmode=1&module=presencestate&command=statuses", {}, function( data ) {
 		if(data.status) {
 			presenceSpecials.startsessionstatus = data.startsessionstatus;
@@ -133,6 +135,7 @@ var Presencestate_buildmenu = function(loggedin) {
 				}
 				stateHTML = stateHTML + '<div class="presence-item" data-id="'+value.id+'"><img src="modules/Presencestate/assets/images/status'+image+'.png">' + value.nice + '<span class="message">'+message+'</span></div>';
 			});
+			//presence box doesnt exist so create it
 			if(!$('#presence').length) {
 				$("<style type='text/css'> #presence {overflow-x: hidden;position: absolute;bottom: 79px;background-color: whitesmoke;width: 200px;border-top-left-radius: 5px;border-top-right-radius: 5px;padding-left: 5px;border-top: 1px solid;border-left: 1px solid;border-right: 1px solid;transition: height .5s;height: 22px;left: 0;right: 0;margin-left: auto;margin-right: auto;} .status-box.open {height: 200px;} #presence-box {cursor:pointer; display: inline-block;padding-right: 5px;height: 20px;margin-top: 1px;border: 1px solid transparent;} #presence-box:hover, #presence-box.lock {background-color: lightgray;border: 1px solid} #presence-menu {width: 188px;position: absolute;background-color: whitesmoke;bottom: 98px;right: 24px;border: 1px solid rgb(194, 194, 194);display:none;box-shadow: 2px 2px 6px #888888;padding-top: 3px;font-size: 85%;left:0;right:0;margin-left:auto;margin-right:auto;} #presence-menu hr {margin-top: 0px;margin-bottom: 0px;} .presence-item {cursor:pointer;border: 1px solid transparent;padding-left: 5px;} .presence-item:hover {background-color: lightgray;border: 1px solid} #presence-menu .message {display: block;font-size: 90%;padding-left: 15px;font-style: italic;} #status-message .message {font-size: 80%;font-style: italic;}</style>").appendTo("head");
 				$('#container-fixed-left').append('<div id="presence"><div id="presence-box"><img id="status-image" src="modules/Presencestate/assets/images/status'+status+'.png"><i class="fa fa-caret-down"></i></div> <span id="status-message">'+display+'</span></div><div id="presence-menu">'+stateHTML+'</div>');
@@ -153,6 +156,7 @@ var Presencestate_buildmenu = function(loggedin) {
 			} else {
 				$('#presence-menu').html(stateHTML);
 			}
+			//redefine clicks because data has changed
 			$('.presence-item').click(function() {
 				$('#presence-menu').toggle();
 				if($('#presence-menu').is(':visible')) {
@@ -171,6 +175,22 @@ var Presencestate_buildmenu = function(loggedin) {
 	});
 };
 
+//Logged In
 $(document).bind('loggedIn', function( event ) {
+	//set the offline image into memory but hide it as well so we don't see it, just a preload trick
+	$('body').append('<img src="modules/Presencestate/assets/images/status_offline.png" style="display:none;">');
 	Presencestate_buildmenu(true);
+});
+
+//Build the menu when we detect we are online and execute status change
+$(window).bind('online', function( event ) {
+	Presencestate_buildmenu(true);
+});
+
+//Go into offline mode, basically when no internet is detected
+$(window).bind('offline', function( event ) {
+	$('#status-image').attr('src','modules/Presencestate/assets/images/status_offline.png');
+	var display = 'Offline';
+	$('#status-message').html(display);
+	$( '.presence-item' ).off("click", "**");
 });
