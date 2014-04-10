@@ -184,13 +184,17 @@ $(document).bind('loggedIn', function( event ) {
 
 //Build the menu when we detect we are online and execute status change
 $(window).bind('online', function( event ) {
-	Presencestate_buildmenu(true);
+	if(UCP.loggedIn) {
+		Presencestate_buildmenu(true);
+	}
 });
 
 //Go into offline mode, basically when no internet is detected
 $(window).bind('offline', function( event ) {
-	$('#status-image').attr('src','modules/Presencestate/assets/images/status_offline.png');
-	var display = 'Offline';
-	$('#status-message').html(display);
-	$( '.presence-item' ).off("click", "**");
+	if(UCP.loggedIn) {
+		$('#status-image').attr('src','modules/Presencestate/assets/images/status_offline.png');
+		var display = 'Offline';
+		$('#status-message').html(display);
+		$( '.presence-item' ).off("click", "**");
+	}
 });
