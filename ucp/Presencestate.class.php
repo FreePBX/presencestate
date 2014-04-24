@@ -86,9 +86,7 @@ class Presencestate extends Modules{
 		$displayvars['startsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
 		$displayvars['endsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
 
-		$html .= $this->loadCSS();
 		$html .= $this->loadLESS();
-		$html .= $this->loadScripts();
 		$html .= $this->load_view(__DIR__.'/views/settings.php',$displayvars);
 
 		return $html;
