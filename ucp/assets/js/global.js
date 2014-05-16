@@ -11,7 +11,9 @@ var PresencestateC = UCPC.extend({
 		}
 	},
 	display: function(event) {
-
+		$('.pssettings select').change(function() {
+			Presencestate.savePSSettings();
+		});
 	},
 	hide: function(event) {
 
