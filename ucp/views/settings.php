@@ -35,7 +35,6 @@
 					<?php } ?>
 				</div>
 			</div>
-			<div class="center"><button onclick="Presencestate.savePSSettings();return false;">Save</button></div>
 		</form>
 	</div>
 </div>
