@@ -6,7 +6,7 @@ namespace UCP\Modules;
 use \UCP\Modules as Modules;
 
 class Presencestate extends Modules{
-	protected $module = 'Presencestate';
+	protected $module = __CLASS__;
 	private $device = null;
 	private $states = null;
 	private $types = null;
@@ -76,7 +76,24 @@ class Presencestate extends Modules{
 		if(!empty($this->device)) {
 			$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
 			$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
-			return array('status' => true, 'presence' => $t, 'niceState' => $this->types[$t['State']], 'states' => $this->states);
+			$menu = array();
+			if(!empty($this->device)) {
+				$user = $this->UCP->User->getUser();
+
+				$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
+				$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+				$menu['status'] = true;
+				$menu['presence'] = $t;
+				$menu['presence']['niceState'] = $this->types[$t['State']];
+				$menu['states'] = array_values($this->states);
+
+				$state = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
+				$menu['startsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
+
+				$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
+				$menu['endsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
+			}
+			return array('status' => true, 'presence' => $t, 'niceState' => $this->types[$t['State']], 'states' => $this->states, 'menu' => $menu);
 		} else {
 			return array('status' => false);
 		}
