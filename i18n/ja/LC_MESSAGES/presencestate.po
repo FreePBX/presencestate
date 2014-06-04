@@ -1,0 +1,96 @@
+# This file is part of FreePBX.
+#
+#    FreePBX is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    FreePBX is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+#
+# FreePBX language template for presencestate
+# Copyright (C) 2008-2014 Schmoozecom, INC
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-03 16:41-0400\n"
+"PO-Revision-Date: 2014-06-03 16:41-0400\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Delete"
+msgstr ""
+
+msgid "New Presence State"
+msgstr ""
+
+msgid "Presence Status"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Submit"
+msgstr ""
+
+msgid "Presence State"
+msgstr ""
+
+msgid "Admin"
+msgstr ""
+
+msgid "Manage list of presence states."
+msgstr ""
+
+msgid "Do Nothing"
+msgstr ""
+
+msgid "Do Not Disturb"
+msgstr ""
+
+msgid "Findme/Follow Me"
+msgstr ""
+
+msgid "Presence State Settings"
+msgstr ""
+
+msgid "On UCP Login Set Status to"
+msgstr ""
+
+msgid "On Browser Close or UCP Logout Set Status to"
+msgstr ""
+
+msgid "Define Actions on A Status Change"
+msgstr ""
+
+msgid "Available"
+msgstr ""
+
+msgid "Chat"
+msgstr ""
+
+msgid "Away"
+msgstr ""
+
+msgid "DND"
+msgstr ""
+
+msgid "Extended Away"
+msgstr ""
+
+msgid "Unavailable"
+msgstr ""
