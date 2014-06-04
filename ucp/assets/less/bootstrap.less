@@ -1,19 +1,104 @@
-.pssettings {
-	background-color: aliceblue;
-	border-radius: 10px;
-	padding: 10px;
-	width: 390px;
-	@media only screen and (max-width : 991px) {
-	    width: 100%;
+#module-page-presencestate {
+	.pssettings {
+		background-color: aliceblue;
+		border-radius: 10px;
+		padding: 10px;
+		width: 390px;
+		@media only screen and (max-width : 991px) {
+		    width: 100%;
+		}
+	}
+
+	.state-group {
+		padding-left: 15px;
+		.message {
+			font-size: 90%;
+			font-style: italic;
+			margin-top: -11px;
+			margin-bottom: 5px;
+		}
 	}
 }
 
-.state-group {
-	padding-left: 15px;
-	.message {
-		font-size: 90%;
-		font-style: italic;
-		margin-top: -11px;
-		margin-bottom: 5px;
+#presence {
+	z-index:50;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: absolute;
+	bottom: 79px;
+	background-color: whitesmoke;
+	width: 200px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding-left: 5px;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	transition: height .5s;
+	height: 22px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.status-box.open {
+	height: 200px;
+}
+
+#presence-box {
+	cursor:pointer;
+	display: inline-block;
+	padding-right: 5px;
+	height: 20px;
+	margin-top: 1px;
+	border: 1px solid transparent;
+}
+#presence-box:hover, #presence-box.lock {
+	background-color: lightgray;
+	border: 1px solid
+}
+#presence-menu {
+	z-index:51;
+	width: 188px;
+	position: absolute;
+	background-color: whitesmoke;
+	bottom: 98px;
+	right: 24px;
+	border: 1px solid rgb(194, 194, 194);
+	display:none;
+	box-shadow: 2px 2px 6px #888888;
+	padding-top: 3px;
+	font-size: 85%;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+
+	hr {
+		margin-top: 0px;
+		margin-bottom: 0px;
 	}
+
+	.message {
+		display: block;
+		font-size: 90%;
+		padding-left: 15px;
+		font-style: italic;
+	}
+}
+
+.presence-item {
+	cursor:pointer;
+	border: 1px solid transparent;
+	padding-left: 5px;
+}
+.presence-item:hover {
+	background-color: lightgray;
+	border: 1px solid
+}
+
+#status-message .message {
+	font-size: 80%;
+	font-style: italic;
 }
