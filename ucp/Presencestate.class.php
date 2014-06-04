@@ -6,7 +6,7 @@ namespace UCP\Modules;
 use \UCP\Modules as Modules;
 
 class Presencestate extends Modules{
-	protected $module = __CLASS__;
+	protected $module = 'Presencestate';
 	private $device = null;
 	private $states = null;
 	private $types = null;
@@ -67,6 +67,7 @@ class Presencestate extends Modules{
 		$displayvars['endsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
 
 		$html .= $this->loadLESS();
+		dbug($html);
 		$html .= $this->load_view(__DIR__.'/views/settings.php',$displayvars);
 
 		return $html;
