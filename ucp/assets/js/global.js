@@ -1,4 +1,4 @@
-var PresencestateC = UCPC.extend({
+var PresencestateC = UCPMC.extend({
 	init: function(){
 		this.presenceStates = {};
 		this.presenceSpecials = {startSessionStatus: null, endSessionStatus: null};
