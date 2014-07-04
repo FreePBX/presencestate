@@ -27,19 +27,112 @@
 	position: absolute;
 	bottom: 79px;
 	background-color: whitesmoke;
-	width: 200px;
 	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
 	padding-left: 5px;
 	border-top: 1px solid;
 	border-left: 1px solid;
-	border-right: 1px solid;
-	transition: height .5s;
 	height: 22px;
-	left: 0;
-	right: 0;
+	right: 0px;
 	margin-left: auto;
 	margin-right: auto;
+	width: 40px;
+	white-space: nowrap;
+	transition: bottom .3s;
+	hr {
+		border: 0;
+		border-top: 1px solid #CFCFCF;
+		margin-top: 1px;
+		margin-bottom: 20px;
+	}
+	#presence-row {
+		cursor:pointer;
+	}
+}
+
+#presence.move {
+	bottom: 3px;
+}
+
+#presence.shrink {
+	-webkit-animation-name: shrink;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: shrink;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+#presence.expand {
+	-webkit-animation-name: expand;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: expand;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes expand {
+  50% {
+    width: 200px;
+		height: 22px;
+  }
+  100% {
+    height: 180px;
+		width: 200px;
+  }
+}
+
+@keyframes expand {
+	50% {
+		width: 200px;
+		height: 22px;
+	}
+	100% {
+		height: 180px;
+		width: 200px;
+	}
+}
+
+@-webkit-keyframes shrink {
+	0% {
+		height: 180px;
+		width: 200px;
+	}
+	50% {
+		height: 22px;
+		width: 200px;
+	}
+	100% {
+		width: 40px;
+		height: 22px;
+	}
+}
+
+@keyframes shrink {
+	0% {
+		height: 180px;
+		width: 200px;
+	}
+	50% {
+		height: 22px;
+		width: 200px;
+	}
+	100% {
+		width: 40px;
+		height: 22px;
+	}
 }
 
 .status-box.open {
@@ -47,12 +140,12 @@
 }
 
 #presence-box {
-	cursor:pointer;
-	display: inline-block;
-	padding-right: 5px;
-	height: 20px;
 	margin-top: 1px;
 	border: 1px solid transparent;
+	i.fa {
+		padding-right: 3px;
+		padding-left: 2px;
+	}
 }
 #presence-box:hover, #presence-box.lock {
 	background-color: lightgray;
@@ -63,15 +156,13 @@
 	width: 188px;
 	position: absolute;
 	background-color: whitesmoke;
-	bottom: 98px;
-	right: 24px;
+	bottom: 59px;
 	border: 1px solid rgb(194, 194, 194);
 	display:none;
 	box-shadow: 2px 2px 6px #888888;
 	padding-top: 3px;
 	font-size: 85%;
-	left:0;
-	right:0;
+	right: 195px;
 	margin-left:auto;
 	margin-right:auto;
 
@@ -98,7 +189,12 @@
 	border: 1px solid
 }
 
-#status-message .message {
-	font-size: 80%;
-	font-style: italic;
+#status-message {
+	margin-right: 10px;
+	display: inline-block;
+	.message {
+		font-size: 80%;
+		font-style: italic;
+		display: inline-block;
+	}
 }

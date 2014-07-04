@@ -145,7 +145,7 @@ class Presencestate extends Modules{
 					$type = $this->states[$state]['type'];
 					$message = !empty($this->states[$state]['message']) ? $this->states[$state]['message'] : '';
 					$this->UCP->FreePBX->astman->set_global($this->UCP->FreePBX->Config->get_conf_setting('AST_FUNC_PRESENCE_STATE') . '(CustomPresence:' . $this->device . ')', '"'.$type . ',,' . $message.'"');
-					return array("status" => true, "State" => $type, "Message" => $message);
+					return array("status" => true, "State" => $type, "Message" => $message, "poller" => $this->poll());
 				}
 			break;
 			case 'statuses':

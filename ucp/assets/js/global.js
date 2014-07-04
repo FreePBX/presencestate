@@ -3,6 +3,7 @@ var PresencestateC = UCPC.extend({
 		this.presenceStates = {};
 		this.presenceSpecials = {startSessionStatus: null, endSessionStatus: null};
 		this.menu = null;
+		this.transitioning = false;
 	},
 	poll: function(data){
 		if(data.status) {
@@ -53,7 +54,7 @@ var PresencestateC = UCPC.extend({
 		}
 		$('#status-image').attr('src','modules/Presencestate/assets/images/status'+output.image+'.png');
 		var niceState = (this.presenceStates[type] !== '') ? this.presenceStates[type] : output.text;
-		var display = (message !== '') ? niceState + ' - <span class="message">' + message + '</span>' : niceState;
+		var display = (message !== '') ? niceState + ' - <div class="message">' + message + '</div>' : niceState;
 		$('#status-message').html(display);
 		this.buildMenu(false);
 	},
@@ -74,29 +75,35 @@ var PresencestateC = UCPC.extend({
 			var subtype = '';
 			var message = (data.presence.Message !== null) && (data.presence.Message !== '') ? data.presence.Message : '';
 			var messageP = (message !== '') ? '('+message+')' : '';
-
+			var color = '#d1d1d1';
 			switch(data.presence.State) {
 				case 'available':
 					state = 'Available';
+					color = 'green';
 				break;
 				case 'chat':
 					state = 'Chat';
+					color = 'green';
 				break;
 				case 'xa':
 					state = 'Extended Away';
 					status = '_away';
+					color = 'yellow';
 				break;
 				case 'away':
 					state = 'Away';
 					status = '_away';
+					color = 'yellow';
 				break;
 				case 'dnd':
 					state = 'Do Not Disturb';
 					status = '_busy';
+					color = 'red';
 				break;
 				case 'unavailable':
 					state = 'Unavailable';
 					status = '_busy';
+					color = 'red';
 				break;
 				case 'not_set':
 					state = 'Not Set';
@@ -104,8 +111,23 @@ var PresencestateC = UCPC.extend({
 				break;
 			}
 			var niceState = (data.presence.niceState !== '') ? data.presence.niceState : state;
-			var display = (message !== '') ? niceState + ' - <span class="message">' + message + '</span>' : niceState;
-			var stateHTML = '<div class="presence-item active" data-id="0"><img src="modules/Presencestate/assets/images/status'+status+'.png">'+niceState+'<span class="message">'+messageP+'</span></div><hr>';
+			var display = (message !== '') ? niceState + ' - <div class="message">' + message + '</div>' : niceState;
+			var stateHTML = '<div class="presence-item active" data-id="0"><img src="modules/Presencestate/assets/images/status'+status+'.png">'+niceState+'<div class="message">'+messageP+'</div></div>';
+			if($('#presence-box2 .p-msg').width() > 186) {
+				var maxn = 186*2;
+				$.keyframe.define([{
+					name: 'marquee',
+						'0%': {'text-indent': (maxn-$('#presence-box2 .p-msg').width())+'px'},
+						'100%': {'text-indent': ($('#presence-box2 .p-msg').width()-maxn)+'px'}
+				}]);
+				$('.p-msg').resetKeyframe();
+				$('.p-msg').playKeyframe('marquee 10000 linear 0 infinite alternate forwards');
+			}
+			$('#presence-box2 .p-btn i').css('color',color);
+			$('#presence-box2 .p-msg').html(niceState + ' <span>'+messageP+'</span>');
+			if(!$('#presence-box2').is(':visible')) {
+				$('#presence-box2').fadeIn('slow');
+			}
 			$.each(data.states, function(index, value) {
 				Presencestate.presenceStates[value.type] = value.nice;
 				if(data.presence.State == value.type && (value.message === null || data.presence.Message == value.message)) {
@@ -130,23 +152,45 @@ var PresencestateC = UCPC.extend({
 						image = '_offline';
 					break;
 				}
-				stateHTML = stateHTML + '<div class="presence-item" data-id="'+value.id+'"><img src="modules/Presencestate/assets/images/status'+image+'.png">' + value.nice + '<span class="message">'+message+'</span></div>';
+				stateHTML = stateHTML + '<div class="presence-item" data-id="'+value.id+'"><img src="modules/Presencestate/assets/images/status'+image+'.png">' + value.nice + '<div class="message">'+message+'</div></div>';
 			});
 			//presence box doesnt exist so create it
 			var update = false;
 			if(!$('#presence').length) {
-				$('#container-fixed-left').append('<div id="presence"><div id="presence-box"><img id="status-image" src="modules/Presencestate/assets/images/status'+status+'.png"><i class="fa fa-caret-down"></i></div> <span id="status-message">'+display+'</span></div><div id="presence-menu">'+stateHTML+'</div>');
+				$('#container-fixed-left').append('<div id="presence"><div id="presence-row"><div id="presence-box"><img id="status-image" src="modules/Presencestate/assets/images/status'+status+'.png"><i class="fa fa-caret-down"></i> <div id="status-message">'+display+'</div></div></div><hr></div><div id="presence-menu">'+stateHTML+'</div>');
 
-				$('#presence-box').click(function() {
+				$("#presence").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ Presencestate.transitioning = false; });
+				$("#presence").bind("animationstart webkitAnimationStart oAnimationStart MSAnimationStart", function(){ Presencestate.transitioning = true; });
+
+				$('#presence-row').click(function() {
 					$('#presence-menu').toggle();
-					$(this).toggleClass('lock');
+					$('#presence-box').toggleClass('lock');
+				});
+
+				$('#presence').hover(function() {
+					if(!Presencestate.transitioning) {
+						$('#presence').addClass('expand');
+						$('#presence').removeClass('shrink');
+					}
+				}, function() {
+					if(!$('#presence-menu').is(":visible") && !Presencestate.transitioning) {
+						$('#presence').addClass('shrink');
+						$('#presence').removeClass('expand');
+					}
 				});
 
 				$('html').click(function(event) {
-					if(($(event.target).parents().index($('#presence-box')) == -1) && $(event.target).parents().index($('#presence-menu')) == -1) {
+					if(($(event.target).parents().index($('#presence-row')) == -1) && $(event.target).parents().index($('#presence-menu')) == -1 && $(event.target).prop('id') != 'presence-row') {
 						if($('#presence-menu').is(":visible")) {
 							$('#presence-menu').hide();
 							$('#presence-box').removeClass('lock');
+						}
+					}
+
+					if(($(event.target).parents().index($('#presence')) == -1) && ($(event.target).parents().index($('#presence-box')) == -1) && $(event.target).parents().index($('#presence-menu')) == -1 && $(event.target).prop('id') != 'presence') {
+						if($('#presence').hasClass('expand') && !Presencestate.transitioning) {
+							$('#presence').removeClass('expand');
+							$('#presence').addClass('shrink');
 						}
 					}
 				});
@@ -170,6 +214,7 @@ var PresencestateC = UCPC.extend({
 					var id = $(this).data('id');
 					if(id !== 0) {
 						$.post( "index.php?quietmode=1&module=presencestate&command=set", {state: id}, function( data ) {
+							Presencestate.menu = data.poller.menu;
 							Presencestate.changeStatus(data.State,data.Message);
 						});
 					}
@@ -236,7 +281,6 @@ $(document).bind('logIn', function( event ) {
 			Presencestate.buildMenu(true);
 		});
 	}
-
 });
 
 //Build the menu when we detect we are online and execute status change
@@ -247,11 +291,11 @@ $(window).bind('online', function( event ) {
 });
 
 $(window).bind('hideFooter', function( event ) {
-	$('#presence').css('bottom','3px');
+	$('#presence').addClass('move');
 	$('#presence-menu').css('bottom','22px');
 });
 $(window).bind('showFooter', function( event ) {
-	$('#presence').css('bottom','79px');
+	$('#presence').removeClass('move');
 	$('#presence-menu').css('bottom','98px');
 });
 
