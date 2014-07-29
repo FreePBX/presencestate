@@ -18,6 +18,24 @@ class Presencestate extends Modules{
 		$this->types = $this->UCP->FreePBX->Presencestate->getAllTypes();
 		foreach($this->states as &$state) {
 			$state['nice'] = $this->types[$state['type']];
+			switch($state['type']) {
+				case 'available':
+				case 'chat':
+					$state['color'] = 'green';
+				break;
+				case 'xa':
+				case 'away':
+					$state['color'] = 'yellow';
+				break;
+				case 'dnd':
+				case 'unavailable':
+					$state['color'] = 'red';
+				break;
+				case 'not_set':
+				default:
+					$state['color'] = 'grey';
+				break;
+			}
 		}
 		uasort($this->states, array($this,'sort'));
 	}
@@ -84,18 +102,33 @@ class Presencestate extends Modules{
 				$menu['status'] = true;
 				$menu['presence'] = $t;
 				$menu['presence']['niceState'] = $this->types[$t['State']];
-				$menu['states'] = array_values($this->states);
+				$menu['representations'] = array(
+					'available' => array('color' => 'green', 'name' => _('Availble')),
+					'chat' => array('color' => 'green', 'name' => _('Chat')),
+					'xa' => array('color' => 'yellow', 'name' => _('Extended Away')),
+					'away' => array('color' => 'yellow', 'name' => _('Away')),
+					'dnd' => array('color' => 'red', 'name' => _('Do Not Disturb')),
+					'unavailable' => array('color' => 'red', 'name' => _('Unavailable')),
+					'not_set' => array('color' => 'grey', 'name' => _('Offline')),
+				);
 
 				$state = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
 				$menu['startsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
 
 				$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
 				$menu['endsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
+
+				$menu['html'] = $this->getStatusMenu($t);
 			}
 			return array('status' => true, 'presence' => $t, 'niceState' => $this->types[$t['State']], 'states' => $this->states, 'menu' => $menu);
 		} else {
 			return array('status' => false);
 		}
+	}
+
+	function getStatusMenu($t=null) {
+		$t = empty($t) ? $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device) : $t;
+		return $this->load_view(__DIR__.'/views/statusesMenu.php',array('currentState' => $t, 'states' => $this->states));
 	}
 
 	/**
@@ -159,13 +192,23 @@ class Presencestate extends Modules{
 					$return['status'] = true;
 					$return['presence'] = $t;
 					$return['presence']['niceState'] = $this->types[$t['State']];
-					$return['states'] = array_values($this->states);
+					$menu['representations'] = array(
+						'available' => array('color' => 'green', 'name' => _('Availble')),
+						'chat' => array('color' => 'green', 'name' => _('Chat')),
+						'xa' => array('color' => 'yellow', 'name' => _('Extended Away')),
+						'away' => array('color' => 'yellow', 'name' => _('Away')),
+						'dnd' => array('color' => 'red', 'name' => _('Do Not Disturb')),
+						'unavailable' => array('color' => 'red', 'name' => _('Unavailable')),
+						'not_set' => array('color' => 'grey', 'name' => _('Offline')),
+					);
 
 					$state = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
 					$return['startsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
 
 					$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
 					$return['endsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
+
+					$return['html'] = $this->getStatusMenu($t);
 				}
 				return $return;
 			default:
