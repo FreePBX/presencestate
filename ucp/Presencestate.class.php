@@ -193,7 +193,7 @@ class Presencestate extends Modules{
 					$return['presence'] = $t;
 					$return['presence']['niceState'] = $this->types[$t['State']];
 					$menu['representations'] = array(
-						'available' => array('color' => 'green', 'name' => _('Availble')),
+						'available' => array('color' => 'green', 'name' => _('Available')),
 						'chat' => array('color' => 'green', 'name' => _('Chat')),
 						'xa' => array('color' => 'yellow', 'name' => _('Extended Away')),
 						'away' => array('color' => 'yellow', 'name' => _('Away')),
