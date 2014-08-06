@@ -25,7 +25,8 @@ var PresencestateC = UCPMC.extend({
 		message = (message !== "") ? "(" + message + ")" : "";
 		if (typeof this.menu.representations[type] !== undefined) {
 			$("#presence-box2 .p-btn i").css("color", this.menu.representations[type].color);
-			$("#presence-box2 .p-msg").html(this.menu.representations[type].name + " <span>" + message + "</span>");
+			$("#presence-box2 .p-msg span").text(this.menu.representations[type].name + " " + message);
+			$("#presence-box2 .p-msg").textfill();
 		}
 	},
 	buildMenu: function(loggedIn) {
@@ -43,9 +44,8 @@ var PresencestateC = UCPMC.extend({
 			}
 
 			$("#presence-menu2 .statuses").html(menu.html);
-			$(".presence-item2").on("click", function() {
+			$(".presence-item2").one("click", function() {
 				$("#presence-menu2 .statuses").css("opacity", "0.5");
-				$(".presence-item2").off("click");
 				var id = $(this).data("id");
 				if (id !== 0) {
 					$.post( "index.php?quietmode=1&module=presencestate&command=set", { state: id }, function( data ) {
@@ -59,6 +59,15 @@ var PresencestateC = UCPMC.extend({
 
 			if (!$("#presence-box2").is(":visible")) {
 				$("#presence-box2").fadeIn("slow");
+			}
+		} else {
+			//Presence is disabled for this user
+			//but we still need to have the drop down if the user has actions
+			if (!$("#presence-box2").is(":visible") && $("#presence-menu2 .options .fa").length > 0) {
+				$("#presence-box2").fadeIn("slow");
+				$("#presence-menu2 .change-status").hide();
+				$("#presence-box2 .p-btn .fa").css("color", "#7b7b7b").css("opacity", "1");
+				$("#presence-box2 .p-msg").text("Actions List")
 			}
 		}
 

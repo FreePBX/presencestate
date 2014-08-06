@@ -10,12 +10,18 @@ class Presencestate extends Modules{
 	private $device = null;
 	private $states = null;
 	private $types = null;
+	private $enabled = true;
 
 	function __construct($Modules) {
 		$this->Modules = $Modules;
 		$this->device = $this->Modules->getDefaultDevice();
 		$this->states = $this->UCP->FreePBX->Presencestate->getAllStates();
 		$this->types = $this->UCP->FreePBX->Presencestate->getAllTypes();
+
+		$user = $this->UCP->User->getUser();
+		$saved = $this->UCP->getSetting($user['username'],$this->module,'saved');
+		$this->enabled = ($saved) ? $this->UCP->getSetting($user['username'],$this->module,'enabled') : true;
+
 		foreach($this->states as &$state) {
 			$state['nice'] = $this->types[$state['type']];
 			switch($state['type']) {
@@ -46,7 +52,7 @@ class Presencestate extends Modules{
 	}
 
 	function logout() {
-		if(!empty($this->device)) {
+		if(!empty($this->device) && $this->enabled) {
 			$user = $this->UCP->User->getUser();
 			$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
 			if(!empty($state) && !empty($this->states[$state])) {
@@ -62,6 +68,9 @@ class Presencestate extends Modules{
 	}
 
 	function getDisplay() {
+		if(!$this->enabled) {
+			return '';
+		}
 		$html = '';
 		$displayvars = array();
 		// fm | dnd | null
@@ -90,7 +99,7 @@ class Presencestate extends Modules{
 	}
 
 	function poll() {
-		if(!empty($this->device)) {
+		if(!empty($this->device) && $this->enabled) {
 			$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
 			$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
 			$menu = array();
@@ -161,6 +170,9 @@ class Presencestate extends Modules{
 	 */
 	function ajaxHandler() {
 		$return = array("status" => false, "message" => "");
+		if(!$this->enabled) {
+			return $return;
+		}
 		switch($_REQUEST['command']) {
 			case 'savesettings':
 				$user = $this->UCP->User->getUser();
@@ -223,6 +235,9 @@ class Presencestate extends Modules{
 	}
 
 	public function getMenuItems() {
+		if(!$this->enabled) {
+			return array();
+		}
 		$menu = array();
 		if(!empty($this->device)) {
 			$menu = array(
