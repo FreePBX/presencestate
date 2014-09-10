@@ -23,9 +23,12 @@ var PresencestateC = UCPMC.extend({
 	},
 	changeStatus: function(type, message) {
 		message = (message !== "") ? "(" + message + ")" : "";
-		if (typeof this.menu.representations[type] !== undefined) {
+		if (typeof this.menu.representations[type] !== "undefined") {
 			$("#presence-box2 .p-btn i").css("color", this.menu.representations[type].color);
 			$("#presence-box2 .p-msg span").text(this.menu.representations[type].name + " " + message);
+			$("#presence-box2 .p-msg").textfill();
+		} else {
+			$("#presence-box2 .p-msg span").text(_("Status Not Set"));
 			$("#presence-box2 .p-msg").textfill();
 		}
 	},
