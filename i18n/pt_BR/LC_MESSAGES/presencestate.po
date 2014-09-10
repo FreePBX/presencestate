@@ -21,76 +21,79 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-03 16:41-0400\n"
-"PO-Revision-Date: 2014-06-03 16:41-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2014-07-26 01:13+0200\n"
+"Last-Translator: Rafael <rafael@ibinetwork.com.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<http://git.freepbx.org/projects/freepbx/presencestate/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.10-dev\n"
 
 msgid "Delete"
-msgstr ""
+msgstr "Apagar"
 
 msgid "New Presence State"
-msgstr ""
+msgstr "Novo Estado de Presença"
 
 msgid "Presence Status"
-msgstr ""
+msgstr "Estado de Presença"
 
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 msgid "Message"
-msgstr ""
+msgstr "Mensagem"
 
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 msgid "Presence State"
-msgstr ""
+msgstr "Estado de Presença"
 
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 msgid "Manage list of presence states."
-msgstr ""
+msgstr "Gerencia lista do estado de presença."
 
 msgid "Do Nothing"
-msgstr ""
+msgstr "Tranquilo"
 
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Não perturbe"
 
 msgid "Findme/Follow Me"
-msgstr ""
+msgstr "Siga-me"
 
 msgid "Presence State Settings"
-msgstr ""
+msgstr "Configurar Estado de Presença"
 
 msgid "On UCP Login Set Status to"
-msgstr ""
+msgstr "Ao logar no Painel do Usuário setar meu Estado para"
 
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr ""
+msgstr "Ao fechar o Browser ou sair do Painel do Usuário setar meu Estado para"
 
 msgid "Define Actions on A Status Change"
-msgstr ""
+msgstr "Definir Ações ao Alterar meu Estado"
 
 msgid "Available"
-msgstr ""
+msgstr "Disponível"
 
 msgid "Chat"
-msgstr ""
+msgstr "Bate-papo"
 
 msgid "Away"
-msgstr ""
+msgstr "Ausente"
 
 msgid "DND"
-msgstr ""
+msgstr "DND"
 
 msgid "Extended Away"
-msgstr ""
+msgstr "Muito Ausente"
 
 msgid "Unavailable"
-msgstr ""
+msgstr "Não Disponível"
