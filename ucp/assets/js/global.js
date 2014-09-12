@@ -9,6 +9,8 @@ var PresencestateC = UCPMC.extend({
 		if (data.status) {
 			var stateHTML = "";
 			this.menu = data.menu;
+			console.log("Presence Menu Follows:");
+			console.log(data.menu);
 			this.changeStatus(data.presence.State, data.presence.Message);
 			this.buildMenu(false);
 		}
@@ -23,7 +25,7 @@ var PresencestateC = UCPMC.extend({
 	},
 	changeStatus: function(type, message) {
 		message = (message !== "") ? "(" + message + ")" : "";
-		if (typeof this.menu.representations[type] !== "undefined") {
+		if (typeof this.menu.representations !== "undefined" && typeof this.menu.representations[type] !== "undefined") {
 			$("#presence-box2 .p-btn i").css("color", this.menu.representations[type].color);
 			$("#presence-box2 .p-msg span").text(this.menu.representations[type].name + " " + message);
 			$("#presence-box2 .p-msg").textfill();
@@ -70,7 +72,7 @@ var PresencestateC = UCPMC.extend({
 				$("#presence-box2").fadeIn("slow");
 				$("#presence-menu2 .change-status").hide();
 				$("#presence-box2 .p-btn .fa").css("color", "#7b7b7b").css("opacity", "1");
-				$("#presence-box2 .p-msg").text("Actions List")
+				$("#presence-box2 .p-msg").text("Actions List");
 			}
 		}
 
