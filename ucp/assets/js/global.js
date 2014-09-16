@@ -9,8 +9,6 @@ var PresencestateC = UCPMC.extend({
 		if (data.status) {
 			var stateHTML = "";
 			this.menu = data.menu;
-			console.log("Presence Menu Follows:");
-			console.log(data.menu);
 			this.changeStatus(data.presence.State, data.presence.Message);
 			this.buildMenu(false);
 		}
