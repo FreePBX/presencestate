@@ -24,13 +24,6 @@
 /* BREADCRUMB/MENU/LOGOUT BAR */
 #nav-bar-background {
 	#top-dashboard-nav-right {
-		top: 5px;
-		cursor: pointer;
-		position: absolute;
-		right: 0;
-		z-index: 50;
-		font-size: 120%;
-		height: 100%;
 		#nav-btn-presencestate {
 			display: none;
 			float: left;
@@ -40,13 +33,9 @@
 			transition: width 1s;
 			padding-left: 1px;
 			width: 26px;
-			.p-btn {
+			.icon {
 				i {
-					font-size: 150%;
 					color: rgb(209, 209, 209);
-					transition: opacity .5s;
-					opacity: .5;
-					width: 25px;
 					padding-left: 1px;
 				}
 				display: inline-block;
@@ -74,9 +63,7 @@
 		#nav-btn-presencestate:hover, #nav-btn-presencestate.active {
 			width: 189px;
 		}
-		#nav-btn-presencestate:hover > .p-btn > i, #nav-btn-presencestate.active > .p-btn > i {
-			opacity: 1;
-		}
+
 	}
 }
 
@@ -89,19 +76,20 @@
 		transition: max-height .5s, border-bottom .5s;
 		max-height: 0px;
 		overflow: hidden;
-		padding: 2px;
-		padding-left: 4px;
-		font-size: 95%;
 		ol {
 			list-style: none;
 			padding: 0;
 			.presence-item {
 				cursor: pointer;
-				border: 1px solid transparent;
-				padding: 1px;
+				padding: 5px;
+				i {
+					padding-right: 2px;
+				}
 			}
 			.presence-item:hover {
-				border: 1px solid gray
+				text-decoration: none;
+				color: #262626;
+				background-color: #ffffff;
 			}
 		}
 	}

@@ -24,7 +24,7 @@ var PresencestateC = UCPMC.extend({
 	changeStatus: function(type, message) {
 		message = (message !== "") ? "(" + message + ")" : "";
 		if (typeof this.menu.representations !== "undefined" && typeof this.menu.representations[type] !== "undefined") {
-			$("#nav-btn-presencestate .p-btn i").css("color", this.menu.representations[type].color);
+			$("#nav-btn-presencestate .icon i").css("color", this.menu.representations[type].color);
 			$("#nav-btn-presencestate .p-msg span").text(this.menu.representations[type].name + " " + message);
 			$("#nav-btn-presencestate .p-msg").textfill();
 		} else {
@@ -35,7 +35,6 @@ var PresencestateC = UCPMC.extend({
 	buildMenu: function(loggedIn) {
 		//build and update menu system
 		//get the menu if it doesnt exist
-		console.log("building menu");
 		var menu = Presencestate.menu;
 		if (menu !== null && menu.status) {
 			Presencestate.presenceSpecials.startSessionStatus = menu.startsessionstatus;
@@ -49,6 +48,7 @@ var PresencestateC = UCPMC.extend({
 
 			$("#presencestate-menu .statuses").html(menu.html);
 			$("#presencestate-menu .presence-item").one("click", function() {
+				$("#presencestate-menu .presence-item").css("cursor", "not-allowed");
 				$("#presencestate-menu .statuses").css("opacity", "0.5");
 				var id = $(this).data("id");
 				if (id !== 0) {
@@ -56,6 +56,7 @@ var PresencestateC = UCPMC.extend({
 						Presencestate.menu = data.poller.menu;
 						Presencestate.changeStatus(data.State, data.Message);
 						Presencestate.buildMenu(false);
+						$("#presencestate-menu .presence-item").css("cursor", "pointer");
 						$("#presencestate-menu .statuses").css("opacity", "1");
 					});
 				}
@@ -70,7 +71,7 @@ var PresencestateC = UCPMC.extend({
 			if (!$("#nav-btn-presencestate").is(":visible") && $("#presence-menu2 .options .fa").length > 0) {
 				$("#nav-btn-presencestate").fadeIn("slow");
 				$("#presencestate-menu .change-status").hide();
-				$("#nav-btn-presencestate .p-btn .fa").css("color", "#7b7b7b").css("opacity", "1");
+				$("#nav-btn-presencestate .icon .fa").css("color", "#7b7b7b").css("opacity", "1");
 				$("#nav-btn-presencestate .p-msg").text("Actions List");
 			}
 		}

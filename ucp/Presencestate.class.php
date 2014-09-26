@@ -248,4 +248,18 @@ class Presencestate extends Modules{
 		}
 		return $menu;
 	}
+
+	public function getNavItems() {
+		$out = array();
+		$out[] = array(
+			"rawname" => "presencestate",
+			"badge" => false,
+			"icon" => "fa-circle",
+			"extra" => '<div class="p-container"><div class="p-msg"><span></span></div></div>',
+			"menu" => array(
+				"html" => '<li class="statuses">' . $this->getStatusMenu() . '</li>'
+			)
+		);
+		return $out;
+	}
 }
