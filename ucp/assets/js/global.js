@@ -109,6 +109,22 @@ var PresencestateC = UCPMC.extend({
 				return false;
 			}
 		});
+	},
+	connect: function() {
+		$.get( "index.php?quietmode=1&module=presencestate&command=statuses", {}, function( data ) {
+			Presencestate.menu = data;
+			Presencestate.buildMenu(true);
+			$("#presencestate-menu .presence-item").css("cursor", "pointer");
+			$("#presencestate-menu .statuses").css("opacity", "1");
+		});
+	},
+	disconnect: function() {
+		if (UCP.loggedIn) {
+			$("#presencestate-menu .presence-item").off("click");
+			$("#presencestate-menu .presence-item").css("cursor", "not-allowed");
+			$("#presencestate-menu .statuses").css("opacity", "0.5");
+			Presencestate.changeStatus("not_set", "");
+		}
 	}
 }),
 Presencestate = new PresencestateC();
@@ -125,27 +141,4 @@ $(document).ready(function() {
 			});
 		}
 	});
-});
-
-//Logged In
-$(document).bind("logIn", function( event ) {
-	$.get( "index.php?quietmode=1&module=presencestate&command=statuses", {}, function( data ) {
-		Presencestate.menu = data;
-		Presencestate.buildMenu(true);
-	});
-});
-
-//Build the menu when we detect we are online and execute status change
-$(window).bind("online", function( event ) {
-	if (UCP.loggedIn) {
-		Presencestate.buildMenu(true);
-	}
-});
-
-//Go into offline mode, basically when no internet is detected
-$(window).bind("offline", function( event ) {
-	if (UCP.loggedIn) {
-		$( ".presence-item" ).off("click", "**");
-		UCP.changeStatus("not_set", "");
-	}
 });
