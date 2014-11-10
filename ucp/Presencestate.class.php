@@ -102,6 +102,7 @@ class Presencestate extends Modules{
 		if(!empty($this->device) && $this->enabled) {
 			$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
 			$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+			$niceState = (!empty($t['State']) && !empty($this->types[$t['State']])) ? $this->types[$t['State']] : '';
 			$menu = array();
 			if(!empty($this->device)) {
 				$user = $this->UCP->User->getUser();
@@ -110,7 +111,7 @@ class Presencestate extends Modules{
 				$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
 				$menu['status'] = true;
 				$menu['presence'] = $t;
-				$menu['presence']['niceState'] = $this->types[$t['State']];
+				$menu['presence']['niceState'] = $niceState;
 				$menu['representations'] = array(
 					'available' => array('color' => 'green', 'name' => _('Available')),
 					'chat' => array('color' => 'green', 'name' => _('Chat')),
@@ -129,7 +130,7 @@ class Presencestate extends Modules{
 
 				$menu['html'] = $this->getStatusMenu($t);
 			}
-			return array('status' => true, 'presence' => $t, 'niceState' => $this->types[$t['State']], 'states' => $this->states, 'menu' => $menu);
+			return array('status' => true, 'presence' => $t, 'niceState' => $niceState, 'states' => $this->states, 'menu' => $menu);
 		} else {
 			return array('status' => false);
 		}
@@ -141,14 +142,14 @@ class Presencestate extends Modules{
 	}
 
 	/**
-	 * Determine what commands are allowed
-	 *
-	 * Used by Ajax Class to determine what commands are allowed by this class
-	 *
-	 * @param string $command The command something is trying to perform
-	 * @param string $settings The Settings being passed through $_POST or $_PUT
-	 * @return bool True if pass
-	 */
+	* Determine what commands are allowed
+	*
+	* Used by Ajax Class to determine what commands are allowed by this class
+	*
+	* @param string $command The command something is trying to perform
+	* @param string $settings The Settings being passed through $_POST or $_PUT
+	* @return bool True if pass
+	*/
 	function ajaxRequest($command, $settings) {
 		switch($command) {
 			case 'set':
@@ -162,12 +163,12 @@ class Presencestate extends Modules{
 	}
 
 	/**
-	 * The Handler for all ajax events releated to this class
-	 *
-	 * Used by Ajax Class to process commands
-	 *
-	 * @return mixed Output if success, otherwise false will generate a 500 error serverside
-	 */
+	* The Handler for all ajax events releated to this class
+	*
+	* Used by Ajax Class to process commands
+	*
+	* @return mixed Output if success, otherwise false will generate a 500 error serverside
+	*/
 	function ajaxHandler() {
 		$return = array("status" => false, "message" => "");
 		if(!$this->enabled) {

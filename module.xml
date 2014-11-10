@@ -2,7 +2,7 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>12.0.15</version>
+	<version>12.0.16</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -15,6 +15,7 @@
 		<phpversion>5.3.0</phpversion>
 	</depends>
 	<changelog>
+		*12.0.16* Undefined indexes in UCP
 		*12.0.15* Presence state trigger in UCP
 		*12.0.14* Realign
 		*12.0.13* UCP Fixes
