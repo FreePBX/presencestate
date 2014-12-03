@@ -66,13 +66,17 @@ var PresencestateC = UCPMC.extend({
 			});
 
 			if (!$("#nav-btn-presencestate").is(":visible")) {
-				$("#nav-btn-presencestate").fadeIn("slow");
+				$("#nav-btn-presencestate").fadeIn("slow", function() {
+					UCP.calibrateMenus();
+				});
 			}
 		} else {
 			//Presence is disabled for this user
 			//but we still need to have the drop down if the user has actions
 			if (!$("#nav-btn-presencestate").is(":visible") && $("#presence-menu2 .options .fa").length > 0) {
-				$("#nav-btn-presencestate").fadeIn("slow");
+				$("#nav-btn-presencestate").fadeIn("slow", function() {
+					UCP.calibrateMenus();
+				});
 				$("#presencestate-menu .change-status").hide();
 				$("#nav-btn-presencestate .icon .fa").css("color", "#7b7b7b").css("opacity", "1");
 				$("#nav-btn-presencestate .p-msg").text("Actions List");
