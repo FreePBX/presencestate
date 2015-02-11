@@ -20,80 +20,131 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-03 16:41-0400\n"
+"POT-Creation-Date: 2015-02-11 18:05-0500\n"
 "PO-Revision-Date: 2014-07-26 01:13+0200\n"
 "Last-Translator: Rafael <rafael@ibinetwork.com.br>\n"
-"Language-Team: Portuguese (Brazil) "
-"<http://git.freepbx.org/projects/freepbx/presencestate/pt_BR/>\n"
-"Language: pt_BR\n"
+"Language-Team: Portuguese (Brazil) <http://git.freepbx.org/projects/freepbx/"
+"presencestate/pt_BR/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.10-dev\n"
 
-msgid "Delete"
-msgstr "Apagar"
-
-msgid "New Presence State"
-msgstr "Novo Estado de Presença"
-
-msgid "Presence Status"
-msgstr "Estado de Presença"
-
-msgid "Type"
-msgstr "Tipo"
-
-msgid "Message"
-msgstr "Mensagem"
-
-msgid "Submit"
-msgstr "Enviar"
-
-msgid "Presence State"
-msgstr "Estado de Presença"
-
-msgid "Admin"
-msgstr "Administrador"
-
-msgid "Manage list of presence states."
-msgstr "Gerencia lista do estado de presença."
-
-msgid "Do Nothing"
-msgstr "Tranquilo"
-
-msgid "Do Not Disturb"
-msgstr "Não perturbe"
-
-msgid "Findme/Follow Me"
-msgstr "Siga-me"
-
-msgid "Presence State Settings"
-msgstr "Configurar Estado de Presença"
-
-msgid "On UCP Login Set Status to"
-msgstr "Ao logar no Painel do Usuário setar meu Estado para"
-
-msgid "On Browser Close or UCP Logout Set Status to"
-msgstr "Ao fechar o Browser ou sair do Painel do Usuário setar meu Estado para"
-
-msgid "Define Actions on A Status Change"
-msgstr "Definir Ações ao Alterar meu Estado"
-
+#: /usr/src/freepbx/presencestate/functions.inc.php:7
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:116
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:209
 msgid "Available"
 msgstr "Disponível"
 
-msgid "Chat"
-msgstr "Bate-papo"
-
+#: /usr/src/freepbx/presencestate/functions.inc.php:9
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:119
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:212
 msgid "Away"
 msgstr "Ausente"
 
+#: /usr/src/freepbx/presencestate/functions.inc.php:8
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:117
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:210
+msgid "Chat"
+msgstr "Bate-papo"
+
+#: /usr/src/freepbx/presencestate/functions.inc.php:10
 msgid "DND"
 msgstr "DND"
 
+#: /usr/src/freepbx/presencestate/ucp/views/settings.php:25
+msgid "Define Actions on A Status Change"
+msgstr "Definir Ações ao Alterar meu Estado"
+
+#: /usr/src/freepbx/presencestate/page.presencestate.php:15
+#: /usr/src/freepbx/presencestate/page.presencestate.php:82
+msgid "Delete"
+msgstr "Apagar"
+
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:89
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:120
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:213
+msgid "Do Not Disturb"
+msgstr "Não perturbe"
+
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:88
+msgid "Do Nothing"
+msgstr "Tranquilo"
+
+#: /usr/src/freepbx/presencestate/Presencestate.class.php:50
+msgid "Enable Presence"
+msgstr ""
+
+#: /usr/src/freepbx/presencestate/functions.inc.php:11
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:118
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:211
 msgid "Extended Away"
 msgstr "Muito Ausente"
 
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:90
+msgid "Findme/Follow Me"
+msgstr "Siga-me"
+
+#: /usr/src/freepbx/presencestate/page.presencestate.php:74
+msgid "Message"
+msgstr "Mensagem"
+
+#: /usr/src/freepbx/presencestate/page.presencestate.php:33
+msgid "New Presence State"
+msgstr "Novo Estado de Presença"
+
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:122
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:215
+msgid "Offline"
+msgstr ""
+
+#: /usr/src/freepbx/presencestate/ucp/views/settings.php:16
+msgid "On Browser Close or UCP Logout Set Status to"
+msgstr "Ao fechar o Browser ou sair do Painel do Usuário setar meu Estado para"
+
+#: /usr/src/freepbx/presencestate/ucp/views/settings.php:7
+msgid "On UCP Login Set Status to"
+msgstr "Ao logar no Painel do Usuário setar meu Estado para"
+
+#: /usr/src/freepbx/presencestate/ucp/views/settings.php:2
+msgid "Presence State Settings"
+msgstr "Configurar Estado de Presença"
+
+#: /usr/src/freepbx/presencestate/page.presencestate.php:63
+msgid "Presence Status"
+msgstr "Estado de Presença"
+
+#: /usr/src/freepbx/presencestate/ucp/assets/js/global.js:34
+msgid "Status Not Set"
+msgstr ""
+
+#: /usr/src/freepbx/presencestate/page.presencestate.php:80
+msgid "Submit"
+msgstr "Enviar"
+
+#: /usr/src/freepbx/presencestate/page.presencestate.php:71
+msgid "Type"
+msgstr "Tipo"
+
+#: /usr/src/freepbx/presencestate/functions.inc.php:12
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:121
+#: /usr/src/freepbx/presencestate/ucp/Presencestate.class.php:214
 msgid "Unavailable"
 msgstr "Não Disponível"
+
+#: /usr/src/freepbx/presencestate/Presencestate.class.php:50
+msgid ""
+"Whether to allow this user to be able to change their presence state/status "
+"in UCP"
+msgstr ""
+
+#~ msgid "Presence State"
+#~ msgstr "Estado de Presença"
+
+#~ msgid "Admin"
+#~ msgstr "Administrador"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "Gerencia lista do estado de presença."
