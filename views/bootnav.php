@@ -1,0 +1,2 @@
+<a href="?display=presencestate" class="list-group-item"><i class="fa fa-list"></i>&nbsp;<?php echo _("List States")?></a>
+<a href="?display=presencestate&view=form" class="list-group-item"><i class="fa fa-plus"></i>&nbsp;<?php echo _("Add State")?></a>
