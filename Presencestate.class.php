@@ -47,8 +47,8 @@ class Presencestate implements BMO {
 	}
 
 	public function processUCPAdminDisplay($user) {
-		if(isset($_REQUEST['presencestate|enable'])) {
-			if($_REQUEST['presencestate|enable'] == 'yes') {
+		if(isset($_REQUEST['presencestate_enable'])) {
+			if($_REQUEST['presencestate_enable'] == 'yes') {
 				$this->FreePBX->Ucp->setSetting($user['username'],'Presencestate','enabled',true);
 			} else {
 				$this->FreePBX->Ucp->setSetting($user['username'],'Presencestate','enabled',false);
@@ -56,15 +56,13 @@ class Presencestate implements BMO {
 		} else {
 			$this->FreePBX->Ucp->setSetting($user['username'],'Presencestate','enabled',true);
 		}
-		$this->FreePBX->Ucp->setSetting($user['username'],'Presencestate','saved',true);
 	}
 
 	public function getUCPAdminDisplay($user) {
 		$html = array();
-		$saved = $this->FreePBX->Ucp->getSetting($user['username'],'Presencestate','saved');
-		$enabled = ($saved) ? $this->FreePBX->Ucp->getSetting($user['username'],'Presencestate','enabled') : true;
-		$html[0]['description'] = '<a href="#" class="info">'._("Enable Presence").':<span>'._("Whether to allow this user to be able to change their presence state/status in UCP").'</span></a>';
-		$html[0]['content'] = load_view(dirname(__FILE__)."/views/ucp_config.php",array("enabled" => $enabled));
+		$enabled = $this->FreePBX->Ucp->getSetting($user['username'],'Presencestate','enabled', true);
+		$enabled = is_null($enabled) ? true : $enabled;
+		$html[] = load_view(dirname(__FILE__)."/views/ucp_config.php",array("penabled" => $enabled));
 		return $html;
 	}
 
