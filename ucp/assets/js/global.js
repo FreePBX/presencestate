@@ -4,6 +4,7 @@ var PresencestateC = UCPMC.extend({
 		this.presenceSpecials = { startSessionStatus: null, endSessionStatus: null };
 		this.menu = null;
 		this.transitioning = false;
+		this.calibrated = false;
 	},
 	poll: function(data) {
 		if (data.status) {
@@ -82,7 +83,10 @@ var PresencestateC = UCPMC.extend({
 				$("#nav-btn-presencestate .p-msg").text("Actions List");
 			}
 		}
-
+		if(!this.calibrated) {
+			UCP.calibrateMenus();
+			this.calibrated = true;
+		}
 	},
 	savePSSettings: function() {
 		$("#message").fadeOut("slow");
