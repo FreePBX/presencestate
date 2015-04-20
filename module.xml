@@ -2,7 +2,7 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>12.0.16</version>
+	<version>13.0.1</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -37,6 +37,6 @@
 		*2.11.0* Initial release
 	</changelog>
 	<supported>
-		<version>12.0</version>
+		<version>13.0</version>
 	</supported>
 </module>

@@ -62,7 +62,11 @@ class Presencestate implements BMO {
 		$html = array();
 		$enabled = $this->FreePBX->Ucp->getSetting($user['username'],'Presencestate','enabled', true);
 		$enabled = is_null($enabled) ? true : $enabled;
-		$html[] = load_view(dirname(__FILE__)."/views/ucp_config.php",array("penabled" => $enabled));
+		$html[0] = array(
+			"title" => _("Presence State"),
+			"rawname" => "presencestate",
+			"content" => load_view(dirname(__FILE__)."/views/ucp_config.php",array("penabled" => $enabled))
+		);
 		return $html;
 	}
 
@@ -97,7 +101,7 @@ class Presencestate implements BMO {
 			return true;
 		}else{
 			return false;
-		}	
+		}
 	}
 	public function ajaxHandler() {
 		if($_REQUEST['command'] == 'getJSON'){
@@ -112,7 +116,7 @@ class Presencestate implements BMO {
 
 					return $ret;
 				break;
-				
+
 				default:
 					print json_encode(_("Invalid Request"));
 				break;
