@@ -22,8 +22,9 @@ class Presencestate extends Modules{
 		$saved = $this->UCP->getSetting($user['username'],$this->module,'saved');
 		$this->enabled = ($saved) ? $this->UCP->getSetting($user['username'],$this->module,'enabled') : true;
 
+		$this->UCP->Modgettext->push_textdomain("presencestate");
 		foreach($this->states as &$state) {
-			$state['nice'] = $this->types[$state['type']];
+			$state['nice'] = _($this->types[$state['type']]);
 			switch($state['type']) {
 				case 'available':
 				case 'chat':
@@ -43,6 +44,8 @@ class Presencestate extends Modules{
 				break;
 			}
 		}
+		$this->UCP->Modgettext->pop_textdomain();
+		
 		uasort($this->states, array($this,'sort'));
 	}
 
