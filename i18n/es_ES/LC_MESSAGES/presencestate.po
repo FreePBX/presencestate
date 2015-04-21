@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-21 15:13-0400\n"
+"POT-Creation-Date: 2015-04-21 15:19-0400\n"
 "PO-Revision-Date: 2015-04-03 10:10+0200\n"
 "Last-Translator: Daver <daverjorge46@gmail.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -97,6 +97,10 @@ msgstr "Al cerrar Navegador o salir de UCP ponga en estado en"
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
 msgstr "Al entrar a UCP ponga estado en"
+
+#: ucp/Presencestate.class.php:249
+msgid "Presence"
+msgstr ""
 
 #: presencestate.i18n.php:4 presencestate.i18n.php:10
 msgid "Presence State"

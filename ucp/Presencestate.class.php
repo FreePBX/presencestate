@@ -45,7 +45,7 @@ class Presencestate extends Modules{
 			}
 		}
 		$this->UCP->Modgettext->pop_textdomain();
-		
+
 		uasort($this->states, array($this,'sort'));
 	}
 
@@ -246,7 +246,7 @@ class Presencestate extends Modules{
 		if(!empty($this->device)) {
 			$menu = array(
 				"rawname" => "presencestate",
-				"name" => "Presence",
+				"name" => _("Presence"),
 				"badge" => false
 			);
 		}
