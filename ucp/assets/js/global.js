@@ -32,7 +32,7 @@ var PresencestateC = UCPMC.extend({
 				$(window).trigger("presenceStateChange");
 			}
 		} else {
-			$("#nav-btn-presencestate .p-msg span").text(_("Status Not Set"));
+			$("#nav-btn-presencestate .p-msg span").text(_("Status Not Set","presencestate"));
 			$("#nav-btn-presencestate .p-msg").textfill();
 		}
 	},

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 19:32-0400\n"
+"POT-Creation-Date: 2015-04-21 15:19-0400\n"
 "PO-Revision-Date: 2014-07-26 01:13+0200\n"
 "Last-Translator: Rafael <rafael@ibinetwork.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://git.freepbx.org/projects/freepbx/"
@@ -36,18 +36,18 @@ msgstr ""
 msgid "Admin"
 msgstr "Administrador"
 
-#: functions.inc.php:7 ucp/Presencestate.class.php:116
-#: ucp/Presencestate.class.php:209
+#: functions.inc.php:7 ucp/Presencestate.class.php:119
+#: ucp/Presencestate.class.php:212
 msgid "Available"
 msgstr "Disponível"
 
-#: functions.inc.php:9 ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: functions.inc.php:9 ucp/Presencestate.class.php:122
+#: ucp/Presencestate.class.php:215
 msgid "Away"
 msgstr "Ausente"
 
-#: functions.inc.php:8 ucp/Presencestate.class.php:117
-#: ucp/Presencestate.class.php:210
+#: functions.inc.php:8 ucp/Presencestate.class.php:120
+#: ucp/Presencestate.class.php:213
 msgid "Chat"
 msgstr "Bate-papo"
 
@@ -63,12 +63,12 @@ msgstr "Definir Ações ao Alterar meu Estado"
 msgid "Delete"
 msgstr "Apagar"
 
-#: ucp/Presencestate.class.php:89 ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: ucp/Presencestate.class.php:92 ucp/Presencestate.class.php:123
+#: ucp/Presencestate.class.php:216
 msgid "Do Not Disturb"
 msgstr "Não perturbe"
 
-#: ucp/Presencestate.class.php:88
+#: ucp/Presencestate.class.php:91
 msgid "Do Nothing"
 msgstr "Tranquilo"
 
@@ -76,12 +76,12 @@ msgstr "Tranquilo"
 msgid "Enable Presence"
 msgstr ""
 
-#: functions.inc.php:11 ucp/Presencestate.class.php:118
-#: ucp/Presencestate.class.php:211
+#: functions.inc.php:11 ucp/Presencestate.class.php:121
+#: ucp/Presencestate.class.php:214
 msgid "Extended Away"
 msgstr "Muito Ausente"
 
-#: ucp/Presencestate.class.php:90
+#: ucp/Presencestate.class.php:93
 msgid "Findme/Follow Me"
 msgstr "Siga-me"
 
@@ -97,7 +97,7 @@ msgstr "Mensagem"
 msgid "New Presence State"
 msgstr "Novo Estado de Presença"
 
-#: ucp/Presencestate.class.php:122 ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:125 ucp/Presencestate.class.php:218
 msgid "Offline"
 msgstr ""
 
@@ -108,6 +108,10 @@ msgstr "Ao fechar o Browser ou sair do Painel do Usuário setar meu Estado para"
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
 msgstr "Ao logar no Painel do Usuário setar meu Estado para"
+
+#: ucp/Presencestate.class.php:249
+msgid "Presence"
+msgstr ""
 
 #: presencestate.i18n.php:4 presencestate.i18n.php:10
 msgid "Presence State"
@@ -133,8 +137,8 @@ msgstr "Enviar"
 msgid "Type"
 msgstr "Tipo"
 
-#: functions.inc.php:12 ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: functions.inc.php:12 ucp/Presencestate.class.php:124
+#: ucp/Presencestate.class.php:217
 msgid "Unavailable"
 msgstr "Não Disponível"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 19:32-0400\n"
+"POT-Creation-Date: 2015-04-21 15:19-0400\n"
 "PO-Revision-Date: 2015-02-20 19:51-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,18 +22,18 @@ msgstr ""
 msgid "Admin"
 msgstr "管理员"
 
-#: functions.inc.php:7 ucp/Presencestate.class.php:116
-#: ucp/Presencestate.class.php:209
+#: functions.inc.php:7 ucp/Presencestate.class.php:119
+#: ucp/Presencestate.class.php:212
 msgid "Available"
 msgstr "在线"
 
-#: functions.inc.php:9 ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: functions.inc.php:9 ucp/Presencestate.class.php:122
+#: ucp/Presencestate.class.php:215
 msgid "Away"
 msgstr "离开"
 
-#: functions.inc.php:8 ucp/Presencestate.class.php:117
-#: ucp/Presencestate.class.php:210
+#: functions.inc.php:8 ucp/Presencestate.class.php:120
+#: ucp/Presencestate.class.php:213
 msgid "Chat"
 msgstr "聊天"
 
@@ -49,12 +49,12 @@ msgstr "定义一个状态修改命令"
 msgid "Delete"
 msgstr "删除"
 
-#: ucp/Presencestate.class.php:89 ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: ucp/Presencestate.class.php:92 ucp/Presencestate.class.php:123
+#: ucp/Presencestate.class.php:216
 msgid "Do Not Disturb"
 msgstr "免打扰"
 
-#: ucp/Presencestate.class.php:88
+#: ucp/Presencestate.class.php:91
 msgid "Do Nothing"
 msgstr "不做"
 
@@ -62,12 +62,12 @@ msgstr "不做"
 msgid "Enable Presence"
 msgstr ""
 
-#: functions.inc.php:11 ucp/Presencestate.class.php:118
-#: ucp/Presencestate.class.php:211
+#: functions.inc.php:11 ucp/Presencestate.class.php:121
+#: ucp/Presencestate.class.php:214
 msgid "Extended Away"
 msgstr ""
 
-#: ucp/Presencestate.class.php:90
+#: ucp/Presencestate.class.php:93
 msgid "Findme/Follow Me"
 msgstr "分机随行"
 
@@ -83,7 +83,7 @@ msgstr "消息"
 msgid "New Presence State"
 msgstr "新在线状态״̬"
 
-#: ucp/Presencestate.class.php:122 ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:125 ucp/Presencestate.class.php:218
 msgid "Offline"
 msgstr ""
 
@@ -93,6 +93,10 @@ msgstr ""
 
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
+msgstr ""
+
+#: ucp/Presencestate.class.php:249
+msgid "Presence"
 msgstr ""
 
 #: presencestate.i18n.php:4 presencestate.i18n.php:10
@@ -119,8 +123,8 @@ msgstr "提交"
 msgid "Type"
 msgstr "类型"
 
-#: functions.inc.php:12 ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: functions.inc.php:12 ucp/Presencestate.class.php:124
+#: ucp/Presencestate.class.php:217
 msgid "Unavailable"
 msgstr "不在线"
 

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 19:32-0400\n"
+"POT-Creation-Date: 2015-04-21 15:19-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,18 +32,18 @@ msgstr ""
 msgid "Admin"
 msgstr ""
 
-#: functions.inc.php:7 ucp/Presencestate.class.php:116
-#: ucp/Presencestate.class.php:209
+#: functions.inc.php:7 ucp/Presencestate.class.php:119
+#: ucp/Presencestate.class.php:212
 msgid "Available"
 msgstr ""
 
-#: functions.inc.php:9 ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: functions.inc.php:9 ucp/Presencestate.class.php:122
+#: ucp/Presencestate.class.php:215
 msgid "Away"
 msgstr ""
 
-#: functions.inc.php:8 ucp/Presencestate.class.php:117
-#: ucp/Presencestate.class.php:210
+#: functions.inc.php:8 ucp/Presencestate.class.php:120
+#: ucp/Presencestate.class.php:213
 msgid "Chat"
 msgstr ""
 
@@ -59,12 +59,12 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: ucp/Presencestate.class.php:89 ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: ucp/Presencestate.class.php:92 ucp/Presencestate.class.php:123
+#: ucp/Presencestate.class.php:216
 msgid "Do Not Disturb"
 msgstr ""
 
-#: ucp/Presencestate.class.php:88
+#: ucp/Presencestate.class.php:91
 msgid "Do Nothing"
 msgstr ""
 
@@ -72,12 +72,12 @@ msgstr ""
 msgid "Enable Presence"
 msgstr ""
 
-#: functions.inc.php:11 ucp/Presencestate.class.php:118
-#: ucp/Presencestate.class.php:211
+#: functions.inc.php:11 ucp/Presencestate.class.php:121
+#: ucp/Presencestate.class.php:214
 msgid "Extended Away"
 msgstr ""
 
-#: ucp/Presencestate.class.php:90
+#: ucp/Presencestate.class.php:93
 msgid "Findme/Follow Me"
 msgstr ""
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "New Presence State"
 msgstr ""
 
-#: ucp/Presencestate.class.php:122 ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:125 ucp/Presencestate.class.php:218
 msgid "Offline"
 msgstr ""
 
@@ -103,6 +103,10 @@ msgstr ""
 
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
+msgstr ""
+
+#: ucp/Presencestate.class.php:249
+msgid "Presence"
 msgstr ""
 
 #: presencestate.i18n.php:4 presencestate.i18n.php:10
@@ -129,8 +133,8 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: functions.inc.php:12 ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: functions.inc.php:12 ucp/Presencestate.class.php:124
+#: ucp/Presencestate.class.php:217
 msgid "Unavailable"
 msgstr ""
 
