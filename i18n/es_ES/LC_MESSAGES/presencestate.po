@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-21 15:19-0400\n"
-"PO-Revision-Date: 2015-04-22 02:22+0200\n"
-"Last-Translator: Andrew <andrew.nagy@the159.com>\n"
+"PO-Revision-Date: 2015-04-23 06:33+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/es_ES/>\n"
 "Language: es_ES\n"
@@ -99,7 +99,6 @@ msgid "On UCP Login Set Status to"
 msgstr "Al entrar a UCP ponga estado en"
 
 #: ucp/Presencestate.class.php:249
-#, fuzzy
 msgid "Presence"
 msgstr "Presencia"
 
