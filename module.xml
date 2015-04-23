@@ -36,6 +36,17 @@
 		*2.11.1* Add Presence State preferences.
 		*2.11.0* Initial release
 	</changelog>
+	<hooks>
+		<ucp class="Ucp">
+			<method class="Presencestate" callingMethod="constructModuleConfigPages">ucpConfigPage</method>
+			<method class="Presencestate" callingMethod="addUser">ucpAddUser</method>
+			<method class="Presencestate" callingMethod="updateUser">ucpUpdateUser</method>
+			<method class="Presencestate" callingMethod="delUser">ucpDelUser</method>
+			<method class="Presencestate" callingMethod="addGroup">ucpAddGroup</method>
+			<method class="Presencestate" callingMethod="updateGroup">ucpUpdateGroup</method>
+			<method class="Presencestate" callingMethod="delGroup">ucpDelGroup</method>
+		</ucp>
+	</hooks>
 	<supported>
 		<version>13.0</version>
 	</supported>

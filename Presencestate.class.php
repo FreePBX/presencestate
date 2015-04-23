@@ -46,22 +46,72 @@ class Presencestate implements BMO {
 
 	}
 
-	public function processUCPAdminDisplay($user) {
-		if(isset($_REQUEST['presencestate_enable'])) {
-			if($_REQUEST['presencestate_enable'] == 'yes') {
-				$this->FreePBX->Ucp->setSetting($user['username'],'Presencestate','enabled',true);
+	public function ucpDelGroup($id,$display,$data) {
+	}
+
+	public function ucpAddGroup($id, $display, $data) {
+		$this->ucpUpdateGroup($id,$display,$data);
+	}
+
+	public function ucpUpdateGroup($id,$display,$data) {
+		if(isset($_POST['presencestate_enable'])) {
+			if($_POST['presencestate_enable'] == 'yes') {
+				$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',true);
 			} else {
-				$this->FreePBX->Ucp->setSetting($user['username'],'Presencestate','enabled',false);
+				$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',false);
 			}
 		} else {
-			$this->FreePBX->Ucp->setSetting($user['username'],'Presencestate','enabled',true);
+			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',true);
 		}
 	}
 
-	public function getUCPAdminDisplay($user) {
+	/**
+	* Hook functionality from userman when a user is deleted
+	* @param {int} $id      The userman user id
+	* @param {string} $display The display page name where this was executed
+	* @param {array} $data    Array of data to be able to use
+	*/
+	public function ucpDelUser($id, $display, $ucpStatus, $data) {
+
+	}
+
+	/**
+	* Hook functionality from userman when a user is added
+	* @param {int} $id      The userman user id
+	* @param {string} $display The display page name where this was executed
+	* @param {array} $data    Array of data to be able to use
+	*/
+	public function ucpAddUser($id, $display, $ucpStatus, $data) {
+		$this->ucpUpdateUser($id, $display, $ucpStatus, $data);
+	}
+
+	/**
+	* Hook functionality from userman when a user is updated
+	* @param {int} $id      The userman user id
+	* @param {string} $display The display page name where this was executed
+	* @param {array} $data    Array of data to be able to use
+	*/
+	public function ucpUpdateUser($id, $display, $ucpStatus, $data) {
+		if(isset($_POST['presencestate_enable'])) {
+			if($_POST['presencestate_enable'] == 'yes') {
+				$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',true);
+			} else {
+				$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',false);
+			}
+		} else {
+			$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',true);
+		}
+	}
+
+	public function ucpConfigPage($mode, $user, $action) {
+		if($mode == 'group') {
+			$enabled = $this->FreePBX->Ucp->getSettingByGID($user['id'],'Presencestate','enabled', true);
+			$enabled = is_null($enabled) ? true : $enabled;
+		} else {
+			$enabled = $this->FreePBX->Ucp->getSettingByID($user['id'],'Presencestate','enabled', true);
+			$enabled = is_null($enabled) ? true : $enabled;
+		}
 		$html = array();
-		$enabled = $this->FreePBX->Ucp->getSetting($user['username'],'Presencestate','enabled', true);
-		$enabled = is_null($enabled) ? true : $enabled;
 		$html[0] = array(
 			"title" => _("Presence State"),
 			"rawname" => "presencestate",
