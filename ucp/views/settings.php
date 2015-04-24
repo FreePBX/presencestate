@@ -6,7 +6,7 @@
 			<div class="form-group">
 				<label for="startsessionstatus"><?php echo _('On UCP Login Set Status to') ?>:</label><br/>
 				<select name="startsessionstatus" id="startsessionstatus" class="form-control">
-					<option value="0">Do Not Change</option>
+					<option value="0"><?php echo _('Do Not Change')?></option>
 					<?php foreach($states as $state) { ?>
 						<option value="<?php echo $state['id']?>" <?php echo ($startsessionstatus == $state['id']) ? 'selected' : '' ?>><?php echo $state['nice']?><?php echo $state['niceMessage']?></option>
 					<?php } ?>
@@ -15,7 +15,7 @@
 			<div class="form-group">
 				<label for="endsessionstatus"><?php echo _('On Browser Close or UCP Logout Set Status to') ?>:</label><br/>
 				<select name="endsessionstatus" id="endsessionstatus" class="form-control">
-					<option value="0">Do Not Change</option>
+					<option value="0"><?php _('Do Not Change')?></option>
 					<?php foreach($states as $state) { ?>
 						<option value="<?php echo $state['id']?>" <?php echo ($endsessionstatus == $state['id']) ? 'selected' : '' ?>><?php echo $state['nice']?><?php echo $state['niceMessage']?></option>
 					<?php } ?>
