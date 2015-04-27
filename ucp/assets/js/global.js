@@ -37,8 +37,7 @@ var PresencestateC = UCPMC.extend({
 		}
 	},
 	buildMenu: function(loggedIn) {
-		//build and update menu system
-		//get the menu if it doesnt exist
+		//build and update menu system get the menu if it doesnt exist
 		_("Your settings have been saved")
 		var menu = Presencestate.menu;
 		if (menu !== null && menu.status) {
@@ -73,8 +72,7 @@ var PresencestateC = UCPMC.extend({
 				});
 			}
 		} else {
-			//Presence is disabled for this user
-			//but we still need to have the drop down if the user has actions
+			//Presence is disabled for this user but we still need to have the drop down if the user has actions
 			if (!$("#nav-btn-presencestate").is(":visible") && $("#presence-menu2 .options .fa").length > 0) {
 				$("#nav-btn-presencestate").fadeIn("slow", function() {
 					UCP.calibrateMenus();
