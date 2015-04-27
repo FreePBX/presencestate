@@ -32,6 +32,7 @@ var PresencestateC = UCPMC.extend({
 				$(window).trigger("presenceStateChange");
 			}
 		} else {
+			_("Your settings have been saved")
 			$("#nav-btn-presencestate .p-msg span").text(_("Status Not Set","presencestate"));
 			$("#nav-btn-presencestate .p-msg").textfill();
 		}
@@ -108,7 +109,6 @@ var PresencestateC = UCPMC.extend({
 		$.post( "?quietmode=1&module=presencestate&command=savesettings", data, function( data ) {
 			if (data.status) {
 				$("#message").addClass("alert-success");
-				_("Your settings have been saved");
 				$("#message").text(_("Your settings have been saved"));
 				$("#message").fadeIn( "slow", function() {
 					setTimeout(function() { $("#message").fadeOut("slow"); }, 2000);
