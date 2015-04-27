@@ -87,7 +87,7 @@ var PresencestateC = UCPMC.extend({
 			UCP.calibrateMenus();
 			this.calibrated = true;
 		}
-		_("Your settings have been saved")
+		_("Your settings have been saved");
 	},
 	savePSSettings: function() {
 		$("#message").fadeOut("slow");
