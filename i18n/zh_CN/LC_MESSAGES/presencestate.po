@@ -115,7 +115,7 @@ msgstr "Presence 状态设置"
 msgid "Presence Status"
 msgstr "在线状态"
 
-#: ucp/assets/js/global.js:36
+#: ucp/assets/js/global.js:35
 msgid "Status Not Set"
 msgstr ""
 
@@ -136,8 +136,4 @@ msgstr "不在线"
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
-msgstr ""
-
-#: ucp/assets/js/global.js:35
-msgid "Your settings have been saved"
 msgstr ""

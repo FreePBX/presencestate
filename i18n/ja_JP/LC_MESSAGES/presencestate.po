@@ -129,7 +129,7 @@ msgstr "プレゼンスステータスの設定"
 msgid "Presence Status"
 msgstr "プレゼンスステータス"
 
-#: ucp/assets/js/global.js:36
+#: ucp/assets/js/global.js:35
 msgid "Status Not Set"
 msgstr "ステータスは設定されていません"
 
@@ -151,7 +151,3 @@ msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
 msgstr "このユーザーがUCPで自分のステータスを変更できるかどうか設定します。"
-
-#: ucp/assets/js/global.js:35
-msgid "Your settings have been saved"
-msgstr ""

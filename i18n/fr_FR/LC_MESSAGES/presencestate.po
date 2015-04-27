@@ -118,7 +118,7 @@ msgstr "Paramètres état de la présence"
 msgid "Presence Status"
 msgstr "Etat de la présence"
 
-#: ucp/assets/js/global.js:36
+#: ucp/assets/js/global.js:35
 msgid "Status Not Set"
 msgstr "Statut non défini"
 
@@ -142,7 +142,3 @@ msgid ""
 msgstr ""
 "Permettre à cet utilisateur d'être en mesure de changer leur présence état/"
 "statut UCP"
-
-#: ucp/assets/js/global.js:35
-msgid "Your settings have been saved"
-msgstr ""
