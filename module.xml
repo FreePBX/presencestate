@@ -2,7 +2,7 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>12.0.19</version>
+	<version>12.0.30</version>
 	<publisher>Schmooze Com Inc</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -15,6 +15,7 @@
 		<phpversion>5.3.0</phpversion>
 	</depends>
 	<changelog>
+		*12.0.30* More Language
 		*12.0.29* Language fixes
 		*12.0.18* Language improvements
 		*12.0.17* FREEPBX-9028 Presence menu not fully loaded at optimization time

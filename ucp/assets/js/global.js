@@ -80,7 +80,7 @@ var PresencestateC = UCPMC.extend({
 				});
 				$("#presencestate-menu .change-status").hide();
 				$("#nav-btn-presencestate .icon .fa").css("color", "#7b7b7b").css("opacity", "1");
-				$("#nav-btn-presencestate .p-msg").text("Actions List");
+				$("#nav-btn-presencestate .p-msg").text(_("Actions List"));
 			}
 		}
 		if(!this.calibrated) {
@@ -108,7 +108,7 @@ var PresencestateC = UCPMC.extend({
 		$.post( "?quietmode=1&module=presencestate&command=savesettings", data, function( data ) {
 			if (data.status) {
 				$("#message").addClass("alert-success");
-				$("#message").text("Saved!");
+				$("#message").text(_("Your settings have been saved"));
 				$("#message").fadeIn( "slow", function() {
 					setTimeout(function() { $("#message").fadeOut("slow"); }, 2000);
 				});
