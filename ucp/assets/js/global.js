@@ -33,11 +33,11 @@ var PresencestateC = UCPMC.extend({
 			}
 		} else {
 			$("#nav-btn-presencestate .p-msg span").text(_("Status Not Set","presencestate"));
-			_("Your settings have been saved")
 			$("#nav-btn-presencestate .p-msg").textfill();
 		}
 	},
 	buildMenu: function(loggedIn) {
+		_("Your settings have been saved")
 		//build and update menu system
 		//get the menu if it doesnt exist
 		var menu = Presencestate.menu;
