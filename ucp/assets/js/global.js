@@ -83,6 +83,7 @@ var PresencestateC = UCPMC.extend({
 				$("#nav-btn-presencestate .p-msg").text(_("Actions List"));
 			}
 		}
+		_("Your settings have been saved")
 		if(!this.calibrated) {
 			UCP.calibrateMenus();
 			this.calibrated = true;
