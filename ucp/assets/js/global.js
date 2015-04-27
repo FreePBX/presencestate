@@ -41,6 +41,7 @@ var PresencestateC = UCPMC.extend({
 		//get the menu if it doesnt exist
 		var menu = Presencestate.menu;
 		if (menu !== null && menu.status) {
+			_("Your settings have been saved")
 			Presencestate.presenceSpecials.startSessionStatus = menu.startsessionstatus;
 			Presencestate.presenceSpecials.endSessionStatus = menu.endsessionstatus;
 			if (loggedIn && Presencestate.presenceSpecials.startSessionStatus !== null) {
@@ -49,7 +50,6 @@ var PresencestateC = UCPMC.extend({
 					Presencestate.buildMenu(false);
 				});
 			}
-			_("Your settings have been saved")
 
 			$("#presencestate-menu .statuses").html(menu.html);
 			$("#presencestate-menu .presence-item").one("click", function() {
