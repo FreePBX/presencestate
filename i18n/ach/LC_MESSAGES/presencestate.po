@@ -9,13 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-24 16:48-0400\n"
+"POT-Creation-Date: 2015-04-27 11:33-0400\n"
 "PO-Revision-Date: 2015-04-20 19:32-0400\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ucp/assets/js/global.js:82
+msgid "Actions List"
+msgstr ""
 
 #: presencestate.i18n.php:6 presencestate.i18n.php:12
 msgid "Admin"
@@ -135,4 +139,8 @@ msgstr ""
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
+msgstr ""
+
+#: ucp/assets/js/global.js:41 ucp/assets/js/global.js:110
+msgid "Your settings have been saved"
 msgstr ""

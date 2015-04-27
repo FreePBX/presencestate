@@ -37,8 +37,7 @@ var PresencestateC = UCPMC.extend({
 		}
 	},
 	buildMenu: function(loggedIn) {
-		//build and update menu system
-		//get the menu if it doesnt exist
+		//build and update menu system get the menu if it doesnt exist
 		var menu = Presencestate.menu;
 		if (menu !== null && menu.status) {
 			Presencestate.presenceSpecials.startSessionStatus = menu.startsessionstatus;
@@ -72,15 +71,14 @@ var PresencestateC = UCPMC.extend({
 				});
 			}
 		} else {
-			//Presence is disabled for this user
-			//but we still need to have the drop down if the user has actions
+			//Presence is disabled for this user but we still need to have the drop down if the user has actions
 			if (!$("#nav-btn-presencestate").is(":visible") && $("#presence-menu2 .options .fa").length > 0) {
 				$("#nav-btn-presencestate").fadeIn("slow", function() {
 					UCP.calibrateMenus();
 				});
 				$("#presencestate-menu .change-status").hide();
 				$("#nav-btn-presencestate .icon .fa").css("color", "#7b7b7b").css("opacity", "1");
-				$("#nav-btn-presencestate .p-msg").text("Actions List");
+				$("#nav-btn-presencestate .p-msg").text(_("Actions List"));
 			}
 		}
 		if(!this.calibrated) {
@@ -108,7 +106,7 @@ var PresencestateC = UCPMC.extend({
 		$.post( "?quietmode=1&module=presencestate&command=savesettings", data, function( data ) {
 			if (data.status) {
 				$("#message").addClass("alert-success");
-				$("#message").text("Saved!");
+				$("#message").text(_("Your settings have been saved"));
 				$("#message").fadeIn( "slow", function() {
 					setTimeout(function() { $("#message").fadeOut("slow"); }, 2000);
 				});
