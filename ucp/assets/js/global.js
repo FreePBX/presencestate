@@ -89,6 +89,7 @@ var PresencestateC = UCPMC.extend({
 		}
 	},
 	savePSSettings: function() {
+		_("Your settings have been saved")
 		$("#message").fadeOut("slow");
 		var data = {};
 		$(".pssettings input[type=\"text\"]").each(function( index ) {
