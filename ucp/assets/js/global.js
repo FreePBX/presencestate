@@ -49,6 +49,7 @@ var PresencestateC = UCPMC.extend({
 					Presencestate.buildMenu(false);
 				});
 			}
+			_("Your settings have been saved")
 
 			$("#presencestate-menu .statuses").html(menu.html);
 			$("#presencestate-menu .presence-item").one("click", function() {
@@ -71,7 +72,6 @@ var PresencestateC = UCPMC.extend({
 					UCP.calibrateMenus();
 				});
 			}
-			_("Your settings have been saved")
 		} else {
 			//Presence is disabled for this user
 			//but we still need to have the drop down if the user has actions
