@@ -71,6 +71,7 @@ var PresencestateC = UCPMC.extend({
 					UCP.calibrateMenus();
 				});
 			}
+			_("Your settings have been saved")
 		} else {
 			//Presence is disabled for this user
 			//but we still need to have the drop down if the user has actions
@@ -83,12 +84,10 @@ var PresencestateC = UCPMC.extend({
 				$("#nav-btn-presencestate .p-msg").text(_("Actions List"));
 			}
 		}
-		_("Your settings have been saved")
 		if(!this.calibrated) {
 			UCP.calibrateMenus();
 			this.calibrated = true;
 		}
-		_("Your settings have been saved");
 	},
 	savePSSettings: function() {
 		$("#message").fadeOut("slow");
