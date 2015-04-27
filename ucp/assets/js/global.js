@@ -33,6 +33,7 @@ var PresencestateC = UCPMC.extend({
 			}
 		} else {
 			$("#nav-btn-presencestate .p-msg span").text(_("Status Not Set","presencestate"));
+			_("Your settings have been saved")
 			$("#nav-btn-presencestate .p-msg").textfill();
 		}
 	},
@@ -89,7 +90,6 @@ var PresencestateC = UCPMC.extend({
 		}
 	},
 	savePSSettings: function() {
-		_("Your settings have been saved");
 		$("#message").fadeOut("slow");
 		var data = {};
 		$(".pssettings input[type=\"text\"]").each(function( index ) {
