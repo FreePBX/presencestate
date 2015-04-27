@@ -37,9 +37,9 @@ var PresencestateC = UCPMC.extend({
 		}
 	},
 	buildMenu: function(loggedIn) {
-		_("Your settings have been saved")
 		//build and update menu system
 		//get the menu if it doesnt exist
+		_("Your settings have been saved")
 		var menu = Presencestate.menu;
 		if (menu !== null && menu.status) {
 			Presencestate.presenceSpecials.startSessionStatus = menu.startsessionstatus;

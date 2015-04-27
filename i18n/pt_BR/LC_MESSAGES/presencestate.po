@@ -151,7 +151,3 @@ msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
 msgstr ""
-
-#: ucp/assets/js/global.js:40
-msgid "Your settings have been saved"
-msgstr ""

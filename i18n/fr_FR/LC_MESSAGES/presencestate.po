@@ -142,7 +142,3 @@ msgid ""
 msgstr ""
 "Permettre à cet utilisateur d'être en mesure de changer leur présence état/"
 "statut UCP"
-
-#: ucp/assets/js/global.js:40
-msgid "Your settings have been saved"
-msgstr ""
