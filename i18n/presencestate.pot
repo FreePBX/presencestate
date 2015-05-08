@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-27 11:33-0400\n"
+"POT-Creation-Date: 2015-05-08 19:02-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,30 +17,33 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ucp/assets/js/global.js:82
+#: views/grid.php:6
+msgid "Actions"
+msgstr ""
+
+#: ucp/assets/js/global.js:81
 msgid "Actions List"
 msgstr ""
 
-#: presencestate.i18n.php:6
-#: presencestate.i18n.php:12
-msgid "Admin"
+#: views/bootnav.php:2
+msgid "Add State"
 msgstr ""
 
 #: functions.inc.php:7
-#: ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: ucp/Presencestate.class.php:118
+#: ucp/Presencestate.class.php:211
 msgid "Available"
 msgstr ""
 
 #: functions.inc.php:9
-#: ucp/Presencestate.class.php:122
-#: ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:121
+#: ucp/Presencestate.class.php:214
 msgid "Away"
 msgstr ""
 
 #: functions.inc.php:8
-#: ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: ucp/Presencestate.class.php:119
+#: ucp/Presencestate.class.php:212
 msgid "Chat"
 msgstr ""
 
@@ -52,8 +55,7 @@ msgstr ""
 msgid "Define Actions on A Status Change"
 msgstr ""
 
-#: page.presencestate.php:15
-#: page.presencestate.php:82
+#: Presencestate.class.php:183
 msgid "Delete"
 msgstr ""
 
@@ -62,44 +64,52 @@ msgstr ""
 msgid "Do Not Change"
 msgstr ""
 
-#: ucp/Presencestate.class.php:92
-#: ucp/Presencestate.class.php:123
-#: ucp/Presencestate.class.php:216
+#: ucp/Presencestate.class.php:91
+#: ucp/Presencestate.class.php:122
+#: ucp/Presencestate.class.php:215
 msgid "Do Not Disturb"
 msgstr ""
 
-#: ucp/Presencestate.class.php:91
+#: ucp/Presencestate.class.php:90
 msgid "Do Nothing"
 msgstr ""
 
-#: Presencestate.class.php:50
+#: views/ucp_config.php:7
 msgid "Enable Presence"
 msgstr ""
 
 #: functions.inc.php:11
-#: ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: ucp/Presencestate.class.php:120
+#: ucp/Presencestate.class.php:213
 msgid "Extended Away"
 msgstr ""
 
-#: ucp/Presencestate.class.php:93
+#: ucp/Presencestate.class.php:92
 msgid "Findme/Follow Me"
 msgstr ""
 
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
+#: views/ucp_config.php:18
+msgid "Inherit"
 msgstr ""
 
-#: page.presencestate.php:74
+#: Presencestate.class.php:169
+msgid "Invalid Request"
+msgstr ""
+
+#: views/bootnav.php:1
+msgid "List States"
+msgstr ""
+
+#: views/grid.php:5
 msgid "Message"
 msgstr ""
 
-#: page.presencestate.php:33
-msgid "New Presence State"
+#: views/ucp_config.php:15
+msgid "No"
 msgstr ""
 
-#: ucp/Presencestate.class.php:125
-#: ucp/Presencestate.class.php:218
+#: ucp/Presencestate.class.php:124
+#: ucp/Presencestate.class.php:217
 msgid "Offline"
 msgstr ""
 
@@ -111,12 +121,19 @@ msgstr ""
 msgid "On UCP Login Set Status to"
 msgstr ""
 
-#: ucp/Presencestate.class.php:249
+#: views/form.php:49
+msgid "Optional Message"
+msgstr ""
+
+#: views/form.php:61
+msgid "Optional message, example: Lunch"
+msgstr ""
+
+#: ucp/Presencestate.class.php:248
 msgid "Presence"
 msgstr ""
 
-#: presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:114
 msgid "Presence State"
 msgstr ""
 
@@ -124,35 +141,47 @@ msgstr ""
 msgid "Presence State Settings"
 msgstr ""
 
-#: page.presencestate.php:63
-msgid "Presence Status"
+#: page.presencestate.php:6
+msgid "Presence States"
+msgstr ""
+
+#: Presencestate.class.php:188
+msgid "Reset"
+msgstr ""
+
+#: views/form.php:37
+msgid "State type"
 msgstr ""
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
 msgstr ""
 
-#: page.presencestate.php:80
+#: Presencestate.class.php:193
 msgid "Submit"
 msgstr ""
 
-#: page.presencestate.php:71
+#: views/form.php:23
+#: views/grid.php:4
 msgid "Type"
 msgstr ""
 
 #: functions.inc.php:12
-#: ucp/Presencestate.class.php:124
-#: ucp/Presencestate.class.php:217
+#: ucp/Presencestate.class.php:123
+#: ucp/Presencestate.class.php:216
 msgid "Unavailable"
 msgstr ""
 
-#: Presencestate.class.php:50
+#: views/ucp_config.php:28
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
 msgstr ""
 
-#: ucp/assets/js/global.js:41
-#: ucp/assets/js/global.js:110
+#: views/ucp_config.php:13
+msgid "Yes"
+msgstr ""
+
+#: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
 msgstr ""
