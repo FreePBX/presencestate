@@ -9,10 +9,14 @@
 					</div>
 					<div class="col-md-9">
 						<span class="radioset">
-							<input type="radio" name="presencestate_enable" id="presencestate_enable_yes" value="yes" <?php echo ($penabled) ? 'checked' : ''?>>
-							<label for="presencestate_enable_yes">Yes</label>
-							<input type="radio" name="presencestate_enable" id="presencestate_enable_no" value="no" <?php echo !($penabled) ? 'checked' : ''?>>
-							<label for="presencestate_enable_no">No</label>
+							<input type="radio" name="presencestate_enable" id="presencestate_enable_yes" value="yes" <?php echo ($enabled) ? 'checked' : ''?>>
+							<label for="presencestate_enable_yes"><?php echo _('Yes')?></label>
+							<input type="radio" name="presencestate_enable" id="presencestate_enable_no" value="no" <?php echo (!is_null($enabled) && !$enabled) ? 'checked' : ''?>>
+							<label for="presencestate_enable_no"><?php echo _('No')?></label>
+							<?php if($mode == "user") {?>
+								<input type="radio" id="presencestate_enable_inherit" name="presencestate_enable" value='inherit' <?php echo is_null($enabled) ? 'checked' : ''?>>
+								<label for="presencestate_enable_inherit"><?php echo _('Inherit')?></label>
+							<?php } ?>
 						</span>
 					</div>
 				</div>

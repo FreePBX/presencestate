@@ -19,8 +19,7 @@ class Presencestate extends Modules{
 		$this->types = $this->UCP->FreePBX->Presencestate->getAllTypes();
 
 		$user = $this->UCP->User->getUser();
-		$saved = $this->UCP->getSetting($user['username'],$this->module,'saved');
-		$this->enabled = ($saved) ? $this->UCP->getSetting($user['username'],$this->module,'enabled') : true;
+		$this->enabled = $this->UCP->getCombinedSettingByID($user['id'],$this->module,'enabled');
 
 		$this->UCP->Modgettext->push_textdomain("presencestate");
 		foreach($this->states as &$state) {

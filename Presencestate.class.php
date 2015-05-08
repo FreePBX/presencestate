@@ -54,14 +54,10 @@ class Presencestate implements BMO {
 	}
 
 	public function ucpUpdateGroup($id,$display,$data) {
-		if(isset($_POST['presencestate_enable'])) {
-			if($_POST['presencestate_enable'] == 'yes') {
-				$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',true);
-			} else {
-				$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',false);
-			}
-		} else {
+		if(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'yes') {
 			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',true);
+		} else {
+			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',null);
 		}
 	}
 
@@ -92,30 +88,27 @@ class Presencestate implements BMO {
 	* @param {array} $data    Array of data to be able to use
 	*/
 	public function ucpUpdateUser($id, $display, $ucpStatus, $data) {
-		if(isset($_POST['presencestate_enable'])) {
-			if($_POST['presencestate_enable'] == 'yes') {
-				$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',true);
-			} else {
-				$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',false);
-			}
-		} else {
+		if(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'yes') {
 			$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',true);
+		} elseif(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'no') {
+			$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',false);
+		} elseif(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'inherit') {
+			$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',null);
 		}
 	}
 
 	public function ucpConfigPage($mode, $user, $action) {
 		if($mode == 'group') {
 			$enabled = $this->FreePBX->Ucp->getSettingByGID($user['id'],'Presencestate','enabled');
-			$enabled = is_null($enabled) ? true : $enabled;
+			$enabled = !($enabled) ? false : true;
 		} else {
 			$enabled = $this->FreePBX->Ucp->getSettingByID($user['id'],'Presencestate','enabled');
-			$enabled = is_null($enabled) ? true : $enabled;
 		}
 		$html = array();
 		$html[0] = array(
 			"title" => _("Presence State"),
 			"rawname" => "presencestate",
-			"content" => load_view(dirname(__FILE__)."/views/ucp_config.php",array("penabled" => $enabled))
+			"content" => load_view(dirname(__FILE__)."/views/ucp_config.php",array("mode" => $mode, "enabled" => $enabled))
 		);
 		return $html;
 	}
