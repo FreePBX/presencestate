@@ -57,7 +57,7 @@ class Presencestate implements BMO {
 		if(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'yes') {
 			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',true);
 		} else {
-			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',null);
+			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',false);
 		}
 	}
 
@@ -98,12 +98,17 @@ class Presencestate implements BMO {
 	}
 
 	public function ucpConfigPage($mode, $user, $action) {
-		if($mode == 'group') {
-			$enabled = $this->FreePBX->Ucp->getSettingByGID($user['id'],'Presencestate','enabled');
-			$enabled = !($enabled) ? false : true;
+		if(empty($user)) {
+			$enabled = ($mode == 'group') ? true : null;
 		} else {
-			$enabled = $this->FreePBX->Ucp->getSettingByID($user['id'],'Presencestate','enabled');
+			if($mode == 'group') {
+				$enabled = $this->FreePBX->Ucp->getSettingByGID($user['id'],'Presencestate','enabled');
+				$enabled = !($enabled) ? false : true;
+			} else {
+				$enabled = $this->FreePBX->Ucp->getSettingByID($user['id'],'Presencestate','enabled');
+			}
 		}
+
 		$html = array();
 		$html[0] = array(
 			"title" => _("Presence State"),
