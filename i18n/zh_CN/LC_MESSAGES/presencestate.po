@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-08 19:02-0400\n"
+"POT-Creation-Date: 2015-05-21 18:28-0400\n"
 "PO-Revision-Date: 2015-02-20 19:51-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -115,11 +115,11 @@ msgstr ""
 msgid "On UCP Login Set Status to"
 msgstr ""
 
-#: views/form.php:49
+#: views/form.php:50
 msgid "Optional Message"
 msgstr ""
 
-#: views/form.php:61
+#: views/form.php:62
 msgid "Optional message, example: Lunch"
 msgstr ""
 
@@ -143,7 +143,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/form.php:37
+#: views/form.php:38
 msgid "State type"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Submit"
 msgstr "提交"
 
-#: views/form.php:23 views/grid.php:4
+#: views/form.php:24 views/grid.php:4
 msgid "Type"
 msgstr "类型"
 

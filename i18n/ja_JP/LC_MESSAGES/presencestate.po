@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-08 19:02-0400\n"
+"POT-Creation-Date: 2015-05-21 18:28-0400\n"
 "PO-Revision-Date: 2015-02-21 11:01+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -129,11 +129,11 @@ msgstr "ブラウザ終了時、もしくはUCPログアウト時にステータ
 msgid "On UCP Login Set Status to"
 msgstr "UCPログイン時にステータスを変更："
 
-#: views/form.php:49
+#: views/form.php:50
 msgid "Optional Message"
 msgstr ""
 
-#: views/form.php:61
+#: views/form.php:62
 msgid "Optional message, example: Lunch"
 msgstr ""
 
@@ -157,7 +157,7 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: views/form.php:37
+#: views/form.php:38
 msgid "State type"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr "ステータスは設定されていません"
 msgid "Submit"
 msgstr "送信"
 
-#: views/form.php:23 views/grid.php:4
+#: views/form.php:24 views/grid.php:4
 msgid "Type"
 msgstr "タイプ"
 
