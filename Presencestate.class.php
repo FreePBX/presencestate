@@ -13,11 +13,11 @@ class Presencestate implements BMO {
 	public function doConfigPageInit($page) {
 		if($page == 'presencestate'){
 			$vars = array(
-				'action' => $_REQUEST['action']?$_REQUEST['action']:'',
+				'action' => !empty($_REQUEST['action'])?$_REQUEST['action']:'',
 				'submit' => '',
-				'id' => $_REQUEST['id']?$_REQUEST['id']:'',
-				'type' => $_REQUEST['type']?$_REQUEST['type']:'',
-				'message' => $_REQUEST['message']?$_REQUEST['message']:NULL
+				'id' => !empty($_REQUEST['id'])?$_REQUEST['id']:'',
+				'type' => !empty($_REQUEST['type'])?$_REQUEST['type']:'',
+				'message' => !empty($_REQUEST['message'])?$_REQUEST['message']:NULL
 			);
 			switch ($vars['action']) {
 				case 'delete':
@@ -199,7 +199,7 @@ class Presencestate implements BMO {
 				}
 				//If we are not in the form view lets 86 the buttons
 				if (empty($request['view'])){
-					unset($buttons);
+					$buttons = array();
 				}
 			break;
 		}

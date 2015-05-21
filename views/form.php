@@ -1,18 +1,19 @@
 <?php
 extract($request);
-if($id != ''){
+if(!empty($id)){
 	$ps = FreePBX::Presencestate();
 	$thisPS = $ps->presencestateItemGet($id);
 }
+$typeoptions = "";
 foreach(presencestate_types_get() as $v => $k){
-	$selected = ($v == $thisPS->type)?'SELECTED':''; 
+	$selected = (!empty($thisPS->type) && ($v == $thisPS->type))?'SELECTED':'';
 	$typeoptions .= '<option value="'.$v.'" '.$selected.'>'.$k.'</option>';
 }
 
 ?>
-<form name='presence' id='presence' class="fpbx-submit" method="POST" data-fpbx-delete='?display=presencestate&action=delete&id=<?php echo $id?>'>
-	<input type="hidden" name="action" value="save"> 
-	<input type="hidden" name="id" value="<?php echo $id?>"> 
+<form name='presence' id='presence' class="fpbx-submit" method="POST" action="?display=presencestate" <?php if(!empty($id)) {?>data-fpbx-delete='?display=presencestate&amp;action=delete&amp;id=<?php echo $id?>'<?php } ?>>
+	<input type="hidden" name="action" value="save">
+	<?php if(!empty($id)) {?><input type="hidden" name="id" value="<?php echo $id?>"><?php }?>
 	<!--Type-->
 	<div class="element-container">
 		<div class="row">
@@ -50,7 +51,7 @@ foreach(presencestate_types_get() as $v => $k){
 							<i class="fa fa-question-circle fpbx-help-icon" data-for="message"></i>
 						</div>
 						<div class="col-md-9">
-							<input type="text" class="form-control" id="message" name="message" value="<?php echo $thisPS->message?>">
+							<input type="text" class="form-control" id="message" name="message" value="<?php echo !empty($thisPS->message) ? $thisPS->message : ""?>">
 						</div>
 					</div>
 				</div>

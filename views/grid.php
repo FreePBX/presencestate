@@ -1,4 +1,4 @@
-<table id="mygrid" data-url="ajax.php?module=presencestate&command=getJSON&jdata=grid" data-cache="false" data-height="299" data-toggle="table" class="table table-striped">
+<table id="mygrid" data-url="ajax.php?module=presencestate&amp;command=getJSON&amp;jdata=grid" data-cache="false" data-toggle="table"  data-maintain-selected="true" data-show-columns="true" data-show-toggle="true" data-pagination="true" data-search="true"  class="table table-striped">
     <thead>
             <tr>
             <th data-field="type"><?php echo _("Type")?></th>

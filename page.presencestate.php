@@ -1,4 +1,4 @@
-<?php		
+<?php
 //	License for all code of this FreePBX module can be found in the license file inside the module directory
 //	Copyright 2015 Sangoma Technologies.
 //
@@ -6,6 +6,7 @@ if (!defined('FREEPBX_IS_AUTH')) { die('No direct script access allowed'); }
 $heading = _("Presence States");
 
 $request = $_REQUEST;
+$request['view'] = !empty($request['view']) ? $request['view'] : "";
 switch ($request['view']) {
 	case 'form':
 		$content = load_view(__DIR__.'/views/form.php', array('request' => $request));
@@ -22,7 +23,7 @@ switch ($request['view']) {
 		<div class="row">
 			<div class="col-sm-9">
 				<div class="fpbx-container">
-					<div class="display full-border">
+					<div class="display <?php echo (empty($request['view'])) ? "no" : "full"?>-border">
 						<?php echo $content ?>
 					</div>
 				</div>

@@ -89,7 +89,7 @@ function presencestate_item_set($vars) {
 	}
 
 	if (empty($vars['id'])) {
-		$vars['id'] = $amp_conf["AMPDBENGINE"] == "sqlite3" ? sqlite_last_insert_rowid($db->connection) : mysql_insert_id($db->connection);
+		$vars['id'] = $db->insert_id();
 	}
 
 	return $vars['id'];
