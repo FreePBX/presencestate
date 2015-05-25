@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-04-27 11:33-0400\n"
-"PO-Revision-Date: 2015-04-27 23:24+0200\n"
+"PO-Revision-Date: 2015-05-25 01:21+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/es_ES/>\n"
@@ -54,7 +54,7 @@ msgstr "Definir acciones en un cambio de estado"
 
 #: page.presencestate.php:15 page.presencestate.php:82
 msgid "Delete"
-msgstr "Eliminar"
+msgstr "Borrar"
 
 #: ucp/views/settings.php:9 ucp/views/settings.php:18
 msgid "Do Not Change"
