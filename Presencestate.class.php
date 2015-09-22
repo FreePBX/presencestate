@@ -54,10 +54,12 @@ class Presencestate implements BMO {
 	}
 
 	public function ucpUpdateGroup($id,$display,$data) {
-		if(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'yes') {
-			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',true);
-		} else {
-			$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',false);
+		if($display == 'userman' && isset($_POST['type']) && $_POST['type'] == 'group') {
+			if(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'yes') {
+				$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',true);
+			} else {
+				$this->FreePBX->Ucp->setSettingByGID($id,'Presencestate','enabled',false);
+			}
 		}
 	}
 
@@ -88,12 +90,14 @@ class Presencestate implements BMO {
 	* @param {array} $data    Array of data to be able to use
 	*/
 	public function ucpUpdateUser($id, $display, $ucpStatus, $data) {
-		if(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'yes') {
-			$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',true);
-		} elseif(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'no') {
-			$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',false);
-		} elseif(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'inherit') {
-			$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',null);
+		if($display == 'userman' && isset($_POST['type']) && $_POST['type'] == 'user') {
+			if(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'yes') {
+				$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',true);
+			} elseif(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'no') {
+				$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',false);
+			} elseif(isset($_POST['presencestate_enable']) && $_POST['presencestate_enable'] == 'inherit') {
+				$this->FreePBX->Ucp->setSettingByID($id,'Presencestate','enabled',null);
+			}
 		}
 	}
 
