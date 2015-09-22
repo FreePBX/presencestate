@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-21 18:28-0400\n"
+"POT-Creation-Date: 2015-09-22 13:14-0700\n"
 "PO-Revision-Date: 2015-04-27 22:42+0200\n"
 "Last-Translator: philippebolduc <philippe@florenceinc.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
@@ -56,7 +56,7 @@ msgstr "NPD"
 msgid "Define Actions on A Status Change"
 msgstr "Définir les actions sur un changement d'état"
 
-#: Presencestate.class.php:183
+#: Presencestate.class.php:187
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -90,7 +90,7 @@ msgstr "Trouvez-moi/Suivez-moi"
 msgid "Inherit"
 msgstr ""
 
-#: Presencestate.class.php:169
+#: Presencestate.class.php:173
 msgid "Invalid Request"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Presence"
 msgstr "Présence"
 
-#: Presencestate.class.php:114
+#: Presencestate.class.php:118
 msgid "Presence State"
 msgstr "État de la présence"
 
@@ -142,7 +142,7 @@ msgstr "Paramètres état de la présence"
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:188
+#: Presencestate.class.php:192
 msgid "Reset"
 msgstr ""
 
@@ -154,7 +154,7 @@ msgstr ""
 msgid "Status Not Set"
 msgstr "Statut non défini"
 
-#: Presencestate.class.php:193
+#: Presencestate.class.php:197
 msgid "Submit"
 msgstr "Soumettre"
 
