@@ -141,7 +141,7 @@ msgstr ""
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr ""
+msgstr "重新设置"
 
 #: views/form.php:38
 msgid "State type"
