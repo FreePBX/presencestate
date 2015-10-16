@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 13:14-0700\n"
-"PO-Revision-Date: 2015-10-15 09:33+0200\n"
+"PO-Revision-Date: 2015-10-16 08:51+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/zh_CN/>\n"
@@ -88,11 +88,11 @@ msgstr "分机随行"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr ""
+msgstr "继承"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
-msgstr ""
+msgstr "无效请求"
 
 #: views/bootnav.php:1
 msgid "List States"
