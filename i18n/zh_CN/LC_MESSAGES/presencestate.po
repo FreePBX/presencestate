@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 13:14-0700\n"
-"PO-Revision-Date: 2015-10-16 08:51+0200\n"
+"PO-Revision-Date: 2015-10-19 14:40+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/zh_CN/>\n"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr "重新设置"
+msgstr "重设"
 
 #: views/form.php:38
 msgid "State type"
