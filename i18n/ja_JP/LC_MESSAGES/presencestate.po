@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 13:14-0700\n"
-"PO-Revision-Date: 2015-10-27 08:43+0200\n"
+"PO-Revision-Date: 2015-10-27 11:13+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/ja_JP/>\n"
@@ -115,7 +115,7 @@ msgstr "メッセージ"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
@@ -186,7 +186,7 @@ msgstr "このユーザーがUCPで自分のステータスを変更できるか
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
