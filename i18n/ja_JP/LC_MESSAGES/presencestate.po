@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 13:14-0700\n"
-"PO-Revision-Date: 2015-10-27 11:13+0200\n"
+"PO-Revision-Date: 2015-10-30 06:23+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/ja_JP/>\n"
@@ -99,7 +99,7 @@ msgstr "ファインドミー／フォローミー"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr ""
+msgstr "引き継ぐ"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
