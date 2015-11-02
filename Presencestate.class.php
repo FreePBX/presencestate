@@ -209,4 +209,9 @@ class Presencestate implements BMO {
 		}
 		return $buttons;
 	}
+	public function getRightNav($request) {
+	  if(isset($request['view']) && $request['view'] == 'form'){
+	    return load_view(__DIR__."/views/bootnav.php",array());
+	  }
+	}
 }
