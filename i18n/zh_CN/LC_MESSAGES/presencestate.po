@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 13:14-0700\n"
-"PO-Revision-Date: 2015-11-09 14:27+0200\n"
+"PO-Revision-Date: 2015-11-12 12:42+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/zh_CN/>\n"
@@ -104,7 +104,7 @@ msgstr "消息"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "无"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr "重设"
+msgstr "重新设置"
 
 #: views/form.php:38
 msgid "State type"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
