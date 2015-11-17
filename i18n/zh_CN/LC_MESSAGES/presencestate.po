@@ -182,7 +182,7 @@ msgid "Your settings have been saved"
 msgstr ""
 
 #~ msgid "Admin"
-#~ msgstr "管理员"
+#~ msgstr "管理"
 
 #~ msgid "Manage list of presence states."
 #~ msgstr "管理在线状态列表"
