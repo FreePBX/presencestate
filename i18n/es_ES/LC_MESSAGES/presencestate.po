@@ -104,7 +104,7 @@ msgstr "Mensaje"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
