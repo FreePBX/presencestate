@@ -23,7 +23,7 @@ msgstr ""
 
 #: views/grid.php:6
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: ucp/assets/js/global.js:81
 msgid "Actions List"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr ""
+msgstr "Restaura"
 
 #: views/form.php:38
 msgid "State type"
