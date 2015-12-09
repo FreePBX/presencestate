@@ -184,7 +184,7 @@ msgid "Your settings have been saved"
 msgstr "Su Configuración ha sido Salvada"
 
 #~ msgid "Admin"
-#~ msgstr "Administrador"
+#~ msgstr "Admin"
 
 #~ msgid "Manage list of presence states."
 #~ msgstr "manejar listas de estados de presencia."
