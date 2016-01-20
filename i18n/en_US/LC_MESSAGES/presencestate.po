@@ -21,16 +21,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 13:14-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-01-20 05:28+0200\n"
+"Last-Translator: Ernesto <ecasas@sangoma.com>\n"
+"Language-Team: English (United States) "
+"<http://weblate.freepbx.org/projects/freepbx/presencestate/en_US/>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2-dev\n"
 
 #: views/grid.php:6
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: ucp/assets/js/global.js:81
 msgid "Actions List"
@@ -111,7 +115,7 @@ msgstr ""
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
@@ -163,7 +167,7 @@ msgstr ""
 
 #: Presencestate.class.php:197
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: views/form.php:24 views/grid.php:4
 msgid "Type"
@@ -182,7 +186,7 @@ msgstr ""
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
