@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-22 13:14-0700\n"
-"PO-Revision-Date: 2016-01-22 06:22+0200\n"
+"PO-Revision-Date: 2016-01-22 08:22+0200\n"
 "Last-Translator: Nicolas <forums@riendeau.org>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/fr_FR/>\n"
@@ -31,7 +31,7 @@ msgstr "Liste des actions"
 
 #: views/bootnav.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Ajouter un état"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
@@ -96,7 +96,7 @@ msgstr "Requête invalide"
 
 #: views/bootnav.php:1
 msgid "List States"
-msgstr ""
+msgstr "Liste des états"
 
 #: views/grid.php:5
 msgid "Message"
@@ -120,11 +120,11 @@ msgstr "Sur connexion à UCP mettre l'état à"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Message optionnel"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Message optionnel, exemple : Repas"
 
 #: ucp/Presencestate.class.php:248
 msgid "Presence"
@@ -140,7 +140,7 @@ msgstr "Paramètres état de la présence"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "États de présence"
 
 #: Presencestate.class.php:192
 msgid "Reset"
@@ -148,7 +148,7 @@ msgstr "Remise à 0"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "Type d'état"
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
