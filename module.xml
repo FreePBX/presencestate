@@ -2,7 +2,7 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>13.0.5</version>
+	<version>13.0.6</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -16,6 +16,7 @@
 		<version>13.0.6</version>
 	</depends>
 	<changelog>
+		*13.0.6* Remove en_US Translations
 		*13.0.5* Update menu
 		*13.0.4* Fix permission management in User Manager
 		*13.0.3* Visual tweaks and fixes
@@ -43,13 +44,13 @@
 	</changelog>
 	<hooks>
 		<ucp class="Ucp">
-			<method class="Presencestate" callingMethod="constructModuleConfigPages">ucpConfigPage</method>
-			<method class="Presencestate" callingMethod="addUser">ucpAddUser</method>
-			<method class="Presencestate" callingMethod="updateUser">ucpUpdateUser</method>
-			<method class="Presencestate" callingMethod="delUser">ucpDelUser</method>
-			<method class="Presencestate" callingMethod="addGroup">ucpAddGroup</method>
-			<method class="Presencestate" callingMethod="updateGroup">ucpUpdateGroup</method>
-			<method class="Presencestate" callingMethod="delGroup">ucpDelGroup</method>
+			<method callingMethod="constructModuleConfigPages" class="Presencestate">ucpConfigPage</method>
+			<method callingMethod="addUser" class="Presencestate">ucpAddUser</method>
+			<method callingMethod="updateUser" class="Presencestate">ucpUpdateUser</method>
+			<method callingMethod="delUser" class="Presencestate">ucpDelUser</method>
+			<method callingMethod="addGroup" class="Presencestate">ucpAddGroup</method>
+			<method callingMethod="updateGroup" class="Presencestate">ucpUpdateGroup</method>
+			<method callingMethod="delGroup" class="Presencestate">ucpDelGroup</method>
 		</ucp>
 	</hooks>
 	<supported>
