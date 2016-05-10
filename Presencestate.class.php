@@ -1,6 +1,5 @@
 <?php
 // vim: set ai ts=4 sw=4 ft=php:
-include_once(__DIR__.'/functions.inc.php');
 class Presencestate implements BMO {
 	public function __construct($freepbx = null) {
 		if ($freepbx == null)
@@ -8,6 +7,7 @@ class Presencestate implements BMO {
 
 		$this->FreePBX = $freepbx;
 		$this->db = $freepbx->Database;
+		$this->FreePBX->Modules->loadFunctionsInc("presencestate");
 	}
 
 	public function doConfigPageInit($page) {
