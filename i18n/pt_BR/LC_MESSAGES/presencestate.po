@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-22 13:14-0700\n"
+"POT-Creation-Date: 2016-05-10 13:49-0700\n"
 "PO-Revision-Date: 2015-04-28 05:51+0200\n"
 "Last-Translator: Renato <fiuza@tecnologia.inf.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -32,7 +32,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: views/grid.php:6
+#: views/grid.php:16
 msgid "Actions"
 msgstr ""
 
@@ -40,9 +40,13 @@ msgstr ""
 msgid "Actions List"
 msgstr "Lisa de Ações"
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr ""
+
+#: presencestate.i18n.php:6 presencestate.i18n.php:12
+msgid "Admin"
+msgstr "Admin"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
@@ -105,11 +109,15 @@ msgstr ""
 msgid "Invalid Request"
 msgstr ""
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List States"
 msgstr ""
 
-#: views/grid.php:5
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "Gerencia lista dos estados de presença."
+
+#: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
 msgstr "Mensagem"
 
@@ -141,7 +149,8 @@ msgstr ""
 msgid "Presence"
 msgstr "Presença"
 
-#: Presencestate.class.php:118
+#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Estado de Presença"
 
@@ -169,7 +178,7 @@ msgstr "Estado Não Configurado"
 msgid "Submit"
 msgstr "Enviar"
 
-#: views/form.php:24 views/grid.php:4
+#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
 msgstr "Tipo"
 
@@ -192,12 +201,6 @@ msgstr ""
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
 msgstr "Suas configurações foram salvas"
-
-#~ msgid "Admin"
-#~ msgstr "Admin"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "Gerencia lista dos estados de presença."
 
 #~ msgid "New Presence State"
 #~ msgstr "Novo Estado de Presença"

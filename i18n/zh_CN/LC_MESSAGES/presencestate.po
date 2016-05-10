@@ -9,19 +9,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-22 13:14-0700\n"
+"POT-Creation-Date: 2016-05-10 13:49-0700\n"
 "PO-Revision-Date: 2015-11-23 13:55+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
-"Language-Team: Simplified Chinese "
-"<http://weblate.freepbx.org/projects/freepbx/presencestate/zh_CN/>\n"
-"Language: zh_CN\n"
+"Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
+"freepbx/presencestate/zh_CN/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: views/grid.php:6
+#: views/grid.php:16
 msgid "Actions"
 msgstr "操作"
 
@@ -29,9 +29,13 @@ msgstr "操作"
 msgid "Actions List"
 msgstr ""
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr ""
+
+#: presencestate.i18n.php:6 presencestate.i18n.php:12
+msgid "Admin"
+msgstr "管理"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
@@ -94,11 +98,15 @@ msgstr "继承"
 msgid "Invalid Request"
 msgstr "无效请求"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List States"
 msgstr ""
 
-#: views/grid.php:5
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "管理在线状态列表"
+
+#: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
 msgstr "消息"
 
@@ -130,7 +138,8 @@ msgstr ""
 msgid "Presence"
 msgstr ""
 
-#: Presencestate.class.php:118
+#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Presence 状态"
 
@@ -158,7 +167,7 @@ msgstr ""
 msgid "Submit"
 msgstr "提交"
 
-#: views/form.php:24 views/grid.php:4
+#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
 msgstr "类型"
 
@@ -180,12 +189,6 @@ msgstr "是"
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
 msgstr ""
-
-#~ msgid "Admin"
-#~ msgstr "管理"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "管理在线状态列表"
 
 #~ msgid "New Presence State"
 #~ msgstr "新在线状态״̬"

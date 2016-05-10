@@ -9,19 +9,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-22 13:14-0700\n"
+"POT-Creation-Date: 2016-05-10 13:49-0700\n"
 "PO-Revision-Date: 2016-01-14 23:00+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
-"Language-Team: Spanish "
-"<http://weblate.freepbx.org/projects/freepbx/presencestate/es_ES/>\n"
-"Language: es_ES\n"
+"Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
+"presencestate/es_ES/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: views/grid.php:6
+#: views/grid.php:16
 msgid "Actions"
 msgstr "Acciones"
 
@@ -29,9 +29,13 @@ msgstr "Acciones"
 msgid "Actions List"
 msgstr "Lista de Acciones"
 
-#: views/bootnav.php:2
+#: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr ""
+
+#: presencestate.i18n.php:6 presencestate.i18n.php:12
+msgid "Admin"
+msgstr "Admin"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
@@ -94,11 +98,15 @@ msgstr "Hereda"
 msgid "Invalid Request"
 msgstr "Solicitud no válida"
 
-#: views/bootnav.php:1
+#: views/bootnav.php:3
 msgid "List States"
 msgstr ""
 
-#: views/grid.php:5
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "manejar listas de estados de presencia."
+
+#: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
 msgstr "Mensaje"
 
@@ -130,7 +138,8 @@ msgstr ""
 msgid "Presence"
 msgstr "Presencia"
 
-#: Presencestate.class.php:118
+#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Estado de Presencia"
 
@@ -158,7 +167,7 @@ msgstr "Estado no establecido"
 msgid "Submit"
 msgstr "Enviar"
 
-#: views/form.php:24 views/grid.php:4
+#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
 msgstr "Tipo"
 
@@ -182,12 +191,6 @@ msgstr "Si"
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
 msgstr "Su Configuración ha sido Salvada"
-
-#~ msgid "Admin"
-#~ msgstr "Admin"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "manejar listas de estados de presencia."
 
 #~ msgid "New Presence State"
 #~ msgstr "Nuevo Estado de Presencia"
