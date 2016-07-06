@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-06-25 12:41+0200\n"
-"Last-Translator: psdk <hyavari26@gmail.com>\n"
+"PO-Revision-Date: 2016-07-06 05:16+0200\n"
+"Last-Translator: Media <mousavi.media@gmail.com>\n"
 "Language-Team: Persian (Iran) "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/fa_IR/>\n"
 "Language: fa_IR\n"
@@ -62,7 +62,7 @@ msgstr "تعریف رفتار بر اساس تغییر در وضعیت"
 
 #: Presencestate.class.php:187
 msgid "Delete"
-msgstr "حذف"
+msgstr "حذف کردن"
 
 #: ucp/views/settings.php:9 ucp/views/settings.php:18
 msgid "Do Not Change"
@@ -92,7 +92,7 @@ msgstr "مرا پیدا کن/مرا دنبال کن"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "ارث بری"
+msgstr "موروثی"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
@@ -166,7 +166,7 @@ msgstr "وضعیت تنظیم نشده است"
 
 #: Presencestate.class.php:197
 msgid "Submit"
-msgstr "ثبت"
+msgstr "ارسال"
 
 #: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
