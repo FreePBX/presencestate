@@ -228,11 +228,12 @@ class Presencestate extends Modules{
 		}
 
 		$widgets = array(
-			"category" => "presencestate",
+			"rawname" => "presencestate",
 			"display" => _("Presence"),
 			"list" => array(
-				"widget" => "presencestate",
-				"display" => _("Presence"),
+				"presencestate" => array(
+					"display" => _("Presence"),
+				)
 			)
 		);
 
@@ -255,7 +256,7 @@ class Presencestate extends Modules{
 
 	public function getWidgetSettingsDisplay() {
 		if(!$this->enabled) {
-			return '';
+			return array();
 		}
 		$displayvars = array();
 		// fm | dnd | null
@@ -278,9 +279,10 @@ class Presencestate extends Modules{
 		$displayvars['startsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
 		$displayvars['endsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
 
-		$display = array();
-		$display['title'] = _('Presence Settings');
-		$display['html'] = $this->load_view(__DIR__.'/views/settings.php',$displayvars);
+		$display = array(
+			'title' => _('Presence Settings'),
+			'html' => $this->load_view(__DIR__.'/views/settings.php',$displayvars)
+		);
 
 		return $display;
 	}
