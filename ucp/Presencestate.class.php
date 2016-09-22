@@ -205,7 +205,7 @@ class Presencestate extends Modules{
 	}
 
 	function getDisplay() {
-		$display = $this->getWidgetDisplay();
+		$display = $this->getWidgetDisplay('presencestate');
 
 		return $display['title'].$display['html'];
 	}
@@ -240,7 +240,7 @@ class Presencestate extends Modules{
 		return $widgets;
 	}
 
-	public function getWidgetDisplay() {
+	public function getWidgetDisplay($id) {
 		$display = array();
 
 		$display['title'] = _('Presence');
@@ -254,7 +254,7 @@ class Presencestate extends Modules{
 		return $display;
 	}
 
-	public function getWidgetSettingsDisplay() {
+	public function getWidgetSettingsDisplay($id) {
 		if(!$this->enabled) {
 			return array();
 		}
