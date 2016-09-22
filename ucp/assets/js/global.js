@@ -28,12 +28,10 @@ var PresencestateC = UCPMC.extend({
 			if ($("#nav-btn-presencestate .p-msg span").text() != this.menu.representations[type].name + " " + message) {
 				$("#nav-btn-presencestate .icon i").css("color", this.menu.representations[type].color);
 				$("#nav-btn-presencestate .p-msg span").text(this.menu.representations[type].name + " " + message);
-				$("#nav-btn-presencestate .p-msg").textfill();
 				$(window).trigger("presenceStateChange");
 			}
 		} else {
 			$("#nav-btn-presencestate .p-msg span").text(_("Status Not Set","presencestate"));
-			$("#nav-btn-presencestate .p-msg").textfill();
 		}
 	},
 	buildMenu: function(loggedIn) {
@@ -77,7 +75,7 @@ var PresencestateC = UCPMC.extend({
 					UCP.calibrateMenus();
 				});
 				$("#presencestate-menu .change-status").hide();
-				$("#nav-btn-presencestate .icon .fa").css("color", "#7b7b7b").css("opacity", "1");
+				$("#nav-btn-presencestate .icon i").css("color", "#7b7b7b").css("opacity", "1");
 				$("#nav-btn-presencestate .p-msg").text(_("Actions List"));
 			}
 		}

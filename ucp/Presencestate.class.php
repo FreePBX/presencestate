@@ -69,48 +69,17 @@ class Presencestate extends Modules{
 
 	}
 
-	function getDisplay() {
-		if(!$this->enabled) {
-			return '';
-		}
-		$html = '';
-		$displayvars = array();
-		// fm | dnd | null
-		$displayvars['states'] = $this->UCP->FreePBX->Presencestate->presencestatePrefsGet($this->device);
-		foreach($displayvars['states'] as $id => &$pref) {
-			$tmp = $pref;
-			$pref = $this->states[$id];
-			$pref['pref'] = $tmp;
-			$pref['niceMessage'] = !empty($pref['message']) ? ' - '.$pref['message'] : '';
-		}
-
-		usort($displayvars['states'], array($this,'sort'));
-
-		$displayvars['actions'] = array(
-			"" => _("Do Nothing"),
-			"dnd" => _('Do Not Disturb'),
-			"fm" => _('Findme/Follow Me'),
-		);
-		$user = $this->UCP->User->getUser();
-		$displayvars['startsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
-		$displayvars['endsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
-
-		$html .= $this->load_view(__DIR__.'/views/settings.php',$displayvars);
-
-		return $html;
-	}
-
 	function poll() {
 		if(!empty($this->device) && $this->enabled) {
-			$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
-			$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
-			$niceState = (!empty($t['State']) && !empty($this->types[$t['State']])) ? $this->types[$t['State']] : '';
+			$niceState = '';
 			$menu = array();
 			if(!empty($this->device)) {
 				$user = $this->UCP->User->getUser();
 
 				$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
 				$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+				$niceState = (!empty($t['State']) && !empty($this->types[$t['State']])) ? $this->types[$t['State']] : '';
+
 				$menu['status'] = true;
 				$menu['presence'] = $t;
 				$menu['presence']['niceState'] = $niceState;
@@ -204,10 +173,12 @@ class Presencestate extends Modules{
 
 					$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
 					$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+					$niceState = (!empty($t['State']) && !empty($this->types[$t['State']])) ? $this->types[$t['State']] : '';
+
 					$return['status'] = true;
 					$return['presence'] = $t;
-					$return['presence']['niceState'] = $this->types[$t['State']];
-					$menu['representations'] = array(
+					$return['presence']['niceState'] = $niceState;
+					$return['representations'] = array(
 						'available' => array('color' => 'green', 'name' => _('Available')),
 						'chat' => array('color' => 'green', 'name' => _('Chat')),
 						'xa' => array('color' => 'yellow', 'name' => _('Extended Away')),
@@ -233,36 +204,80 @@ class Presencestate extends Modules{
 		return $return;
 	}
 
-	public function getBadge() {
-		return false;
+	function getDisplay() {
+		$display = $this->getWidgetDisplay();
+
+		return $display['title'].$display['html'];
 	}
 
 	public function getMenuItems() {
-		if(!$this->enabled) {
-			return array();
-		}
-		$menu = array();
-		if(!empty($this->device)) {
-			$menu = array(
-				"rawname" => "presencestate",
-				"name" => _("Presence"),
-				"badge" => false
-			);
-		}
+		$menu = $this->getWidgetList();
+
 		return $menu;
 	}
 
-	public function getNavItems() {
-		$out = array();
-		$out[] = array(
+	public function getWidgetList() {
+		$widgetList = $this->getSimpleWidgetList();
+
+		return $widgetList;
+	}
+
+	public function getSimpleWidgetList() {
+		if(!$this->enabled || empty($this->device)) {
+			return array();
+		}
+
+		$widgets = array(
 			"rawname" => "presencestate",
-			"badge" => false,
-			"icon" => "fa-circle",
-			"extra" => '<div class="p-container"><div class="p-msg"><span></span></div></div>',
-			"menu" => array(
-				"html" => '<li class="statuses">' . $this->getStatusMenu() . '</li>'
-			)
+			"name" => _("Presence"),
 		);
-		return $out;
+
+		return $widgets;
+	}
+
+	public function getWidgetDisplay() {
+		$display = array();
+
+		$display['title'] = _('Presence');
+		$display['html'] = '<div id="nav-btn-presencestate" class="module-container " data-module="presencestate">
+				<div class="icon"><i class="fa fa-circle"></i></div>
+				<div class="p-container"><div class="p-msg"><span></span></div></div>
+			</div>';
+
+		$display['html'] .= '<ol id="presencestate-menu" data-module="presencestate"><li class="statuses">' . $this->getStatusMenu() . '</li></ol>';
+
+		return $display;
+	}
+
+	public function getWidgetSettingsDisplay() {
+		if(!$this->enabled) {
+			return '';
+		}
+		$displayvars = array();
+		// fm | dnd | null
+		$displayvars['states'] = $this->UCP->FreePBX->Presencestate->presencestatePrefsGet($this->device);
+		foreach($displayvars['states'] as $id => &$pref) {
+			$tmp = $pref;
+			$pref = $this->states[$id];
+			$pref['pref'] = $tmp;
+			$pref['niceMessage'] = !empty($pref['message']) ? ' - '.$pref['message'] : '';
+		}
+
+		usort($displayvars['states'], array($this,'sort'));
+
+		$displayvars['actions'] = array(
+			"" => _("Do Nothing"),
+			"dnd" => _('Do Not Disturb'),
+			"fm" => _('Findme/Follow Me'),
+		);
+		$user = $this->UCP->User->getUser();
+		$displayvars['startsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
+		$displayvars['endsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
+
+		$display = array();
+		$display['title'] = _('Presence Settings');
+		$display['html'] = $this->load_view(__DIR__.'/views/settings.php',$displayvars);
+
+		return $display;
 	}
 }
