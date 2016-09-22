@@ -228,8 +228,12 @@ class Presencestate extends Modules{
 		}
 
 		$widgets = array(
-			"rawname" => "presencestate",
-			"name" => _("Presence"),
+			"category" => "presencestate",
+			"display" => _("Presence"),
+			"list" => array(
+				"widget" => "presencestate",
+				"display" => _("Presence"),
+			)
 		);
 
 		return $widgets;
