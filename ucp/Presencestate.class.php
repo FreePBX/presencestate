@@ -227,12 +227,21 @@ class Presencestate extends Modules{
 			return array();
 		}
 
+		$user = $this->UCP->User->getUser();
+		if (!empty($user['displayname'])) {
+			$display = $user['displayname'];
+		} else if (!empty($user['fname']) || !empty($user['lname'])) {
+			$display = (!empty($user['fname']) ? $user['fname'] : '') . ' ' . (!empty($user['lname']) ? $user['lname'] : '');
+		} else {
+			$display = $user['username'];
+		}
+
 		$widgets = array(
 			"rawname" => "presencestate",
 			"display" => _("Presence"),
 			"list" => array(
 				"presencestate" => array(
-					"display" => _("Presence"),
+					"display" => $display,
 				)
 			)
 		);
