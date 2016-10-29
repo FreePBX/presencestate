@@ -65,14 +65,14 @@ var PresencestateC = UCPMC.extend({
 
 			if (!$("#nav-btn-presencestate").is(":visible")) {
 				$("#nav-btn-presencestate").fadeIn("slow", function() {
-					UCP.calibrateMenus();
+					//UCP.calibrateMenus();
 				});
 			}
 		} else {
 			//Presence is disabled for this user but we still need to have the drop down if the user has actions
 			if (!$("#nav-btn-presencestate").is(":visible") && $("#presence-menu2 .options .fa").length > 0) {
 				$("#nav-btn-presencestate").fadeIn("slow", function() {
-					UCP.calibrateMenus();
+					//UCP.calibrateMenus();
 				});
 				$("#presencestate-menu .change-status").hide();
 				$("#nav-btn-presencestate .icon i").css("color", "#7b7b7b").css("opacity", "1");
@@ -80,7 +80,7 @@ var PresencestateC = UCPMC.extend({
 			}
 		}
 		if(!this.calibrated) {
-			UCP.calibrateMenus();
+			//UCP.calibrateMenus();
 			this.calibrated = true;
 		}
 	},

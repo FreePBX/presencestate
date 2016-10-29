@@ -205,7 +205,7 @@ class Presencestate extends Modules{
 	}
 
 	function getDisplay() {
-		$display = $this->getWidgetDisplay('presencestate');
+		$display = $this->getWidgetDisplay();
 
 		return $display['title'].$display['html'];
 	}
@@ -227,21 +227,14 @@ class Presencestate extends Modules{
 			return array();
 		}
 
-		$user = $this->UCP->User->getUser();
-		if (!empty($user['displayname'])) {
-			$display = $user['displayname'];
-		} else if (!empty($user['fname']) || !empty($user['lname'])) {
-			$display = (!empty($user['fname']) ? $user['fname'] : '') . ' ' . (!empty($user['lname']) ? $user['lname'] : '');
-		} else {
-			$display = $user['username'];
-		}
-
 		$widgets = array(
 			"rawname" => "presencestate",
 			"display" => _("Presence"),
+			"icon" => "fa fa-user",
 			"list" => array(
 				"presencestate" => array(
-					"display" => $display,
+					"display" => _("Presence"),
+					"defaultsize" => array("height" => 1, "width" => 1)
 				)
 			)
 		);
@@ -265,7 +258,7 @@ class Presencestate extends Modules{
 
 	public function getWidgetSettingsDisplay($id) {
 		if(!$this->enabled) {
-			return array();
+			return '';
 		}
 		$displayvars = array();
 		// fm | dnd | null
@@ -288,10 +281,9 @@ class Presencestate extends Modules{
 		$displayvars['startsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
 		$displayvars['endsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
 
-		$display = array(
-			'title' => _('Presence Settings'),
-			'html' => $this->load_view(__DIR__.'/views/settings.php',$displayvars)
-		);
+		$display = array();
+		$display['title'] = _('Presence Settings');
+		$display['html'] = $this->load_view(__DIR__.'/views/settings.php',$displayvars);
 
 		return $display;
 	}
