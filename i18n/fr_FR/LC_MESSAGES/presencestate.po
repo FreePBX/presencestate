@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-11-20 00:49+0200\n"
+"PO-Revision-Date: 2016-11-22 22:20+0200\n"
 "Last-Translator: Pascal <pascal.noyel@ipexia.com>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/fr_FR/>\n"
@@ -153,7 +153,7 @@ msgstr "États de présence"
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr "Remise à Zero"
 
 #: views/form.php:38
 msgid "State type"
@@ -165,7 +165,7 @@ msgstr "Statut non défini"
 
 #: Presencestate.class.php:197
 msgid "Submit"
-msgstr "Soumettre"
+msgstr "Envoyer"
 
 #: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
