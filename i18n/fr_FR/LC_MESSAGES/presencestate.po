@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-11-25 03:41+0200\n"
+"PO-Revision-Date: 2016-11-25 04:11+0200\n"
 "Last-Translator: Pascal <pascal.noyel@ipexia.com>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/fr_FR/>\n"
@@ -92,7 +92,7 @@ msgstr "Trouvez-moi/Suivez-moi"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "Hérite"
+msgstr "Par défaut"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
@@ -153,7 +153,7 @@ msgstr "États de présence"
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr "Remise à Zero"
+msgstr "Remise à zéro"
 
 #: views/form.php:38
 msgid "State type"
