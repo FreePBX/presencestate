@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-12-03 08:42+0200\n"
+"PO-Revision-Date: 2016-12-05 21:26+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/pt_BR/>\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: presencestate.i18n.php:6 presencestate.i18n.php:12
 msgid "Admin"
-msgstr "Admin"
+msgstr "Administrador"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
