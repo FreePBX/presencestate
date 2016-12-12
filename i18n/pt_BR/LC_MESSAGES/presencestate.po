@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-12-09 21:47+0200\n"
+"PO-Revision-Date: 2016-12-11 22:49+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/pt_BR/>\n"
@@ -42,7 +42,7 @@ msgstr "Lisa de Ações"
 
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Adicionar Estado"
 
 #: presencestate.i18n.php:6 presencestate.i18n.php:12
 msgid "Admin"
@@ -107,11 +107,11 @@ msgstr "Herdar"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
-msgstr ""
+msgstr "Solicitação Inválida"
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
+msgstr "Listar Estados"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
@@ -139,11 +139,11 @@ msgstr "Ao Logar no PCU Mudar Estado para"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Mensagem Opcional"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Mensagem opcional, por exemplo: Almoço"
 
 #: ucp/Presencestate.class.php:248
 msgid "Presence"
@@ -160,7 +160,7 @@ msgstr "Configurar Estado de Presença"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "Estados de Presença"
 
 #: Presencestate.class.php:192
 msgid "Reset"
@@ -168,7 +168,7 @@ msgstr "Reiniciar"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "Tipo de Estado"
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
