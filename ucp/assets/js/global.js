@@ -18,7 +18,7 @@ var PresencestateC = UCPMC.extend({
 			if (selected !== null) {
 				id = $(selected).data('id');
 
-				self.saveState({ state: id });
+				self.saveState(id);
 			}
 		});
 	},
@@ -37,7 +37,7 @@ var PresencestateC = UCPMC.extend({
 			if (selected !== null) {
 				id = $(selected).data('id');
 
-				self.saveState({ state: id });
+				self.saveState(id);
 			}
 		});
 	},
@@ -48,13 +48,14 @@ var PresencestateC = UCPMC.extend({
 		$(".grid-stack-item[data-rawname='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
 		$(".widget-extra-menu[data-module='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
 	},
-	saveState: function(data, callback) {
+	saveState: function(id) {
 		var self = this;
 
+		data = { state: id };
 		data.module = "presencestate";
 		data.command = "set";
 
-		$.post(UCP.ajaxUrl, data, callback).always(function(data) {
+		$.post(UCP.ajaxUrl, data, null).always(function(data) {
 			self.menu = data.poller.menu;
 			self.statusUpdate(data.State, data.Message);
 		});
@@ -73,7 +74,10 @@ var PresencestateC = UCPMC.extend({
 			}
 		});
 
-		$.post( "?quietmode=1&module=presencestate&command=savesettings", data, function( data ) {
+		data.module = "presencestate";
+		data.command = "savesettings";
+
+		$.post(UCP.ajaxUrl, data, null).always(function(data) {
 			if (data.status) {
 				self.presenceSpecials.startSessionStatus = data.startsessionstatus;
 				self.presenceSpecials.endSessionStatus = data.endsessionstatus;

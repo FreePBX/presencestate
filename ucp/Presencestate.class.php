@@ -151,18 +151,6 @@ class Presencestate extends Modules{
 		return $return;
 	}
 
-	function getDisplay() {
-		$display = $this->getWidgetDisplay();
-
-		return $display['title'].$display['html'];
-	}
-
-	public function getMenuItems() {
-		$menu = $this->getWidgetList();
-
-		return $menu;
-	}
-
 	public function getWidgetList() {
 		$widgetList = $this->getSimpleWidgetList();
 
@@ -233,5 +221,9 @@ class Presencestate extends Modules{
 		$display['html'] = $this->load_view(__DIR__.'/views/settings.php',$displayvars);
 
 		return $display;
+	}
+
+	public function getSimpleWidgetSettingsDisplay($id) {
+		return $this->getWidgetSettingsDisplay($id);
 	}
 }
