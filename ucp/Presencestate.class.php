@@ -197,6 +197,7 @@ class Presencestate extends Modules{
 		$display['title'] = _('Presence');
 
 		$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
+		$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
 		$display['html'] = $this->load_view(__DIR__.'/views/widget.php', array('currentState' => $t, 'states' => $this->states));
 
 		return $display;
