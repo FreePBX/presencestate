@@ -7,20 +7,18 @@ var PresencestateC = UCPMC.extend({
 	poll: function(data) {
 		if (data.status) {
 			this.menu = data.menu;
-			this.changeStatus(data.presence.State, data.presence.Message);
+			this.statusUpdate(data.presence.State, data.presence.Message);
 		}
 	},
 	displayWidget: function(widget_id,dashboard_id) {
 		var self = this;
 
-		$(".grid-stack-item[data-rawname='presencestate'] select[name='status']").change(function() {
+		$(".grid-stack-item[data-id='"+widget_id+"'][data-rawname='presencestate'] select[name='status']").change(function() {
 			var selected = $(this).find("option:selected");
 			if (selected !== null) {
 				id = $(selected).data('id');
-				$.post( "index.php?quietmode=1&module=presencestate&command=set", { state: id }, function( data ) {
-					self.menu = data.poller.menu;
-					self.changeStatus(data.State, data.Message);
-				});
+
+				self.saveState({ state: id });
 			}
 		});
 	},
@@ -32,8 +30,34 @@ var PresencestateC = UCPMC.extend({
 			self.savePSSettings();
 		});
 	},
-	changeStatus: function(type, message) {
+	displaySimpleWidget: function(widget_type_id) {
+		var self = this;
+		$(".widget-extra-menu[data-module='presencestate'] select[name='status']").change(function() {
+			var selected = $(this).find("option:selected");
+			if (selected !== null) {
+				id = $(selected).data('id');
+
+				self.saveState({ state: id });
+			}
+		});
+	},
+	displaySimpleWidgetSettings: function(widget_id) {
+		this.displayWidgetSettings(widget_id);
+	},
+	statusUpdate: function(type, message) {
 		$(".grid-stack-item[data-rawname='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
+		$(".widget-extra-menu[data-module='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
+	},
+	saveState: function(data, callback) {
+		var self = this;
+
+		data.module = "presencestate";
+		data.command = "set";
+
+		$.post(UCP.ajaxUrl, data, callback).always(function(data) {
+			self.menu = data.poller.menu;
+			self.statusUpdate(data.State, data.Message);
+		});
 	},
 	savePSSettings: function() {
 		var self = this;
