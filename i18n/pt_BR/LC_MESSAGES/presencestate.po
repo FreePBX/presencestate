@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2017-02-23 18:55+0200\n"
+"PO-Revision-Date: 2017-02-23 23:59+0200\n"
 "Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/pt_BR/>\n"
@@ -103,7 +103,7 @@ msgstr "Siga-me"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "Herdar"
+msgstr ""
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
