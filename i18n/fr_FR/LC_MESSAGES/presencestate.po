@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2017-03-07 09:15+0200\n"
+"PO-Revision-Date: 2017-03-12 17:22+0200\n"
 "Last-Translator: Nicolas <freepbx@riendeau.org>\n"
 "Language-Team: French "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/fr_FR/>\n"
@@ -62,7 +62,7 @@ msgstr "Définir les actions sur un changement d'état"
 
 #: Presencestate.class.php:187
 msgid "Delete"
-msgstr "Supprime"
+msgstr "Supprimer"
 
 #: ucp/views/settings.php:9 ucp/views/settings.php:18
 msgid "Do Not Change"
@@ -92,7 +92,7 @@ msgstr "Trouvez-moi/Suivez-moi"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "Par défaut"
+msgstr "Hérite"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
