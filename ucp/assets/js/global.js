@@ -90,11 +90,11 @@ var PresencestateC = UCPMC.extend({
 
 $(document).ready(function() {
 	$(window).bind("beforeunload", function() {
-		if (self.presenceSpecials.endSessionStatus !== null && navigator.onLine) {
+		if (UCP.Modules.Presencestate.presenceSpecials.endSessionStatus !== null && navigator.onLine) {
 			$.ajax({
-				url: "index.php?quietmode=1&module=presencestate&command=set",
+				url: UCP.ajaxUrl + "?module=presencestate&command=set",
 				type: "POST",
-				data: { state: self.presenceSpecials.endSessionStatus.id },
+				data: { state: UCP.Modules.Presencestate.presenceSpecials.endSessionStatus.id },
 				async: false, //block the browser from closing to send our request, hacky I know
 				timeout: 2000
 			});
