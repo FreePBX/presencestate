@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 18:55-0800\n"
+"POT-Creation-Date: 2017-03-17 10:40-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Define Actions on A Status Change"
 msgstr ""
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:201
 msgid "Delete"
 msgstr ""
 
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Inherit"
 msgstr ""
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:187
 msgid "Invalid Request"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:118
+#: Presencestate.class.php:132
 #: presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:206
 msgid "Reset"
 msgstr ""
 
@@ -149,7 +149,7 @@ msgstr ""
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:211
 msgid "Submit"
 msgstr ""
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 18:55-0800\n"
+"POT-Creation-Date: 2017-03-17 10:40-0700\n"
 "PO-Revision-Date: 2017-01-12 16:22+0200\n"
 "Last-Translator: Sven <spiderrs4@web.de>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/"
@@ -53,7 +53,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "Aktion bei Statusänderung"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:201
 msgid "Delete"
 msgstr "Löschen"
 
@@ -85,7 +85,7 @@ msgstr "Finde Mich/Folge Mir"
 msgid "Inherit"
 msgstr "Erben"
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:187
 msgid "Invalid Request"
 msgstr "ungültige Anfrage"
 
@@ -130,7 +130,7 @@ msgstr "Anwesenheit"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Anwesenheitsstatus"
@@ -139,7 +139,7 @@ msgstr "Anwesenheitsstatus"
 msgid "Presence States"
 msgstr "Anwesenheitsstatus"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:206
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -147,7 +147,7 @@ msgstr "Zurücksetzen"
 msgid "State type"
 msgstr "Status Typ"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:211
 msgid "Submit"
 msgstr "Bestätigen"
 

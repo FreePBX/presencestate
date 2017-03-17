@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-01 18:55-0800\n"
+"POT-Creation-Date: 2017-03-17 10:40-0700\n"
 "PO-Revision-Date: 2016-10-08 12:16+0200\n"
 "Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -53,7 +53,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "تعریف رفتار بر اساس تغییر در وضعیت"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:201
 msgid "Delete"
 msgstr "حذف"
 
@@ -85,7 +85,7 @@ msgstr "مرا پیدا کن/مرا دنبال کن"
 msgid "Inherit"
 msgstr "موروثی"
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:187
 msgid "Invalid Request"
 msgstr "درخواست نامعتبر"
 
@@ -131,7 +131,7 @@ msgstr "حضور"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "وضعیت حضور"
@@ -140,7 +140,7 @@ msgstr "وضعیت حضور"
 msgid "Presence States"
 msgstr "وضعیت های حضور"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:206
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -148,7 +148,7 @@ msgstr "بازنشانی"
 msgid "State type"
 msgstr "نوع وضعیت"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:211
 msgid "Submit"
 msgstr "ثبت"
 
