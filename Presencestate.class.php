@@ -36,7 +36,7 @@ class Presencestate implements BMO {
 		$res = $q->fetch(\PDO::FETCH_ASSOC);
 		if ($res['count'] == 0) {
 			/* Add default presence states */
-			$sql[] = 'INSERT INTO presencestate_list (`type`) VALUES
+			$sql = 'INSERT INTO presencestate_list (`type`) VALUES
 			 ("available"),
 			 ("chat"),
 			 ("away"),
@@ -44,8 +44,8 @@ class Presencestate implements BMO {
 			 ("xa"),
 			 ("unavailable")
 			;';
+			$this->db->query($sql);
 		}
-
 	}
 	public function uninstall() {
 

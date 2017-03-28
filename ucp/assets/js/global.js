@@ -30,9 +30,9 @@ var PresencestateC = UCPMC.extend({
 			self.savePSSettings();
 		});
 	},
-	displaySimpleWidget: function(widget_type_id) {
+	displaySimpleWidget: function(widget_id) {
 		var self = this;
-		$(".widget-extra-menu[data-module='presencestate'] select[name='status']").change(function() {
+		$(".widget-extra-menu[data-id='"+widget_id+"'] select[name='status']").change(function() {
 			var selected = $(this).find("option:selected");
 			if (selected !== null) {
 				id = $(selected).data('id');
