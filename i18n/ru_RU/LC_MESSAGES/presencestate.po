@@ -13,71 +13,72 @@ msgstr ""
 "PO-Revision-Date: 2016-05-10 13:49-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: views/grid.php:16
 msgid "Actions"
-msgstr ""
+msgstr "Действия"
 
 #: ucp/assets/js/global.js:81
 msgid "Actions List"
-msgstr ""
+msgstr "Список действий"
 
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Добавить состояние"
 
 #: presencestate.i18n.php:6 presencestate.i18n.php:12
 msgid "Admin"
-msgstr ""
+msgstr "Администратор"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
 msgid "Available"
-msgstr ""
+msgstr "Доступен"
 
 #: functions.inc.php:9 ucp/Presencestate.class.php:121
 #: ucp/Presencestate.class.php:214
 msgid "Away"
-msgstr ""
+msgstr "Ушел"
 
 #: functions.inc.php:8 ucp/Presencestate.class.php:119
 #: ucp/Presencestate.class.php:212
 msgid "Chat"
-msgstr ""
+msgstr "Чат"
 
 #: functions.inc.php:10
 msgid "DND"
-msgstr ""
+msgstr "Не беспокоить"
 
 #: ucp/views/settings.php:25
 msgid "Define Actions on A Status Change"
-msgstr ""
+msgstr "Определить действие при смене статуса"
 
 #: Presencestate.class.php:187
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: ucp/views/settings.php:9 ucp/views/settings.php:18
 msgid "Do Not Change"
-msgstr ""
+msgstr "Не менять"
 
 #: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
 #: ucp/Presencestate.class.php:215
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Не беспокоить"
 
 #: ucp/Presencestate.class.php:90
 msgid "Do Nothing"
-msgstr ""
+msgstr "Ничего не делать"
 
 #: views/ucp_config.php:7
 msgid "Enable Presence"
-msgstr ""
+msgstr "Включить отображение присутствия"
 
 #: functions.inc.php:11 ucp/Presencestate.class.php:120
 #: ucp/Presencestate.class.php:213
@@ -90,100 +91,100 @@ msgstr ""
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr ""
+msgstr "Наследовать"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
-msgstr ""
+msgstr "Недопустимый запрос"
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
+msgstr "Список состояний"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
-msgstr ""
+msgstr "Управление списком сотояний присуствия."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
-msgstr ""
+msgstr "Сообщение"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
-msgstr ""
+msgstr "Не в сети"
 
 #: ucp/views/settings.php:16
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr ""
+msgstr "При закрытии браузера или выхода из UCP установить статус"
 
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
-msgstr ""
+msgstr "При входе в UCP установить статус"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Необязательное сообщение"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Необязательное сообщение, например: На обеде"
 
 #: ucp/Presencestate.class.php:248
 msgid "Presence"
-msgstr ""
+msgstr "Присутствие"
 
 #: Presencestate.class.php:118 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
-msgstr ""
+msgstr "Состояние присутствия"
 
 #: ucp/views/settings.php:2
 msgid "Presence State Settings"
-msgstr ""
+msgstr "Настройки состояний присуствия"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "Состояния присуствия"
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr ""
+msgstr "Сброс"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "Тип состояния"
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
-msgstr ""
+msgstr "Статус не задан"
 
 #: Presencestate.class.php:197
 msgid "Submit"
-msgstr ""
+msgstr "Подтвердить"
 
 #: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: functions.inc.php:12 ucp/Presencestate.class.php:123
 #: ucp/Presencestate.class.php:216
 msgid "Unavailable"
-msgstr ""
+msgstr "Недоступен"
 
 #: views/ucp_config.php:28
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
-msgstr ""
+msgstr "Разрешать этому пользователю менять статус присуствия в UCP"
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
-msgstr ""
+msgstr "Настройки сохранены"
