@@ -151,6 +151,14 @@ class Presencestate extends Modules{
 		return $return;
 	}
 
+	public function getStaticSettings() {
+		$user = $this->UCP->User->getUser();
+		return array(
+			'startSessionStatus' => $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus'),
+			'endSessionStatus' => $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus')
+		);
+	}
+
 	public function getWidgetList() {
 		$widgetList = $this->getSimpleWidgetList();
 

@@ -79,8 +79,8 @@ var PresencestateC = UCPMC.extend({
 
 		$.post(UCP.ajaxUrl, data, null).always(function(data) {
 			if (data.status) {
-				self.presenceSpecials.startSessionStatus = data.startsessionstatus;
-				self.presenceSpecials.endSessionStatus = data.endsessionstatus;
+				self.presenceSpecials.startSessionStatus = (data.startsessionstatus !== null) ? data.startsessionstatus.id : null;
+				self.presenceSpecials.endSessionStatus = (data.endsessionstatus !== null) ? data.endsessionstatus.id : null;
 			} else {
 				return false;
 			}
@@ -94,10 +94,22 @@ $(document).ready(function() {
 			$.ajax({
 				url: UCP.ajaxUrl + "?module=presencestate&command=set",
 				type: "POST",
-				data: { state: UCP.Modules.Presencestate.presenceSpecials.endSessionStatus.id },
+				data: { state: UCP.Modules.Presencestate.presenceSpecials.endSessionStatus },
 				async: false, //block the browser from closing to send our request, hacky I know
 				timeout: 2000
 			});
 		}
 	});
+});
+
+$(document).on("logIn", function() {
+	UCP.Modules.Presencestate.presenceSpecials.startSessionStatus = UCP.Modules.Presencestate.staticsettings.startSessionStatus;
+	UCP.Modules.Presencestate.presenceSpecials.endSessionStatus = UCP.Modules.Presencestate.staticsettings.endSessionStatus;
+	if (UCP.Modules.Presencestate.presenceSpecials.startSessionStatus !== null && navigator.onLine) {
+		$.ajax({
+			url: UCP.ajaxUrl + "?module=presencestate&command=set",
+			type: "POST",
+			data: { state: UCP.Modules.Presencestate.presenceSpecials.startSessionStatus }
+		});
+	}
 });
