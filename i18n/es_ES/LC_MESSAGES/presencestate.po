@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-17 10:40-0700\n"
+"POT-Creation-Date: 2017-06-23 12:40-0700\n"
 "PO-Revision-Date: 2016-12-11 05:38+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
@@ -61,11 +61,11 @@ msgstr "Borrar"
 msgid "Do Not Change"
 msgstr "No Cambiar"
 
-#: ucp/Presencestate.class.php:212
+#: ucp/Presencestate.class.php:220
 msgid "Do Not Disturb"
 msgstr "No Molestar"
 
-#: ucp/Presencestate.class.php:211
+#: ucp/Presencestate.class.php:219
 msgid "Do Nothing"
 msgstr "No haga nada"
 
@@ -77,7 +77,7 @@ msgstr "Habilitar Presencia"
 msgid "Extended Away"
 msgstr "Lejos extendido"
 
-#: ucp/Presencestate.class.php:213
+#: ucp/Presencestate.class.php:221
 msgid "Findme/Follow Me"
 msgstr "Encuentra-Me/Sigue-Me"
 
@@ -121,12 +121,12 @@ msgstr "Mensaje Opcional"
 msgid "Optional message, example: Lunch"
 msgstr "Mensaje Opcional, por ejemplo: Almuerzo"
 
-#: ucp/Presencestate.class.php:167 ucp/Presencestate.class.php:171
-#: ucp/Presencestate.class.php:185
+#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
+#: ucp/Presencestate.class.php:193
 msgid "Presence"
 msgstr "Presencia"
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:228
 msgid "Presence Settings"
 msgstr ""
 
