@@ -10,179 +10,184 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-05-10 13:49-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-07-11 16:44+0200\n"
+"Last-Translator: PETER <ftek@ymail.com>\n"
+"Language-Team: Vietnamese "
+"<http://weblate.freepbx.org/projects/freepbx/presencestate/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/grid.php:16
 msgid "Actions"
-msgstr ""
+msgstr "Các thao tác"
 
 #: ucp/assets/js/global.js:81
 msgid "Actions List"
-msgstr ""
+msgstr "Danh sách thao tác"
 
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Thêm State"
 
 #: presencestate.i18n.php:6 presencestate.i18n.php:12
 msgid "Admin"
-msgstr ""
+msgstr "Quản trị viên"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
 msgid "Available"
-msgstr ""
+msgstr "Khả dụng"
 
 #: functions.inc.php:9 ucp/Presencestate.class.php:121
 #: ucp/Presencestate.class.php:214
 msgid "Away"
-msgstr ""
+msgstr "rời khỏi"
 
 #: functions.inc.php:8 ucp/Presencestate.class.php:119
 #: ucp/Presencestate.class.php:212
 msgid "Chat"
-msgstr ""
+msgstr "Chat"
 
 #: functions.inc.php:10
 msgid "DND"
-msgstr ""
+msgstr "DND ( Không được làm phiền)"
 
 #: ucp/views/settings.php:25
 msgid "Define Actions on A Status Change"
-msgstr ""
+msgstr "Xác định các thao tác trên một thay đổi trạng thái"
 
 #: Presencestate.class.php:187
 msgid "Delete"
-msgstr ""
+msgstr "Xóa"
 
 #: ucp/views/settings.php:9 ucp/views/settings.php:18
 msgid "Do Not Change"
-msgstr ""
+msgstr "Không được thay đổi"
 
 #: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
 #: ucp/Presencestate.class.php:215
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Không làm phiền"
 
 #: ucp/Presencestate.class.php:90
 msgid "Do Nothing"
-msgstr ""
+msgstr "Không làm gì"
 
 #: views/ucp_config.php:7
 msgid "Enable Presence"
-msgstr ""
+msgstr "Kích hoạt tính năng Hiển thị Presence"
 
 #: functions.inc.php:11 ucp/Presencestate.class.php:120
 #: ucp/Presencestate.class.php:213
 msgid "Extended Away"
-msgstr ""
+msgstr "Rời khỏi trong thời gian lâu"
 
 #: ucp/Presencestate.class.php:92
 msgid "Findme/Follow Me"
-msgstr ""
+msgstr "Tính năng theo dõi Findme/Follow Me"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr ""
+msgstr "Kế thừa"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
-msgstr ""
+msgstr "Yêu cầu không hợp lệ"
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
+msgstr "Danh sách các trạng thái"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
-msgstr ""
+msgstr "Quản lý danh sách các trạng thái hiển thị."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
-msgstr ""
+msgstr "Tin nhắn"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "Không"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
-msgstr ""
+msgstr "Ngoại tuyến"
 
 #: ucp/views/settings.php:16
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr ""
+msgstr "Trên Trình duyệt đóng hoặc Trạng thái cài đặt đăng xuất khỏi UCP tới"
 
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
-msgstr ""
+msgstr "Trạng thái cài đặt đăng nhập trên UCP tới"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Tin nhắn tùy chọn"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Tin nhắn tùy chọn, ví dụ: Lunch"
 
 #: ucp/Presencestate.class.php:248
 msgid "Presence"
-msgstr ""
+msgstr "Hiên thị"
 
 #: Presencestate.class.php:118 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
-msgstr ""
+msgstr "Hiển thị trạng thái"
 
 #: ucp/views/settings.php:2
 msgid "Presence State Settings"
-msgstr ""
+msgstr "Cài đặt hiển thị trạng thái"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "Hiển thị các trạng thái"
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr ""
+msgstr "Cài đặt lại"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "Kiểu trạng thái"
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
-msgstr ""
+msgstr "Trạng thái không được cài đặt"
 
 #: Presencestate.class.php:197
 msgid "Submit"
-msgstr ""
+msgstr "Gửi đi"
 
 #: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
-msgstr ""
+msgstr "Kiểu"
 
 #: functions.inc.php:12 ucp/Presencestate.class.php:123
 #: ucp/Presencestate.class.php:216
 msgid "Unavailable"
-msgstr ""
+msgstr "Không khả dụng"
 
 #: views/ucp_config.php:28
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
 msgstr ""
+"Có nên cho phép người dùng này thay đổi các hiển thị trạng thái/ tình trạng "
+"của họ trong UCP không"
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
-msgstr ""
+msgstr "Các cài đặt của bạn đã được lưu lại"
