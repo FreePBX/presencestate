@@ -123,16 +123,19 @@ class Presencestate implements BMO {
 	}
 
 	public function presencestatePrefsGet($extension) {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		return presencestate_prefs_get($extension);
 	}
 
 	public function presencestatePrefsSetMultiple($extension, $array) {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		foreach($array as $id => $val) {
 			$this->presencestatePrefsSet($extension, array('id'=>$id,'pref'=>$val));
 		}
 	}
 
 	public function presencestatePrefsSet($extension, $vars) {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		presencestate_prefs_set($extension, $vars);
 	}
 	public function presencestateItemGet($id){
@@ -143,9 +146,11 @@ class Presencestate implements BMO {
 		return $stmt->fetchObject();
 	}
 	public function getAllTypes() {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		return presencestate_types_get();
 	}
 	public function getAllStates() {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		return presencestate_list_get();
 	}
 	public function ajaxRequest($req, &$setting) {
@@ -209,6 +214,24 @@ class Presencestate implements BMO {
 		}
 		return $buttons;
 	}
+
+	public function getStateByDevice($device) {
+		$t = $this->FreePBX->astman->PresenceState('CustomPresence:'.$device);
+		$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+		$states = $this->getAllStates();
+		$result = array(
+			"id" => null,
+			"type" => $t['State'],
+			"message" => $t['Message']
+		);
+		foreach($states as $state) {
+			if($t['Message'] == $state['message'] && $state['type'] == $t['State']) {
+				$result['id'] = $state['id'];
+			}
+		}
+		return $result;
+	}
+
 	public function getRightNav($request) {
 	  if(isset($request['view']) && $request['view'] == 'form'){
 	    return load_view(__DIR__."/views/bootnav.php",array());
