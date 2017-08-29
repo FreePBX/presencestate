@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 12:40-0700\n"
+"POT-Creation-Date: 2017-08-29 10:23-0700\n"
 "PO-Revision-Date: 2016-12-20 23:26+0200\n"
 "Last-Translator: Alexander <alexander.schley@paranagua.pr.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
@@ -64,7 +64,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "Definir Ações ao Alterar meu Estado"
 
-#: Presencestate.class.php:201
+#: Presencestate.class.php:206
 msgid "Delete"
 msgstr "Apagar"
 
@@ -96,7 +96,7 @@ msgstr "Siga-me"
 msgid "Inherit"
 msgstr "Herdar"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Invalid Request"
 msgstr "Solicitação Inválida"
 
@@ -150,7 +150,7 @@ msgstr "Estado de Presença"
 msgid "Presence States"
 msgstr "Estados de Presença"
 
-#: Presencestate.class.php:206
+#: Presencestate.class.php:211
 msgid "Reset"
 msgstr "Reiniciar"
 
@@ -158,7 +158,7 @@ msgstr "Reiniciar"
 msgid "State type"
 msgstr "Tipo de Estado"
 
-#: Presencestate.class.php:211
+#: Presencestate.class.php:216
 msgid "Submit"
 msgstr "Enviar"
 

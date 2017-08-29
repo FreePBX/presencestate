@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 12:40-0700\n"
+"POT-Creation-Date: 2017-08-29 10:23-0700\n"
 "PO-Revision-Date: 2015-11-23 13:55+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -53,7 +53,7 @@ msgstr "免打扰"
 msgid "Define Actions on A Status Change"
 msgstr "定义一个状态修改命令"
 
-#: Presencestate.class.php:201
+#: Presencestate.class.php:206
 msgid "Delete"
 msgstr "删除"
 
@@ -85,7 +85,7 @@ msgstr "分机随行"
 msgid "Inherit"
 msgstr "继承"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Invalid Request"
 msgstr "无效请求"
 
@@ -139,7 +139,7 @@ msgstr "Presence 状态"
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:206
+#: Presencestate.class.php:211
 msgid "Reset"
 msgstr "重置"
 
@@ -147,7 +147,7 @@ msgstr "重置"
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:211
+#: Presencestate.class.php:216
 msgid "Submit"
 msgstr "提交"
 
