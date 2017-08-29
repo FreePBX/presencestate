@@ -112,5 +112,3 @@ function presencestate_item_del($id) {
 		die_freepbx("Could not delete presence state.\n");
 	}
 }
-
-?>
