@@ -21,20 +21,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2015-04-28 05:51+0200\n"
-"Last-Translator: Renato <fiuza@tecnologia.inf.br>\n"
-"Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
-"freepbx/presencestate/pt_BR/>\n"
+"PO-Revision-Date: 2017-03-08 21:13+0200\n"
+"Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
+"Language-Team: Portuguese (Brazil) "
+"<http://weblate.freepbx.org/projects/freepbx/presencestate/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/grid.php:16
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: ucp/assets/js/global.js:81
 msgid "Actions List"
@@ -42,7 +42,7 @@ msgstr "Lisa de Ações"
 
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Adicionar Estado"
 
 #: presencestate.i18n.php:6 presencestate.i18n.php:12
 msgid "Admin"
@@ -103,15 +103,15 @@ msgstr "Siga-me"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr ""
+msgstr "Herdar"
 
 #: Presencestate.class.php:173
 msgid "Invalid Request"
-msgstr ""
+msgstr "Solicitação Inválida"
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
+msgstr "Listar Estados"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
@@ -123,7 +123,7 @@ msgstr "Mensagem"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
@@ -139,11 +139,11 @@ msgstr "Ao Logar no PCU Mudar Estado para"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Mensagem Opcional"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Mensagem opcional, por exemplo: Almoço"
 
 #: ucp/Presencestate.class.php:248
 msgid "Presence"
@@ -160,15 +160,15 @@ msgstr "Configurar Estado de Presença"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "Estados de Presença"
 
 #: Presencestate.class.php:192
 msgid "Reset"
-msgstr ""
+msgstr "Reiniciar"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "Tipo de Estado"
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
@@ -185,7 +185,7 @@ msgstr "Tipo"
 #: functions.inc.php:12 ucp/Presencestate.class.php:123
 #: ucp/Presencestate.class.php:216
 msgid "Unavailable"
-msgstr "Não Disponível"
+msgstr "Indisponível"
 
 #: views/ucp_config.php:28
 msgid ""
@@ -196,7 +196,7 @@ msgstr ""
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
