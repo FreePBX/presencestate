@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for presencestate
-# Copyright (C) 2008-2016 Sangoma, Inc.
+# Copyright (C) 2008-2017 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-10 13:49-0700\n"
+"POT-Creation-Date: 2017-08-29 13:22-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,6 @@ msgid "Add State"
 msgstr ""
 
 #: presencestate.i18n.php:6
-#: presencestate.i18n.php:12
 msgid "Admin"
 msgstr ""
 
@@ -61,7 +60,7 @@ msgstr ""
 msgid "Define Actions on A Status Change"
 msgstr ""
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Delete"
 msgstr ""
 
@@ -98,7 +97,7 @@ msgstr ""
 msgid "Inherit"
 msgstr ""
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:178
 msgid "Invalid Request"
 msgstr ""
 
@@ -158,7 +157,7 @@ msgstr ""
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:197
 msgid "Reset"
 msgstr ""
 
@@ -170,7 +169,7 @@ msgstr ""
 msgid "Status Not Set"
 msgstr ""
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:202
 msgid "Submit"
 msgstr ""
 

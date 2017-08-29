@@ -9,17 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-10 13:49-0700\n"
+"POT-Creation-Date: 2017-08-29 13:22-0400\n"
 "PO-Revision-Date: 2017-05-17 02:01+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
-"Language-Team: Russian "
-"<http://weblate.freepbx.org/projects/freepbx/presencestate/ru_RU/>\n"
-"Language: ru_RU\n"
+"Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
+"presencestate/ru_RU/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.4\n"
 
 #: views/grid.php:16
@@ -34,7 +34,7 @@ msgstr "Список действий"
 msgid "Add State"
 msgstr "Добавить состояние"
 
-#: presencestate.i18n.php:6 presencestate.i18n.php:12
+#: presencestate.i18n.php:6
 msgid "Admin"
 msgstr "Администратор"
 
@@ -61,7 +61,7 @@ msgstr "Не беспокоить"
 msgid "Define Actions on A Status Change"
 msgstr "Определить действие при смене статуса"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Delete"
 msgstr "Удалить"
 
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Inherit"
 msgstr "Наследовать"
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:178
 msgid "Invalid Request"
 msgstr "Недопустимый запрос"
 
@@ -152,7 +152,7 @@ msgstr "Настройки состояний присуствия"
 msgid "Presence States"
 msgstr "Состояния присуствия"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:197
 msgid "Reset"
 msgstr "Сброс"
 
@@ -164,7 +164,7 @@ msgstr "Тип состояния"
 msgid "Status Not Set"
 msgstr "Статус не задан"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:202
 msgid "Submit"
 msgstr "Сохранить"
 

@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-10 13:49-0700\n"
+"POT-Creation-Date: 2017-08-29 13:22-0400\n"
 "PO-Revision-Date: 2017-03-06 02:37+0200\n"
 "Last-Translator: hammer125 <auswertung@aon.at>\n"
-"Language-Team: German "
-"<http://weblate.freepbx.org/projects/freepbx/presencestate/de_DE/>\n"
-"Language: de_DE\n"
+"Language-Team: German <http://weblate.freepbx.org/projects/freepbx/"
+"presencestate/de_DE/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -33,7 +33,7 @@ msgstr "Aktionsliste"
 msgid "Add State"
 msgstr "Status hinzufügen"
 
-#: presencestate.i18n.php:6 presencestate.i18n.php:12
+#: presencestate.i18n.php:6
 msgid "Admin"
 msgstr "Administrator"
 
@@ -60,7 +60,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "Aktion bei Statusänderung"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Delete"
 msgstr "Löschen"
 
@@ -94,7 +94,7 @@ msgstr "Finde Mich/Folge Mir"
 msgid "Inherit"
 msgstr "Erben"
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:178
 msgid "Invalid Request"
 msgstr "ungültige Anfrage"
 
@@ -151,7 +151,7 @@ msgstr "Anwesenheitsstatus Einstellungen"
 msgid "Presence States"
 msgstr "Anwesenheitsstatus"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:197
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -163,7 +163,7 @@ msgstr "Status Typ"
 msgid "Status Not Set"
 msgstr "Status nicht gesetzt"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:202
 msgid "Submit"
 msgstr "absenden"
 
@@ -180,7 +180,8 @@ msgstr "Nicht Verfügbar"
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
-msgstr "Erlaubt dem Benutzer seinen Anwesenheitsstatus/ Status im UCP zu ändern"
+msgstr ""
+"Erlaubt dem Benutzer seinen Anwesenheitsstatus/ Status im UCP zu ändern"
 
 #: views/ucp_config.php:13
 msgid "Yes"

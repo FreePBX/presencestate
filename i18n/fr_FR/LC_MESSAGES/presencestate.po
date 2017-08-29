@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-10 13:49-0700\n"
+"POT-Creation-Date: 2017-08-29 13:22-0400\n"
 "PO-Revision-Date: 2017-03-13 02:03+0200\n"
 "Last-Translator: Nicolas <freepbx@riendeau.org>\n"
-"Language-Team: French "
-"<http://weblate.freepbx.org/projects/freepbx/presencestate/fr_FR/>\n"
-"Language: fr_FR\n"
+"Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
+"presencestate/fr_FR/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -33,7 +33,7 @@ msgstr "Liste des actions"
 msgid "Add State"
 msgstr "Ajouter un état"
 
-#: presencestate.i18n.php:6 presencestate.i18n.php:12
+#: presencestate.i18n.php:6
 msgid "Admin"
 msgstr "Admin"
 
@@ -60,7 +60,7 @@ msgstr "NPD"
 msgid "Define Actions on A Status Change"
 msgstr "Définir les actions sur un changement d'état"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -94,7 +94,7 @@ msgstr "Trouvez-moi/Suivez-moi"
 msgid "Inherit"
 msgstr "Hérite"
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:178
 msgid "Invalid Request"
 msgstr "Requête invalide"
 
@@ -151,7 +151,7 @@ msgstr "Paramètres état de la présence"
 msgid "Presence States"
 msgstr "États de présence"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:197
 msgid "Reset"
 msgstr "Réinitialiser"
 
@@ -163,7 +163,7 @@ msgstr "Type d'état"
 msgid "Status Not Set"
 msgstr "Statut non défini"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:202
 msgid "Submit"
 msgstr "Soumettre"
 
