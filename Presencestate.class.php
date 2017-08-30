@@ -229,7 +229,17 @@ class Presencestate implements BMO {
 		return $buttons;
 	}
 
+	/**
+	 * Get Presence State by Device
+	 * @method getStateByDevice
+	 * @param  integer           $device The device ID
+	 * @return array                   The device state
+	 */
 	public function getStateByDevice($device) {
+		$dev = $this->FreePBX->Core->getDevice($device);
+		if(empty($dev)) {
+			throw new \Exception("Device does not exist!");
+		}
 		$t = $this->FreePBX->astman->PresenceState('CustomPresence:'.$device);
 		$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
 		$states = $this->getAllStates();
@@ -244,6 +254,29 @@ class Presencestate implements BMO {
 			}
 		}
 		return $result;
+	}
+
+	/**
+	 * Set Presence State by Device
+	 * @method setStateByDevice
+	 * @param  integer           $device  The device ID
+	 * @param  string           $state   The presence state state
+	 * @param  string           $message The message to override
+	 */
+	public function setStateByDevice($device, $state, $message = null) {
+		$dev = $this->FreePBX->Core->getDevice($device);
+		if(empty($dev)) {
+			throw new \Exception("Device does not exist!");
+		}
+		$states = $this->getAllStates();
+		if(!empty($state) && !empty($states[$state])) {
+			$type = $this->states[$state]['type'];
+			$msg = !empty($this->states[$state]['message']) ? $this->states[$state]['message'] : '';
+			$msg = !empty($message) ? $message : $msg;
+			$this->FreePBX->astman->set_global($this->FreePBX->Config->get_conf_setting('AST_FUNC_PRESENCE_STATE') . '(CustomPresence:' . $device . ')', '"'.$type . ',,' . $msg.'"');
+		} else {
+			throw new \Exception("Invalid state of '".$state."'");
+		}
 	}
 
 	public function getRightNav($request) {
