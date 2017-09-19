@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 12:40-0700\n"
+"POT-Creation-Date: 2017-09-18 19:02-0700\n"
 "PO-Revision-Date: 2017-05-17 02:01+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -54,7 +54,7 @@ msgstr "Не беспокоить"
 msgid "Define Actions on A Status Change"
 msgstr "Определить действие при смене статуса"
 
-#: Presencestate.class.php:201
+#: Presencestate.class.php:206
 msgid "Delete"
 msgstr "Удалить"
 
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Inherit"
 msgstr "Наследовать"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Invalid Request"
 msgstr "Недопустимый запрос"
 
@@ -140,7 +140,7 @@ msgstr "Состояние присутствия"
 msgid "Presence States"
 msgstr "Состояния присуствия"
 
-#: Presencestate.class.php:206
+#: Presencestate.class.php:211
 msgid "Reset"
 msgstr "Сброс"
 
@@ -148,7 +148,7 @@ msgstr "Сброс"
 msgid "State type"
 msgstr "Тип состояния"
 
-#: Presencestate.class.php:211
+#: Presencestate.class.php:216
 msgid "Submit"
 msgstr "Сохранить"
 
