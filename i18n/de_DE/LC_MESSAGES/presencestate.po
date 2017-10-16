@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-29 13:22-0400\n"
-"PO-Revision-Date: 2017-03-06 02:37+0200\n"
+"PO-Revision-Date: 2017-10-15 22:08+0200\n"
 "Last-Translator: hammer125 <auswertung@aon.at>\n"
-"Language-Team: German <http://weblate.freepbx.org/projects/freepbx/"
-"presencestate/de_DE/>\n"
+"Language-Team: German "
+"<http://weblate.freepbx.org/projects/freepbx/presencestate/de_DE/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -165,7 +165,7 @@ msgstr "Status nicht gesetzt"
 
 #: Presencestate.class.php:202
 msgid "Submit"
-msgstr "absenden"
+msgstr "Senden"
 
 #: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
