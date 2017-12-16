@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-29 13:22-0400\n"
-"PO-Revision-Date: 2017-12-14 17:02+0200\n"
+"PO-Revision-Date: 2017-12-15 18:53+0200\n"
 "Last-Translator: tranlsated <noemi@translated.net>\n"
 "Language-Team: German "
 "<http://weblate.freepbx.org/projects/freepbx/presencestate/de_DE/>\n"
@@ -174,7 +174,7 @@ msgstr "Typ"
 #: functions.inc.php:12 ucp/Presencestate.class.php:123
 #: ucp/Presencestate.class.php:216
 msgid "Unavailable"
-msgstr "Nicht Verfügbar"
+msgstr "Nicht verfügbar"
 
 #: views/ucp_config.php:28
 msgid ""
