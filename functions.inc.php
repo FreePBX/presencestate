@@ -61,38 +61,13 @@ function presencestate_prefs_set($extension, $vars) {
 }
 
 function presencestate_list_get() {
-	global $db;
-
-	$sql = 'SELECT * FROM presencestate_list';
-	$ret = $db->getAll($sql, DB_FETCHMODE_ASSOC);
-
-	if (DB::isError($ret)) {
-		die_freepbx("Could not get list of presence states.\n");
-	}
-
-	foreach ($ret as $row) {
-		$presencestates[$row['id']] = $row;
-	}
-
-	asort($presencestates);
-	return $presencestates;
+    FreePBX::Modules()->deprecatedFunction();
+    return FreePBX::Presencestate()->getAllStates();
 }
 
 function presencestate_item_set($vars) {
-	global $db;
-
-	$sql = 'REPLACE INTO presencestate_list (id, type, message) VALUES (?, ?, ?)';
-	$ret = $db->query($sql, array($vars['id'], $vars['type'], $vars['message']));
-
-	if (DB::isError($ret)) {
-		die_freepbx("Could not save presence state.\n");
-	}
-
-	if (empty($vars['id'])) {
-		$vars['id'] = $db->insert_id();
-	}
-
-	return $vars['id'];
+    FreePBX::Modules()->deprecatedFunction();
+    return FreePBX::Presencestate()->setItem($vars);
 }
 
 function presencestate_item_del($id) {

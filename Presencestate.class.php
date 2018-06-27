@@ -50,12 +50,7 @@ class Presencestate implements BMO {
 	public function uninstall() {
 
 	}
-	public function backup(){
 
-	}
-	public function restore($backup){
-
-	}
 	public function genConfig() {
 
 	}
@@ -164,9 +159,16 @@ class Presencestate implements BMO {
 		return presencestate_types_get();
 	}
 	public function getAllStates() {
-		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
-		return presencestate_list_get();
-	}
+        $sql = 'SELECT * FROM presencestate_list';
+        $ret = $this->FreePBX->Database->query($sql)
+            ->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($ret as $row) {
+            $presencestates[$row['id']] = $row;
+        }
+        asort($presencestates);
+        return $presencestates;
+    }
+    
 	public function ajaxRequest($req, &$setting) {
 		if ($req == "getJSON") {
 			return true;
@@ -283,5 +285,31 @@ class Presencestate implements BMO {
 	  if(isset($request['view']) && $request['view'] == 'form'){
 	    return load_view(__DIR__."/views/bootnav.php",array());
 	  }
-	}
+    }
+    public function dumpPrefs(){
+        return $this->FreePBX->Database->query('SELECT * FROM presencestate_prefs')
+            ->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function loadPrefs($prefs){
+        $stmt = $this->FreePBX->Database->prepare('REPLACE INTO presencestate_prefs (extension, item_id, pref) VALUES (:extension, :item_id, :pref)');
+        foreach ($prefs as $item) {
+            if(count($item) !== 3){
+                continue;
+            }
+            $stmt->execute([
+                ':extension' => $item['extension'],
+                ':item_id' => $item['item_id'],
+                ':pref' => $item['pref'],
+            ]);
+        }
+        return $this;
+    }
+
+    public function setItem($vars){
+        $sql = 'REPLACE INTO presencestate_list (id, type, message) VALUES (?, ?, ?)';
+        $this->FreePBX->Database->prepare($sql)
+            ->execute([$vars['id'], $vars['type'], $vars['message']]);
+        return $vars['id'];
+
+    }
 }
