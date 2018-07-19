@@ -3,151 +3,113 @@ var PresencestateC = UCPMC.extend({
 		this.presenceStates = {};
 		this.presenceSpecials = { startSessionStatus: null, endSessionStatus: null };
 		this.menu = null;
-		this.transitioning = false;
-		this.calibrated = false;
 	},
 	poll: function(data) {
 		if (data.status) {
-			var stateHTML = "";
 			this.menu = data.menu;
-			this.changeStatus(data.presence.State, data.presence.Message);
-			this.buildMenu(false);
+			this.statusUpdate(data.presence.State, data.presence.Message);
 		}
 	},
-	display: function(event) {
-		$(".pssettings select").change(function() {
-			Presencestate.savePSSettings();
+	displayWidget: function(widget_id,dashboard_id) {
+		var self = this;
+
+		$(".grid-stack-item[data-id='"+widget_id+"'][data-rawname='presencestate'] select[name='status']").change(function() {
+			var selected = $(this).find("option:selected");
+			if (selected !== null) {
+				id = $(selected).data('id');
+
+				self.saveState(id);
+			}
 		});
 	},
-	hide: function(event) {
+	displayWidgetSettings: function(widget_id, dashboard_id) {
+		var self = this;
 
+		/* Settings changes binds */
+		$("div[data-rawname='presencestate'] .widget-settings-content .pssettings select").change(function() {
+			self.savePSSettings();
+		});
 	},
-	changeStatus: function(type, message) {
-		message = (message !== "") ? "(" + message + ")" : "";
-		if (typeof this.menu.representations !== "undefined" && typeof this.menu.representations[type] !== "undefined") {
-			if ($("#nav-btn-presencestate .p-msg span").text() != this.menu.representations[type].name + " " + message) {
-				$("#nav-btn-presencestate .icon i").css("color", this.menu.representations[type].color);
-				$("#nav-btn-presencestate .p-msg span").text(this.menu.representations[type].name + " " + message);
-				$("#nav-btn-presencestate .p-msg").textfill();
-				$(window).trigger("presenceStateChange");
+	displaySimpleWidget: function(widget_id) {
+		var self = this;
+		$(".widget-extra-menu[data-id='"+widget_id+"'] select[name='status']").change(function() {
+			var selected = $(this).find("option:selected");
+			if (selected !== null) {
+				id = $(selected).data('id');
+
+				self.saveState(id);
 			}
-		} else {
-			$("#nav-btn-presencestate .p-msg span").text(_("Status Not Set","presencestate"));
-			$("#nav-btn-presencestate .p-msg").textfill();
-		}
+		});
 	},
-	buildMenu: function(loggedIn) {
-		//build and update menu system get the menu if it doesnt exist
-		var menu = Presencestate.menu;
-		if (menu !== null && menu.status) {
-			Presencestate.presenceSpecials.startSessionStatus = menu.startsessionstatus;
-			Presencestate.presenceSpecials.endSessionStatus = menu.endsessionstatus;
-			if (loggedIn && Presencestate.presenceSpecials.startSessionStatus !== null) {
-				$.post( "index.php?quietmode=1&module=presencestate&command=set", { state: Presencestate.presenceSpecials.startSessionStatus.id }, function( data ) {
-					Presencestate.changeStatus(data.State, data.Message);
-					Presencestate.buildMenu(false);
-				});
-			}
+	displaySimpleWidgetSettings: function(widget_id) {
+		this.displayWidgetSettings(widget_id);
+	},
+	statusUpdate: function(type, message) {
+		$(".grid-stack-item[data-rawname='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
+		$(".widget-extra-menu[data-module='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
+	},
+	saveState: function(id) {
+		var self = this;
 
-			$("#presencestate-menu .statuses").html(menu.html);
-			$("#presencestate-menu .presence-item").one("click", function() {
-				$("#presencestate-menu .presence-item").css("cursor", "not-allowed");
-				$("#presencestate-menu .statuses").css("opacity", "0.5");
-				var id = $(this).data("id");
-				if (id !== 0) {
-					$.post( "index.php?quietmode=1&module=presencestate&command=set", { state: id }, function( data ) {
-						Presencestate.menu = data.poller.menu;
-						Presencestate.changeStatus(data.State, data.Message);
-						Presencestate.buildMenu(false);
-						$("#presencestate-menu .presence-item").css("cursor", "pointer");
-						$("#presencestate-menu .statuses").css("opacity", "1");
-					});
-				}
-			});
+		data = { state: id };
+		data.module = "presencestate";
+		data.command = "set";
 
-			if (!$("#nav-btn-presencestate").is(":visible")) {
-				$("#nav-btn-presencestate").fadeIn("slow", function() {
-					UCP.calibrateMenus();
-				});
-			}
-		} else {
-			//Presence is disabled for this user but we still need to have the drop down if the user has actions
-			if (!$("#nav-btn-presencestate").is(":visible") && $("#presence-menu2 .options .fa").length > 0) {
-				$("#nav-btn-presencestate").fadeIn("slow", function() {
-					UCP.calibrateMenus();
-				});
-				$("#presencestate-menu .change-status").hide();
-				$("#nav-btn-presencestate .icon .fa").css("color", "#7b7b7b").css("opacity", "1");
-				$("#nav-btn-presencestate .p-msg").text(_("Actions List"));
-			}
-		}
-		if(!this.calibrated) {
-			UCP.calibrateMenus();
-			this.calibrated = true;
-		}
+		$.post(UCP.ajaxUrl, data, null).always(function(data) {
+			self.menu = data.poller.menu;
+			self.statusUpdate(data.State, data.Message);
+		});
 	},
 	savePSSettings: function() {
-		$("#message").fadeOut("slow");
+		var self = this;
+
 		var data = {};
-		$(".pssettings input[type=\"text\"]").each(function( index ) {
-			data[$( this ).attr("name")] = $( this ).val();
-		});
-		$(".pssettings input[type=\"checkbox\"]").each(function( index ) {
-			data[$( this ).attr("name")] = $( this ).is(":checked");
-		});
 		data.events = {};
-		$(".pssettings select").each(function( index ) {
+
+		$("div[data-rawname='presencestate'] .widget-settings-content .pssettings select").each(function( index ) {
 			if ($(this).hasClass("event")) {
 				data.events[$( this ).attr("name")] = $(this).val();
 			} else {
 				data[$( this ).attr("name")] = $(this).val();
 			}
 		});
-		$.post( "?quietmode=1&module=presencestate&command=savesettings", data, function( data ) {
+
+		data.module = "presencestate";
+		data.command = "savesettings";
+
+		$.post(UCP.ajaxUrl, data, null).always(function(data) {
 			if (data.status) {
-				$("#message").addClass("alert-success");
-				$("#message").text(_("Your settings have been saved"));
-				$("#message").fadeIn( "slow", function() {
-					setTimeout(function() { $("#message").fadeOut("slow"); }, 2000);
-				});
-				Presencestate.presenceSpecials.startSessionStatus = data.startsessionstatus;
-				Presencestate.presenceSpecials.endSessionStatus = data.endsessionstatus;
+				self.presenceSpecials.startSessionStatus = (data.startsessionstatus !== null) ? data.startsessionstatus.id : null;
+				self.presenceSpecials.endSessionStatus = (data.endsessionstatus !== null) ? data.endsessionstatus.id : null;
 			} else {
-				$("#message").addClass("alert-error");
-				$("#message").text(data.message);
 				return false;
 			}
 		});
-	},
-	connect: function() {
-		$.get( "index.php?quietmode=1&module=presencestate&command=statuses", {}, function( data ) {
-			Presencestate.menu = data;
-			Presencestate.buildMenu(true);
-			$("#presencestate-menu .presence-item").css("cursor", "pointer");
-			$("#presencestate-menu .statuses").css("opacity", "1");
-		});
-	},
-	disconnect: function() {
-		if (UCP.loggedIn) {
-			$("#presencestate-menu .presence-item").off("click");
-			$("#presencestate-menu .presence-item").css("cursor", "not-allowed");
-			$("#presencestate-menu .statuses").css("opacity", "0.5");
-			Presencestate.changeStatus("not_set", "");
-		}
 	}
-}),
-Presencestate = new PresencestateC();
+});
 
 $(document).ready(function() {
 	$(window).bind("beforeunload", function() {
-		if (Presencestate.presenceSpecials.endSessionStatus !== null && navigator.onLine) {
+		if (UCP.Modules.Presencestate.presenceSpecials.endSessionStatus !== null && navigator.onLine) {
 			$.ajax({
-				url: "index.php?quietmode=1&module=presencestate&command=set",
+				url: UCP.ajaxUrl + "?module=presencestate&command=set",
 				type: "POST",
-				data: { state: Presencestate.presenceSpecials.endSessionStatus.id },
+				data: { state: UCP.Modules.Presencestate.presenceSpecials.endSessionStatus },
 				async: false, //block the browser from closing to send our request, hacky I know
 				timeout: 2000
 			});
 		}
 	});
+});
+
+$(document).on("logIn", function() {
+	UCP.Modules.Presencestate.presenceSpecials.startSessionStatus = UCP.Modules.Presencestate.staticsettings.startSessionStatus;
+	UCP.Modules.Presencestate.presenceSpecials.endSessionStatus = UCP.Modules.Presencestate.staticsettings.endSessionStatus;
+	if (UCP.Modules.Presencestate.presenceSpecials.startSessionStatus !== null && navigator.onLine) {
+		$.ajax({
+			url: UCP.ajaxUrl + "?module=presencestate&command=set",
+			type: "POST",
+			data: { state: UCP.Modules.Presencestate.presenceSpecials.startSessionStatus }
+		});
+	}
 });
