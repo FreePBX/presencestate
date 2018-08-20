@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-18 19:02-0700\n"
-"PO-Revision-Date: 2016-11-25 04:11+0200\n"
-"Last-Translator: Pascal <pascal.noyel@ipexia.com>\n"
+"POT-Creation-Date: 2018-07-19 18:14-0400\n"
+"PO-Revision-Date: 2017-12-11 22:57+0200\n"
+"Last-Translator: JCattan <jeremie@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/fr_FR/>\n"
 "Language: fr_FR\n"
@@ -83,7 +83,7 @@ msgstr "Trouvez-moi/Suivez-moi"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "Par défaut"
+msgstr "Hérite"
 
 #: Presencestate.class.php:192
 msgid "Invalid Request"
@@ -141,7 +141,7 @@ msgstr "États de présence"
 
 #: Presencestate.class.php:211
 msgid "Reset"
-msgstr "Remise à zéro"
+msgstr "Reset"
 
 #: views/form.php:38
 msgid "State type"
@@ -157,7 +157,7 @@ msgstr "Type"
 
 #: functions.inc.php:12
 msgid "Unavailable"
-msgstr "Non disponible"
+msgstr "Absence"
 
 #: views/ucp_config.php:28
 msgid ""

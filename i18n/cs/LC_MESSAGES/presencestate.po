@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-29 10:23-0700\n"
-"PO-Revision-Date: 2017-08-25 18:19+0200\n"
+"POT-Creation-Date: 2018-07-19 18:14-0400\n"
+"PO-Revision-Date: 2018-01-03 15:24+0200\n"
 "Last-Translator: Petr <petrv@atlantis.cz>\n"
 "Language-Team: Czech <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/cs/>\n"
@@ -31,11 +31,11 @@ msgstr "Přidat stav"
 
 #: presencestate.i18n.php:6
 msgid "Admin"
-msgstr "Admin"
+msgstr "Administrator"
 
 #: functions.inc.php:7
 msgid "Available"
-msgstr "Dostupný"
+msgstr "Online"
 
 #: functions.inc.php:9
 msgid "Away"
