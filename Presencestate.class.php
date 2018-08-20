@@ -160,14 +160,23 @@ class Presencestate implements BMO {
 	}
 	public function getAllStates() {
         $sql = 'SELECT * FROM presencestate_list';
-        $ret = $this->FreePBX->Database->query($sql)
+        $ret = $this->db->query($sql)
             ->fetchAll(PDO::FETCH_ASSOC);
         foreach ($ret as $row) {
             $presencestates[$row['id']] = $row;
         }
         asort($presencestates);
         return $presencestates;
-    }
+	}
+	public function setDatabase($pdo){
+		$this->Database = $pdo;
+		return $this;
+	}
+	
+	public function resetDatabase(){
+		$this->Database = $this->FreePBX->Database;
+		return $this;
+	}
     
 	public function ajaxRequest($req, &$setting) {
 		if ($req == "getJSON") {
@@ -287,11 +296,11 @@ class Presencestate implements BMO {
 	  }
     }
     public function dumpPrefs(){
-        return $this->FreePBX->Database->query('SELECT * FROM presencestate_prefs')
+        return $this->db->query('SELECT * FROM presencestate_prefs')
             ->fetchAll(PDO::FETCH_ASSOC);
     }
     public function loadPrefs($prefs){
-        $stmt = $this->FreePBX->Database->prepare('REPLACE INTO presencestate_prefs (extension, item_id, pref) VALUES (:extension, :item_id, :pref)');
+        $stmt = $this->db->prepare('REPLACE INTO presencestate_prefs (extension, item_id, pref) VALUES (:extension, :item_id, :pref)');
         foreach ($prefs as $item) {
             if(count($item) !== 3){
                 continue;
@@ -307,7 +316,7 @@ class Presencestate implements BMO {
 
     public function setItem($vars){
         $sql = 'REPLACE INTO presencestate_list (id, type, message) VALUES (?, ?, ?)';
-        $this->FreePBX->Database->prepare($sql)
+        $this->db->prepare($sql)
             ->execute([$vars['id'], $vars['type'], $vars['message']]);
         return $vars['id'];
 
