@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-19 18:14-0400\n"
+"POT-Creation-Date: 2018-08-20 12:52-0400\n"
 "PO-Revision-Date: 2018-01-03 15:24+0200\n"
 "Last-Translator: Petr <petrv@atlantis.cz>\n"
 "Language-Team: Czech <http://weblate.freepbx.org/projects/freepbx/"
@@ -28,10 +28,6 @@ msgstr "Akce"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Přidat stav"
-
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "Administrator"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -53,7 +49,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "Definujte akce na změnu stavu"
 
-#: Presencestate.class.php:206
+#: Presencestate.class.php:217
 msgid "Delete"
 msgstr "Smazat"
 
@@ -85,17 +81,13 @@ msgstr "Find me/Follow Me"
 msgid "Inherit"
 msgstr "Zdědit"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:203
 msgid "Invalid Request"
 msgstr "Neplatná žádost"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr "Přehled stavů"
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "Upravit seznam prezenčních stavů."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
@@ -130,8 +122,7 @@ msgstr "Prezence"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:132 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:127
 msgid "Presence State"
 msgstr "Stav prezence"
 
@@ -139,7 +130,7 @@ msgstr "Stav prezence"
 msgid "Presence States"
 msgstr "Prezence stavy"
 
-#: Presencestate.class.php:211
+#: Presencestate.class.php:222
 msgid "Reset"
 msgstr "Resetovat"
 
@@ -147,7 +138,7 @@ msgstr "Resetovat"
 msgid "State type"
 msgstr "Typ stavu"
 
-#: Presencestate.class.php:216
+#: Presencestate.class.php:227
 msgid "Submit"
 msgstr "Potvrdit"
 
@@ -168,6 +159,12 @@ msgstr "Povolit uživateli, aby mohl změnit stav přítomnosti / stavu v UCP"
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Ano"
+
+#~ msgid "Admin"
+#~ msgstr "Administrator"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "Upravit seznam prezenčních stavů."
 
 #~ msgid "Actions List"
 #~ msgstr "Seznam akcí"

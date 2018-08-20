@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-29 10:23-0700\n"
+"POT-Creation-Date: 2018-08-20 12:52-0400\n"
 "PO-Revision-Date: 2017-07-25 21:58+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -28,10 +28,6 @@ msgstr "Các thao tác"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Thêm State"
-
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "Quản trị viên"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -53,7 +49,7 @@ msgstr "DND ( Không được làm phiền)"
 msgid "Define Actions on A Status Change"
 msgstr "Xác định các thao tác trên một thay đổi trạng thái"
 
-#: Presencestate.class.php:206
+#: Presencestate.class.php:217
 msgid "Delete"
 msgstr "Xóa"
 
@@ -85,17 +81,13 @@ msgstr "Tính năng theo dõi Findme/Follow Me"
 msgid "Inherit"
 msgstr "Kế thừa"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:203
 msgid "Invalid Request"
 msgstr "Yêu cầu không hợp lệ"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr "Danh sách các trạng thái"
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "Quản lý danh sách các trạng thái hiển thị."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
@@ -130,8 +122,7 @@ msgstr "Hiên thị"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:132 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:127
 msgid "Presence State"
 msgstr "Hiển thị trạng thái"
 
@@ -139,7 +130,7 @@ msgstr "Hiển thị trạng thái"
 msgid "Presence States"
 msgstr "Hiển thị các trạng thái"
 
-#: Presencestate.class.php:211
+#: Presencestate.class.php:222
 msgid "Reset"
 msgstr "Cài đặt lại"
 
@@ -147,7 +138,7 @@ msgstr "Cài đặt lại"
 msgid "State type"
 msgstr "Kiểu trạng thái"
 
-#: Presencestate.class.php:216
+#: Presencestate.class.php:227
 msgid "Submit"
 msgstr "Gửi đi"
 
@@ -170,6 +161,12 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Có"
+
+#~ msgid "Admin"
+#~ msgstr "Quản trị viên"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "Quản lý danh sách các trạng thái hiển thị."
 
 #~ msgid "Actions List"
 #~ msgstr "Danh sách thao tác"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-18 19:02-0700\n"
+"POT-Creation-Date: 2018-08-20 12:52-0400\n"
 "PO-Revision-Date: 2017-05-17 02:01+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -29,10 +29,6 @@ msgstr "Действия"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Добавить состояние"
-
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "Администратор"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -54,7 +50,7 @@ msgstr "Не беспокоить"
 msgid "Define Actions on A Status Change"
 msgstr "Определить действие при смене статуса"
 
-#: Presencestate.class.php:206
+#: Presencestate.class.php:217
 msgid "Delete"
 msgstr "Удалить"
 
@@ -86,17 +82,13 @@ msgstr ""
 msgid "Inherit"
 msgstr "Наследовать"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:203
 msgid "Invalid Request"
 msgstr "Недопустимый запрос"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr "Список состояний"
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "Управление списком сотояний присуствия."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
@@ -131,8 +123,7 @@ msgstr "Присутствие"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:132 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:127
 msgid "Presence State"
 msgstr "Состояние присутствия"
 
@@ -140,7 +131,7 @@ msgstr "Состояние присутствия"
 msgid "Presence States"
 msgstr "Состояния присуствия"
 
-#: Presencestate.class.php:211
+#: Presencestate.class.php:222
 msgid "Reset"
 msgstr "Сброс"
 
@@ -148,7 +139,7 @@ msgstr "Сброс"
 msgid "State type"
 msgstr "Тип состояния"
 
-#: Presencestate.class.php:216
+#: Presencestate.class.php:227
 msgid "Submit"
 msgstr "Сохранить"
 
@@ -169,6 +160,12 @@ msgstr "Разрешать этому пользователю менять ст
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Да"
+
+#~ msgid "Admin"
+#~ msgstr "Администратор"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "Управление списком сотояний присуствия."
 
 #~ msgid "Actions List"
 #~ msgstr "Список действий"
