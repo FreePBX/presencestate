@@ -169,12 +169,12 @@ class Presencestate implements BMO {
         return $presencestates;
 	}
 	public function setDatabase($pdo){
-		$this->Database = $pdo;
+		$this->db = $pdo;
 		return $this;
 	}
 	
 	public function resetDatabase(){
-		$this->Database = $this->FreePBX->Database;
+		$this->db = $this->FreePBX->Database;
 		return $this;
 	}
     
