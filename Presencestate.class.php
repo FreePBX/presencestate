@@ -230,6 +230,33 @@ class Presencestate implements BMO {
 	}
 
 	/**
+	 * Get All Device States
+	 * @method getAllDevicesStates
+	 * @return array
+	 */
+	public function getAllDevicesStates() {
+		$devices = $this->FreePBX->astman->PresenceStateList();
+		$states = $this->getAllStates();
+		$final = array();
+		foreach($devices as $t) {
+			$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+			$result = array(
+				"id" => null,
+				"type" => $t['Status'],
+				"message" => $t['Message']
+			);
+			foreach($states as $state) {
+				if($t['Message'] == $state['message'] && $state['type'] == $t['Status']) {
+					$result['id'] = $state['id'];
+				}
+			}
+			$parts = explode(":",$t['Presentity']);
+			$final[$parts[1]] = $result;
+		}
+		return $final;
+	}
+
+	/**
 	 * Get Presence State by Device
 	 * @method getStateByDevice
 	 * @param  integer           $device The device ID
