@@ -21,7 +21,6 @@ class Restore Extends Base\RestoreBase{
             'states' => $this->FreePBX->Presencestate->getAllStates(),
             'prefs' => $this->FreePBX->Presencestate->dumpPrefs(),
         ];
-        $configs = reset($configs);
         $cb->resetDatabase();
         foreach ($configs['states'] as $state) {
            $cb->setItem($state);
