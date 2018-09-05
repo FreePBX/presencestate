@@ -22,7 +22,7 @@ class Presencestate extends Base {
 		 * @returns - a list of presencestate types
 		 * @uri /presencestate/types
 		 */
-		$app->get('/list', function ($request, $response, $args) {
+		$app->get('/types', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$types = presencestate_types_get();
 
