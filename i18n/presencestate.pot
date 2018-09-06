@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 12:52-0400\n"
+"POT-Creation-Date: 2018-09-05 22:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,10 @@ msgstr ""
 #: views/bootnav.php:2
 #: views/grid.php:2
 msgid "Add State"
+msgstr ""
+
+#: presencestate.i18n.php:6
+msgid "Admin"
 msgstr ""
 
 #: functions.inc.php:7
@@ -88,6 +92,10 @@ msgstr ""
 msgid "List States"
 msgstr ""
 
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr ""
+
 #: views/bootnav.php:15
 #: views/grid.php:15
 msgid "Message"
@@ -124,6 +132,8 @@ msgid "Presence Settings"
 msgstr ""
 
 #: Presencestate.class.php:127
+#: presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr ""
 
