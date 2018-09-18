@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-19 18:14-0400\n"
-"PO-Revision-Date: 2018-09-18 15:08+0000\n"
+"PO-Revision-Date: 2018-09-18 15:43+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/presencestate/de/>\n"
 "Language: de_DE\n"
@@ -86,7 +86,7 @@ msgstr "Übernehmen"
 
 #: Presencestate.class.php:192
 msgid "Invalid Request"
-msgstr "ungültige Anfrage"
+msgstr "Ungültige Anfrage"
 
 #: views/bootnav.php:3
 msgid "List States"
@@ -106,7 +106,9 @@ msgstr "Nein"
 
 #: ucp/views/settings.php:14
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr "Bei schließen des Browsers oder UPC Logout setze Status auf"
+msgstr ""
+"Setze den Status beim Schließen des Browsers oder bei der Abmeldung vom UCP "
+"auf"
 
 #: ucp/views/settings.php:5
 msgid "On UCP Login Set Status to"
@@ -118,7 +120,7 @@ msgstr "Optionale Nachricht"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr "Optionale Nachricht, z.B. Mittag"
+msgstr "Optionale Nachricht, z.B. Mittagessen"
 
 #: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
 #: ucp/Presencestate.class.php:193
