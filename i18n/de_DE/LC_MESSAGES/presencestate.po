@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-19 18:14-0400\n"
-"PO-Revision-Date: 2018-09-18 15:43+0000\n"
+"PO-Revision-Date: 2018-10-19 13:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/presencestate/de/>\n"
 "Language: de_DE\n"
@@ -82,7 +82,7 @@ msgstr "Finde Mich/Folge Mir"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "Übernehmen"
+msgstr "Erben"
 
 #: Presencestate.class.php:192
 msgid "Invalid Request"
