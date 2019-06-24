@@ -1,208 +1,192 @@
 # This file is part of FreePBX.
 #
-#    FreePBX is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 2 of the License, or
-#    (at your option) any later version.
-#
-#    FreePBX is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with FreePBX.  If not, see <http://www.gnu.org/licenses/>.
+# For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for presencestate
-# Copyright (C) 2008-2014 Schmoozecom, INC
+# Copyright (C) 2008-2016 Sangoma, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-23 12:25-0400\n"
-"PO-Revision-Date: 2015-10-30 06:23+0200\n"
-"Last-Translator: Kevin <kevin@qloog.com>\n"
-"Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
-"presencestate/ja_JP/>\n"
-"Language: ja_JP\n"
+"PO-Revision-Date: 2017-03-06 02:37+0200\n"
+"Last-Translator: hammer125 <auswertung@aon.at>\n"
+"Language-Team: German <http://weblate.freepbx.org/projects/freepbx/"
+"presencestate/de_DE/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/grid.php:16
 msgid "Actions"
-msgstr "アクション"
+msgstr "Aktionen"
 
 #: ucp/assets/js/global.js:81
 msgid "Actions List"
-msgstr ""
+msgstr "Aktionsliste"
 
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Status hinzufügen"
 
 #: presencestate.i18n.php:6
 msgid "Admin"
-msgstr "アドミン"
+msgstr "Administrator"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
 msgid "Available"
-msgstr "オンライン"
+msgstr "Verfügbar"
 
 #: functions.inc.php:9 ucp/Presencestate.class.php:121
 #: ucp/Presencestate.class.php:214
 msgid "Away"
-msgstr "不在"
+msgstr "Abwesend"
 
 #: functions.inc.php:8 ucp/Presencestate.class.php:119
 #: ucp/Presencestate.class.php:212
 msgid "Chat"
-msgstr "チャット"
+msgstr "Chat"
 
 #: functions.inc.php:10
 msgid "DND"
-msgstr "取込中"
+msgstr "DND"
 
 #: ucp/views/settings.php:25
 msgid "Define Actions on A Status Change"
-msgstr "ステータス変更のアクションを定義します"
+msgstr "Aktion bei Statusänderung"
 
 #: Presencestate.class.php:192
 msgid "Delete"
-msgstr "削除"
+msgstr "Löschen"
 
 #: ucp/views/settings.php:9 ucp/views/settings.php:18
 msgid "Do Not Change"
-msgstr ""
+msgstr "Nichts ändern"
 
 #: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
 #: ucp/Presencestate.class.php:215
 msgid "Do Not Disturb"
-msgstr "着信拒否"
+msgstr "Bitte nicht stören"
 
 #: ucp/Presencestate.class.php:90
 msgid "Do Nothing"
-msgstr "何もしない"
+msgstr "Nichts tun"
 
 #: views/ucp_config.php:7
 msgid "Enable Presence"
-msgstr "プレゼンスを有効にする"
+msgstr "Aktiviere Anwesenheitsstatus"
 
 #: functions.inc.php:11 ucp/Presencestate.class.php:120
 #: ucp/Presencestate.class.php:213
 msgid "Extended Away"
-msgstr "長期不在"
+msgstr "Länger abwesend"
 
 #: ucp/Presencestate.class.php:92
 msgid "Findme/Follow Me"
-msgstr "ファインドミー／フォローミー"
+msgstr "Finde Mich/Folge Mir"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "引き継ぐ"
+msgstr "Erben"
 
 #: Presencestate.class.php:178
 msgid "Invalid Request"
-msgstr ""
+msgstr "ungültige Anfrage"
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
+msgstr "Statusliste"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
-msgstr "ステータスのリストを管理します。"
+msgstr "Liste der Anwesenheitsstatus verwalten."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
-msgstr "メッセージ"
+msgstr "Nachricht"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr "いいえ"
+msgstr "Nein"
 
 #: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
 msgid "Offline"
-msgstr "オフライン"
+msgstr "Offline"
 
 #: ucp/views/settings.php:16
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr "ブラウザ終了時、もしくはUCPログアウト時にステータスを変更："
+msgstr "Bei schließen des Browsers oder UPC Logout setze Status auf"
 
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
-msgstr "UCPログイン時にステータスを変更："
+msgstr "Bei UPC Login setze Status auf"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Optionale Nachricht"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Optionale Nachricht, z.B. Mittag"
 
 #: ucp/Presencestate.class.php:248
 msgid "Presence"
-msgstr ""
+msgstr "Anwesenheit"
 
 #: Presencestate.class.php:118 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
-msgstr "プレゼンスステータス"
+msgstr "Anwesenheitsstatus"
 
 #: ucp/views/settings.php:2
 msgid "Presence State Settings"
-msgstr "プレゼンスステータスの設定"
+msgstr "Anwesenheitsstatus Einstellungen"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "Anwesenheitsstatus"
 
 #: Presencestate.class.php:197
 msgid "Reset"
-msgstr "リセット"
+msgstr "Zurücksetzen"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "Status Typ"
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
-msgstr "ステータスは設定されていません"
+msgstr "Status nicht gesetzt"
 
 #: Presencestate.class.php:202
 msgid "Submit"
-msgstr "送信"
+msgstr "absenden"
 
 #: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
-msgstr "種類"
+msgstr "Typ"
 
 #: functions.inc.php:12 ucp/Presencestate.class.php:123
 #: ucp/Presencestate.class.php:216
 msgid "Unavailable"
-msgstr "オフライン"
+msgstr "Nicht Verfügbar"
 
 #: views/ucp_config.php:28
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
-msgstr "このユーザーがUCPで自分のステータスを変更できるかどうか設定します。"
+msgstr ""
+"Erlaubt dem Benutzer seinen Anwesenheitsstatus/ Status im UCP zu ändern"
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr "はい"
+msgstr "Ja"
 
 #: ucp/assets/js/global.js:109
 msgid "Your settings have been saved"
-msgstr ""
-
-#~ msgid "New Presence State"
-#~ msgstr "新規ステータス"
-
-#~ msgid "Presence Status"
-#~ msgstr "プレゼンスステータス"
+msgstr "Ihre Einstellung wurde gespeichert"

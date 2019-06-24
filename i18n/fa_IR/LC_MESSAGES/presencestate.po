@@ -9,15 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-04-30 14:03+0200\n"
+"POT-Creation-Date: 2018-08-23 12:25-0400\n"
+"PO-Revision-Date: 2016-10-08 12:16+0200\n"
 "Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/fa_IR/>\n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
@@ -31,16 +31,16 @@ msgstr "فهرست عملیات"
 
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
-msgstr "افزودن کیفیت"
+msgstr "افزودن وضعیت"
 
-#: presencestate.i18n.php:6 presencestate.i18n.php:12
+#: presencestate.i18n.php:6
 msgid "Admin"
-msgstr ""
+msgstr "مدیر"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
 msgid "Available"
-msgstr "دردسترس"
+msgstr "در دسترس"
 
 #: functions.inc.php:9 ucp/Presencestate.class.php:121
 #: ucp/Presencestate.class.php:214
@@ -54,28 +54,28 @@ msgstr "چت"
 
 #: functions.inc.php:10
 msgid "DND"
-msgstr "مزاحم نشوید"
+msgstr "DND"
 
 #: ucp/views/settings.php:25
 msgid "Define Actions on A Status Change"
-msgstr "تشخیص عملیات در تغییر وضعیت"
+msgstr "تعریف رفتار بر اساس تغییر در وضعیت"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Delete"
 msgstr "حذف"
 
 #: ucp/views/settings.php:9 ucp/views/settings.php:18
 msgid "Do Not Change"
-msgstr "بدون تغییر"
+msgstr "تغییر ندهید"
 
 #: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
 #: ucp/Presencestate.class.php:215
 msgid "Do Not Disturb"
-msgstr "مزاحم نشوید"
+msgstr "مزاحم نشوید (DND)"
 
 #: ucp/Presencestate.class.php:90
 msgid "Do Nothing"
-msgstr "هیچ کاری نکن"
+msgstr "هیچ کاری نکنید"
 
 #: views/ucp_config.php:7
 msgid "Enable Presence"
@@ -84,7 +84,7 @@ msgstr "فعال کردن حضور"
 #: functions.inc.php:11 ucp/Presencestate.class.php:120
 #: ucp/Presencestate.class.php:213
 msgid "Extended Away"
-msgstr "تمدید دور"
+msgstr "خیلی دور"
 
 #: ucp/Presencestate.class.php:92
 msgid "Findme/Follow Me"
@@ -92,9 +92,9 @@ msgstr "مرا پیدا کن/مرا دنبال کن"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "ارث بری"
+msgstr "موروثی"
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:178
 msgid "Invalid Request"
 msgstr "درخواست نامعتبر"
 
@@ -104,7 +104,7 @@ msgstr "فهرست وضعیت ها"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
-msgstr ""
+msgstr "مدیریت فهرست وضعیت های حضور."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
@@ -120,11 +120,12 @@ msgstr "آفلاین"
 
 #: ucp/views/settings.php:16
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr "در هنگام بستن مرورگر یا تنظیم وضعیت خروج از کنترل پنل کاربری"
+msgstr ""
+"در هنگام بستن مرورگر یا خروج از پنل کنترل کاربری وضعیت تغییر داده شود به"
 
 #: ucp/views/settings.php:7
 msgid "On UCP Login Set Status to"
-msgstr "تنظیم وضعیت ورود به کنترل پنل کاربری"
+msgstr "هنگام ورود به پنل کنترل کاربری وضعیت تغییر داده شود به"
 
 #: views/form.php:50
 msgid "Optional Message"
@@ -151,7 +152,7 @@ msgstr "تنظیمات وضعیت حضور"
 msgid "Presence States"
 msgstr "وضعیت های حضور"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:197
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -163,7 +164,7 @@ msgstr "نوع وضعیت"
 msgid "Status Not Set"
 msgstr "وضعیت تنظیم نشده است"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:202
 msgid "Submit"
 msgstr "ثبت"
 
@@ -174,13 +175,14 @@ msgstr "نوع"
 #: functions.inc.php:12 ucp/Presencestate.class.php:123
 #: ucp/Presencestate.class.php:216
 msgid "Unavailable"
-msgstr "دور از دسترس"
+msgstr "خارج از دسترس"
 
 #: views/ucp_config.php:28
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
-msgstr "مجوز به کاربر برای تغییر وضعیت/حالت خود در کنترل پنل کاربری"
+msgstr ""
+"دادن مجوز به کاربر برای تغییر وضعیت/حالت حضور خود در پنل کنترل کاربری (UCP)"
 
 #: views/ucp_config.php:13
 msgid "Yes"

@@ -123,16 +123,19 @@ class Presencestate implements BMO {
 	}
 
 	public function presencestatePrefsGet($extension) {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		return presencestate_prefs_get($extension);
 	}
 
 	public function presencestatePrefsSetMultiple($extension, $array) {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		foreach($array as $id => $val) {
 			$this->presencestatePrefsSet($extension, array('id'=>$id,'pref'=>$val));
 		}
 	}
 
 	public function presencestatePrefsSet($extension, $vars) {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		presencestate_prefs_set($extension, $vars);
 	}
 	public function presencestateItemGet($id){
@@ -143,9 +146,11 @@ class Presencestate implements BMO {
 		return $stmt->fetchObject();
 	}
 	public function getAllTypes() {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		return presencestate_types_get();
 	}
 	public function getAllStates() {
+		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		return presencestate_list_get();
 	}
 	public function ajaxRequest($req, &$setting) {
@@ -209,6 +214,84 @@ class Presencestate implements BMO {
 		}
 		return $buttons;
 	}
+
+	/**
+	 * Get All Device States
+	 * @method getAllDevicesStates
+	 * @return array
+	 */
+	public function getAllDevicesStates() {
+		$devices = $this->FreePBX->astman->PresenceStateList();
+		$states = $this->getAllStates();
+		$final = array();
+		foreach($devices as $t) {
+			$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+			$result = array(
+				"id" => null,
+				"type" => $t['Status'],
+				"message" => $t['Message']
+			);
+			foreach($states as $state) {
+				if($t['Message'] == $state['message'] && $state['type'] == $t['Status']) {
+					$result['id'] = $state['id'];
+				}
+			}
+			$parts = explode(":",$t['Presentity']);
+			$final[$parts[1]] = $result;
+		}
+		return $final;
+	}
+
+	/**
+	 * Get Presence State by Device
+	 * @method getStateByDevice
+	 * @param  integer           $device The device ID
+	 * @return array                   The device state
+	 */
+	public function getStateByDevice($device) {
+		$dev = $this->FreePBX->Core->getDevice($device);
+		if(empty($dev)) {
+			throw new \Exception("Device does not exist!");
+		}
+		$t = $this->FreePBX->astman->PresenceState('CustomPresence:'.$device);
+		$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
+		$states = $this->getAllStates();
+		$result = array(
+			"id" => null,
+			"type" => $t['State'],
+			"message" => $t['Message']
+		);
+		foreach($states as $state) {
+			if($t['Message'] == $state['message'] && $state['type'] == $t['State']) {
+				$result['id'] = $state['id'];
+			}
+		}
+		return $result;
+	}
+
+	/**
+	 * Set Presence State by Device
+	 * @method setStateByDevice
+	 * @param  integer           $device  The device ID
+	 * @param  string           $state   The presence state state
+	 * @param  string           $message The message to override
+	 */
+	public function setStateByDevice($device, $state, $message = null) {
+		$dev = $this->FreePBX->Core->getDevice($device);
+		if(empty($dev)) {
+			throw new \Exception("Device does not exist!");
+		}
+		$states = $this->getAllStates();
+		if(!empty($state) && !empty($states[$state])) {
+			$type = $this->states[$state]['type'];
+			$msg = !empty($this->states[$state]['message']) ? $this->states[$state]['message'] : '';
+			$msg = !empty($message) ? $message : $msg;
+			$this->FreePBX->astman->set_global($this->FreePBX->Config->get_conf_setting('AST_FUNC_PRESENCE_STATE') . '(CustomPresence:' . $device . ')', '"'.$type . ',,' . $msg.'"');
+		} else {
+			throw new \Exception("Invalid state of '".$state."'");
+		}
+	}
+
 	public function getRightNav($request) {
 	  if(isset($request['view']) && $request['view'] == 'form'){
 	    return load_view(__DIR__."/views/bootnav.php",array());

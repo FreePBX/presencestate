@@ -9,17 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-10 13:49-0700\n"
-"PO-Revision-Date: 2016-01-14 23:00+0200\n"
+"POT-Creation-Date: 2018-08-23 12:25-0400\n"
+"PO-Revision-Date: 2016-12-11 05:38+0200\n"
 "Last-Translator: Ernesto <ecasas@sangoma.com>\n"
 "Language-Team: Spanish <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2-dev\n"
+"X-Generator: Weblate 2.4\n"
 
 #: views/grid.php:16
 msgid "Actions"
@@ -31,11 +31,11 @@ msgstr "Lista de Acciones"
 
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Agregar Estado"
 
-#: presencestate.i18n.php:6 presencestate.i18n.php:12
+#: presencestate.i18n.php:6
 msgid "Admin"
-msgstr "Admin"
+msgstr "Administ"
 
 #: functions.inc.php:7 ucp/Presencestate.class.php:118
 #: ucp/Presencestate.class.php:211
@@ -60,7 +60,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "Definir acciones en un cambio de estado"
 
-#: Presencestate.class.php:187
+#: Presencestate.class.php:192
 msgid "Delete"
 msgstr "Borrar"
 
@@ -92,15 +92,15 @@ msgstr "Encuentra-Me/Sigue-Me"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "Hereda"
+msgstr "Heredar"
 
-#: Presencestate.class.php:173
+#: Presencestate.class.php:178
 msgid "Invalid Request"
-msgstr "Solicitud no válida"
+msgstr "Requerimiento Invalido"
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
+msgstr "Listar Estados"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
@@ -128,11 +128,11 @@ msgstr "Al entrar a UCP ponga estado en"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Mensaje Opcional"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Mensaje Opcional, por ejemplo: Almuerzo"
 
 #: ucp/Presencestate.class.php:248
 msgid "Presence"
@@ -149,21 +149,21 @@ msgstr "Configuración Estado de Presencia"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "Estados de Presencia"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:197
 msgid "Reset"
-msgstr "Reiniciar"
+msgstr "Reinicio"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "tipo de estado"
 
 #: ucp/assets/js/global.js:35
 msgid "Status Not Set"
 msgstr "Estado no establecido"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:202
 msgid "Submit"
 msgstr "Enviar"
 
