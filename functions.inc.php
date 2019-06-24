@@ -70,6 +70,7 @@ function presencestate_list_get() {
 		die_freepbx("Could not get list of presence states.\n");
 	}
 
+	$presencestates = [];
 	foreach ($ret as $row) {
 		$presencestates[$row['id']] = $row;
 	}
