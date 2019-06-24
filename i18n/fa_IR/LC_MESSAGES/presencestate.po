@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-05 22:47-0400\n"
+"POT-Creation-Date: 2019-06-24 23:15+0000\n"
 "PO-Revision-Date: 2016-10-08 12:16+0200\n"
 "Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -28,10 +28,6 @@ msgstr "عملیات"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "افزودن وضعیت"
-
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "مدیر"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -53,7 +49,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "تعریف رفتار بر اساس تغییر در وضعیت"
 
-#: Presencestate.class.php:217
+#: Presencestate.class.php:218
 msgid "Delete"
 msgstr "حذف"
 
@@ -85,17 +81,13 @@ msgstr "مرا پیدا کن/مرا دنبال کن"
 msgid "Inherit"
 msgstr "موروثی"
 
-#: Presencestate.class.php:203
+#: Presencestate.class.php:204
 msgid "Invalid Request"
 msgstr "درخواست نامعتبر"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr "فهرست وضعیت ها"
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "مدیریت فهرست وضعیت های حضور."
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
@@ -131,8 +123,7 @@ msgstr "حضور"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:127
 msgid "Presence State"
 msgstr "وضعیت حضور"
 
@@ -140,7 +131,7 @@ msgstr "وضعیت حضور"
 msgid "Presence States"
 msgstr "وضعیت های حضور"
 
-#: Presencestate.class.php:222
+#: Presencestate.class.php:223
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -148,7 +139,7 @@ msgstr "بازنشانی"
 msgid "State type"
 msgstr "نوع وضعیت"
 
-#: Presencestate.class.php:227
+#: Presencestate.class.php:228
 msgid "Submit"
 msgstr "ثبت"
 
@@ -170,6 +161,12 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "بله"
+
+#~ msgid "Admin"
+#~ msgstr "مدیر"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "مدیریت فهرست وضعیت های حضور."
 
 #~ msgid "Actions List"
 #~ msgstr "فهرست عملیات"

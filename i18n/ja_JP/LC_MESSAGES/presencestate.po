@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-05 22:47-0400\n"
+"POT-Creation-Date: 2019-06-24 23:15+0000\n"
 "PO-Revision-Date: 2015-10-30 06:23+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -39,10 +39,6 @@ msgstr "アクション"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr ""
-
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "アドミン"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -64,7 +60,7 @@ msgstr "取込中"
 msgid "Define Actions on A Status Change"
 msgstr "ステータス変更のアクションを定義します"
 
-#: Presencestate.class.php:217
+#: Presencestate.class.php:218
 msgid "Delete"
 msgstr "削除"
 
@@ -96,17 +92,13 @@ msgstr "ファインドミー／フォローミー"
 msgid "Inherit"
 msgstr "引き継ぐ"
 
-#: Presencestate.class.php:203
+#: Presencestate.class.php:204
 msgid "Invalid Request"
 msgstr ""
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr ""
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "ステータスのリストを管理します。"
 
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
@@ -141,8 +133,7 @@ msgstr ""
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:127
 msgid "Presence State"
 msgstr "プレゼンスステータス"
 
@@ -150,7 +141,7 @@ msgstr "プレゼンスステータス"
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:222
+#: Presencestate.class.php:223
 msgid "Reset"
 msgstr "リセット"
 
@@ -158,7 +149,7 @@ msgstr "リセット"
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:227
+#: Presencestate.class.php:228
 msgid "Submit"
 msgstr "送信"
 
@@ -179,6 +170,12 @@ msgstr "このユーザーがUCPで自分のステータスを変更できるか
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "はい"
+
+#~ msgid "Admin"
+#~ msgstr "アドミン"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "ステータスのリストを管理します。"
 
 #~ msgid "Offline"
 #~ msgstr "オフライン"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-21 19:28-0500\n"
+"POT-Creation-Date: 2019-06-24 23:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,10 +25,6 @@ msgstr ""
 #: views/bootnav.php:2
 #: views/grid.php:2
 msgid "Add State"
-msgstr ""
-
-#: presencestate.i18n.php:6
-msgid "Admin"
 msgstr ""
 
 #: functions.inc.php:7
@@ -51,7 +47,7 @@ msgstr ""
 msgid "Define Actions on A Status Change"
 msgstr ""
 
-#: Presencestate.class.php:217
+#: Presencestate.class.php:218
 msgid "Delete"
 msgstr ""
 
@@ -84,16 +80,12 @@ msgstr ""
 msgid "Inherit"
 msgstr ""
 
-#: Presencestate.class.php:203
+#: Presencestate.class.php:204
 msgid "Invalid Request"
 msgstr ""
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
 msgstr ""
 
 #: views/bootnav.php:15
@@ -132,8 +124,6 @@ msgid "Presence Settings"
 msgstr ""
 
 #: Presencestate.class.php:127
-#: presencestate.i18n.php:4
-#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr ""
 
@@ -141,7 +131,7 @@ msgstr ""
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:222
+#: Presencestate.class.php:223
 msgid "Reset"
 msgstr ""
 
@@ -149,7 +139,7 @@ msgstr ""
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:227
+#: Presencestate.class.php:228
 msgid "Submit"
 msgstr ""
 
