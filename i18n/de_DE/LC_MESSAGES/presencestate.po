@@ -10,16 +10,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-19 18:14-0400\n"
-"PO-Revision-Date: 2018-02-16 20:01+0200\n"
-"Last-Translator: Nils <Nils@heckenkamp.info>\n"
-"Language-Team: German <http://weblate.freepbx.org/projects/freepbx/"
-"presencestate/de_DE/>\n"
+"PO-Revision-Date: 2018-10-19 13:00+0000\n"
+"Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
+"Language-Team: German <http://*/projects/freepbx/presencestate/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.4\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: views/grid.php:16
 msgid "Actions"
@@ -83,11 +82,11 @@ msgstr "Finde Mich/Folge Mir"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr "Übernehmen"
+msgstr "Erben"
 
 #: Presencestate.class.php:192
 msgid "Invalid Request"
-msgstr "ungültige Anfrage"
+msgstr "Ungültige Anfrage"
 
 #: views/bootnav.php:3
 msgid "List States"
@@ -107,7 +106,9 @@ msgstr "Nein"
 
 #: ucp/views/settings.php:14
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr "Bei schließen des Browsers oder UPC Logout setze Status auf"
+msgstr ""
+"Setze den Status beim Schließen des Browsers oder bei der Abmeldung vom UCP "
+"auf"
 
 #: ucp/views/settings.php:5
 msgid "On UCP Login Set Status to"
@@ -119,7 +120,7 @@ msgstr "Optionale Nachricht"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr "Optionale Nachricht, z.B. Mittag"
+msgstr "Optionale Nachricht, z.B. Mittagessen"
 
 #: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
 #: ucp/Presencestate.class.php:193
@@ -128,7 +129,7 @@ msgstr "Anwesenheit"
 
 #: ucp/Presencestate.class.php:228
 msgid "Presence Settings"
-msgstr ""
+msgstr "Anwesenheitseinstellungen"
 
 #: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
