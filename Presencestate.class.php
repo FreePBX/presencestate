@@ -162,6 +162,7 @@ class Presencestate implements BMO {
         $sql = 'SELECT * FROM presencestate_list';
         $ret = $this->db->query($sql)
             ->fetchAll(PDO::FETCH_ASSOC);
+	$presencestates = [];
         foreach ($ret as $row) {
             $presencestates[$row['id']] = $row;
         }
