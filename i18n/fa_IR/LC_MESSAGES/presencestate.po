@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-23 12:25-0400\n"
+"POT-Creation-Date: 2017-09-18 19:02-0700\n"
 "PO-Revision-Date: 2016-10-08 12:16+0200\n"
 "Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -25,10 +25,6 @@ msgstr ""
 msgid "Actions"
 msgstr "عملیات"
 
-#: ucp/assets/js/global.js:81
-msgid "Actions List"
-msgstr "فهرست عملیات"
-
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "افزودن وضعیت"
@@ -37,18 +33,15 @@ msgstr "افزودن وضعیت"
 msgid "Admin"
 msgstr "مدیر"
 
-#: functions.inc.php:7 ucp/Presencestate.class.php:118
-#: ucp/Presencestate.class.php:211
+#: functions.inc.php:7
 msgid "Available"
 msgstr "در دسترس"
 
-#: functions.inc.php:9 ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: functions.inc.php:9
 msgid "Away"
 msgstr "دور"
 
-#: functions.inc.php:8 ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: functions.inc.php:8
 msgid "Chat"
 msgstr "چت"
 
@@ -56,24 +49,23 @@ msgstr "چت"
 msgid "DND"
 msgstr "DND"
 
-#: ucp/views/settings.php:25
+#: ucp/views/settings.php:23
 msgid "Define Actions on A Status Change"
 msgstr "تعریف رفتار بر اساس تغییر در وضعیت"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:206
 msgid "Delete"
 msgstr "حذف"
 
-#: ucp/views/settings.php:9 ucp/views/settings.php:18
+#: ucp/views/settings.php:7 ucp/views/settings.php:16
 msgid "Do Not Change"
 msgstr "تغییر ندهید"
 
-#: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
-#: ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:220
 msgid "Do Not Disturb"
 msgstr "مزاحم نشوید (DND)"
 
-#: ucp/Presencestate.class.php:90
+#: ucp/Presencestate.class.php:219
 msgid "Do Nothing"
 msgstr "هیچ کاری نکنید"
 
@@ -81,12 +73,11 @@ msgstr "هیچ کاری نکنید"
 msgid "Enable Presence"
 msgstr "فعال کردن حضور"
 
-#: functions.inc.php:11 ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: functions.inc.php:11
 msgid "Extended Away"
 msgstr "خیلی دور"
 
-#: ucp/Presencestate.class.php:92
+#: ucp/Presencestate.class.php:221
 msgid "Findme/Follow Me"
 msgstr "مرا پیدا کن/مرا دنبال کن"
 
@@ -94,7 +85,7 @@ msgstr "مرا پیدا کن/مرا دنبال کن"
 msgid "Inherit"
 msgstr "موروثی"
 
-#: Presencestate.class.php:178
+#: Presencestate.class.php:192
 msgid "Invalid Request"
 msgstr "درخواست نامعتبر"
 
@@ -114,16 +105,12 @@ msgstr "پیام"
 msgid "No"
 msgstr "خیر"
 
-#: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
-msgid "Offline"
-msgstr "آفلاین"
-
-#: ucp/views/settings.php:16
+#: ucp/views/settings.php:14
 msgid "On Browser Close or UCP Logout Set Status to"
 msgstr ""
 "در هنگام بستن مرورگر یا خروج از پنل کنترل کاربری وضعیت تغییر داده شود به"
 
-#: ucp/views/settings.php:7
+#: ucp/views/settings.php:5
 msgid "On UCP Login Set Status to"
 msgstr "هنگام ورود به پنل کنترل کاربری وضعیت تغییر داده شود به"
 
@@ -135,24 +122,25 @@ msgstr "پیام اختیاری"
 msgid "Optional message, example: Lunch"
 msgstr "پیام اختیاری، مثال: زمان نهار"
 
-#: ucp/Presencestate.class.php:248
+#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
+#: ucp/Presencestate.class.php:193
 msgid "Presence"
 msgstr "حضور"
 
-#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: ucp/Presencestate.class.php:228
+msgid "Presence Settings"
+msgstr ""
+
+#: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "وضعیت حضور"
-
-#: ucp/views/settings.php:2
-msgid "Presence State Settings"
-msgstr "تنظیمات وضعیت حضور"
 
 #: page.presencestate.php:6
 msgid "Presence States"
 msgstr "وضعیت های حضور"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:211
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -160,11 +148,7 @@ msgstr "بازنشانی"
 msgid "State type"
 msgstr "نوع وضعیت"
 
-#: ucp/assets/js/global.js:35
-msgid "Status Not Set"
-msgstr "وضعیت تنظیم نشده است"
-
-#: Presencestate.class.php:202
+#: Presencestate.class.php:216
 msgid "Submit"
 msgstr "ثبت"
 
@@ -172,8 +156,7 @@ msgstr "ثبت"
 msgid "Type"
 msgstr "نوع"
 
-#: functions.inc.php:12 ucp/Presencestate.class.php:123
-#: ucp/Presencestate.class.php:216
+#: functions.inc.php:12
 msgid "Unavailable"
 msgstr "خارج از دسترس"
 
@@ -188,6 +171,17 @@ msgstr ""
 msgid "Yes"
 msgstr "بله"
 
-#: ucp/assets/js/global.js:109
-msgid "Your settings have been saved"
-msgstr "تنظیمات شما ذخیره شد"
+#~ msgid "Actions List"
+#~ msgstr "فهرست عملیات"
+
+#~ msgid "Offline"
+#~ msgstr "آفلاین"
+
+#~ msgid "Presence State Settings"
+#~ msgstr "تنظیمات وضعیت حضور"
+
+#~ msgid "Status Not Set"
+#~ msgstr "وضعیت تنظیم نشده است"
+
+#~ msgid "Your settings have been saved"
+#~ msgstr "تنظیمات شما ذخیره شد"

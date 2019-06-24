@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-23 12:25-0400\n"
+"POT-Creation-Date: 2017-09-18 19:02-0700\n"
 "PO-Revision-Date: 2015-10-30 06:23+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -36,10 +36,6 @@ msgstr ""
 msgid "Actions"
 msgstr "アクション"
 
-#: ucp/assets/js/global.js:81
-msgid "Actions List"
-msgstr ""
-
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr ""
@@ -48,18 +44,15 @@ msgstr ""
 msgid "Admin"
 msgstr "アドミン"
 
-#: functions.inc.php:7 ucp/Presencestate.class.php:118
-#: ucp/Presencestate.class.php:211
+#: functions.inc.php:7
 msgid "Available"
 msgstr "オンライン"
 
-#: functions.inc.php:9 ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: functions.inc.php:9
 msgid "Away"
 msgstr "不在"
 
-#: functions.inc.php:8 ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: functions.inc.php:8
 msgid "Chat"
 msgstr "チャット"
 
@@ -67,24 +60,23 @@ msgstr "チャット"
 msgid "DND"
 msgstr "取込中"
 
-#: ucp/views/settings.php:25
+#: ucp/views/settings.php:23
 msgid "Define Actions on A Status Change"
 msgstr "ステータス変更のアクションを定義します"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:206
 msgid "Delete"
 msgstr "削除"
 
-#: ucp/views/settings.php:9 ucp/views/settings.php:18
+#: ucp/views/settings.php:7 ucp/views/settings.php:16
 msgid "Do Not Change"
 msgstr ""
 
-#: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
-#: ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:220
 msgid "Do Not Disturb"
 msgstr "着信拒否"
 
-#: ucp/Presencestate.class.php:90
+#: ucp/Presencestate.class.php:219
 msgid "Do Nothing"
 msgstr "何もしない"
 
@@ -92,12 +84,11 @@ msgstr "何もしない"
 msgid "Enable Presence"
 msgstr "プレゼンスを有効にする"
 
-#: functions.inc.php:11 ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: functions.inc.php:11
 msgid "Extended Away"
 msgstr "長期不在"
 
-#: ucp/Presencestate.class.php:92
+#: ucp/Presencestate.class.php:221
 msgid "Findme/Follow Me"
 msgstr "ファインドミー／フォローミー"
 
@@ -105,7 +96,7 @@ msgstr "ファインドミー／フォローミー"
 msgid "Inherit"
 msgstr "引き継ぐ"
 
-#: Presencestate.class.php:178
+#: Presencestate.class.php:192
 msgid "Invalid Request"
 msgstr ""
 
@@ -125,15 +116,11 @@ msgstr "メッセージ"
 msgid "No"
 msgstr "いいえ"
 
-#: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
-msgid "Offline"
-msgstr "オフライン"
-
-#: ucp/views/settings.php:16
+#: ucp/views/settings.php:14
 msgid "On Browser Close or UCP Logout Set Status to"
 msgstr "ブラウザ終了時、もしくはUCPログアウト時にステータスを変更："
 
-#: ucp/views/settings.php:7
+#: ucp/views/settings.php:5
 msgid "On UCP Login Set Status to"
 msgstr "UCPログイン時にステータスを変更："
 
@@ -145,24 +132,25 @@ msgstr ""
 msgid "Optional message, example: Lunch"
 msgstr ""
 
-#: ucp/Presencestate.class.php:248
+#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
+#: ucp/Presencestate.class.php:193
 msgid "Presence"
 msgstr ""
 
-#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: ucp/Presencestate.class.php:228
+msgid "Presence Settings"
+msgstr ""
+
+#: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "プレゼンスステータス"
-
-#: ucp/views/settings.php:2
-msgid "Presence State Settings"
-msgstr "プレゼンスステータスの設定"
 
 #: page.presencestate.php:6
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:211
 msgid "Reset"
 msgstr "リセット"
 
@@ -170,11 +158,7 @@ msgstr "リセット"
 msgid "State type"
 msgstr ""
 
-#: ucp/assets/js/global.js:35
-msgid "Status Not Set"
-msgstr "ステータスは設定されていません"
-
-#: Presencestate.class.php:202
+#: Presencestate.class.php:216
 msgid "Submit"
 msgstr "送信"
 
@@ -182,8 +166,7 @@ msgstr "送信"
 msgid "Type"
 msgstr "種類"
 
-#: functions.inc.php:12 ucp/Presencestate.class.php:123
-#: ucp/Presencestate.class.php:216
+#: functions.inc.php:12
 msgid "Unavailable"
 msgstr "オフライン"
 
@@ -197,9 +180,14 @@ msgstr "このユーザーがUCPで自分のステータスを変更できるか
 msgid "Yes"
 msgstr "はい"
 
-#: ucp/assets/js/global.js:109
-msgid "Your settings have been saved"
-msgstr ""
+#~ msgid "Offline"
+#~ msgstr "オフライン"
+
+#~ msgid "Presence State Settings"
+#~ msgstr "プレゼンスステータスの設定"
+
+#~ msgid "Status Not Set"
+#~ msgstr "ステータスは設定されていません"
 
 #~ msgid "New Presence State"
 #~ msgstr "新規ステータス"

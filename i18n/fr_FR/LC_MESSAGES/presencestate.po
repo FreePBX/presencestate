@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-23 12:25-0400\n"
-"PO-Revision-Date: 2017-03-13 02:03+0200\n"
-"Last-Translator: Nicolas <freepbx@riendeau.org>\n"
+"POT-Creation-Date: 2018-07-19 18:14-0400\n"
+"PO-Revision-Date: 2017-12-11 22:57+0200\n"
+"Last-Translator: JCattan <jeremie@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/fr_FR/>\n"
 "Language: fr_FR\n"
@@ -25,10 +25,6 @@ msgstr ""
 msgid "Actions"
 msgstr "Actions"
 
-#: ucp/assets/js/global.js:81
-msgid "Actions List"
-msgstr "Liste des actions"
-
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Ajouter un état"
@@ -37,18 +33,15 @@ msgstr "Ajouter un état"
 msgid "Admin"
 msgstr "Admin"
 
-#: functions.inc.php:7 ucp/Presencestate.class.php:118
-#: ucp/Presencestate.class.php:211
+#: functions.inc.php:7
 msgid "Available"
 msgstr "Disponible"
 
-#: functions.inc.php:9 ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: functions.inc.php:9
 msgid "Away"
 msgstr "Absent"
 
-#: functions.inc.php:8 ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: functions.inc.php:8
 msgid "Chat"
 msgstr "Clavadarge"
 
@@ -56,24 +49,23 @@ msgstr "Clavadarge"
 msgid "DND"
 msgstr "NPD"
 
-#: ucp/views/settings.php:25
+#: ucp/views/settings.php:23
 msgid "Define Actions on A Status Change"
 msgstr "Définir les actions sur un changement d'état"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:206
 msgid "Delete"
 msgstr "Supprimer"
 
-#: ucp/views/settings.php:9 ucp/views/settings.php:18
+#: ucp/views/settings.php:7 ucp/views/settings.php:16
 msgid "Do Not Change"
 msgstr "Ne rien changer"
 
-#: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
-#: ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:220
 msgid "Do Not Disturb"
 msgstr "Ne-pas-Déranger (DND)"
 
-#: ucp/Presencestate.class.php:90
+#: ucp/Presencestate.class.php:219
 msgid "Do Nothing"
 msgstr "Ne rien faire"
 
@@ -81,12 +73,11 @@ msgstr "Ne rien faire"
 msgid "Enable Presence"
 msgstr "Activer la présence"
 
-#: functions.inc.php:11 ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: functions.inc.php:11
 msgid "Extended Away"
 msgstr "Absence prolongée"
 
-#: ucp/Presencestate.class.php:92
+#: ucp/Presencestate.class.php:221
 msgid "Findme/Follow Me"
 msgstr "Trouvez-moi/Suivez-moi"
 
@@ -94,7 +85,7 @@ msgstr "Trouvez-moi/Suivez-moi"
 msgid "Inherit"
 msgstr "Hérite"
 
-#: Presencestate.class.php:178
+#: Presencestate.class.php:192
 msgid "Invalid Request"
 msgstr "Requête invalide"
 
@@ -114,15 +105,11 @@ msgstr "Message"
 msgid "No"
 msgstr "Non"
 
-#: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
-msgid "Offline"
-msgstr "Hors ligne"
-
-#: ucp/views/settings.php:16
+#: ucp/views/settings.php:14
 msgid "On Browser Close or UCP Logout Set Status to"
 msgstr "Sur la fermeture du navigateur ou déconnexion de UCP mettre l'état à"
 
-#: ucp/views/settings.php:7
+#: ucp/views/settings.php:5
 msgid "On UCP Login Set Status to"
 msgstr "Sur connexion à UCP mettre l'état à"
 
@@ -134,45 +121,41 @@ msgstr "Message optionnel"
 msgid "Optional message, example: Lunch"
 msgstr "Message optionnel, exemple : Repas"
 
-#: ucp/Presencestate.class.php:248
+#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
+#: ucp/Presencestate.class.php:193
 msgid "Presence"
 msgstr "Présence"
 
-#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: ucp/Presencestate.class.php:228
+msgid "Presence Settings"
+msgstr ""
+
+#: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "État de la présence"
-
-#: ucp/views/settings.php:2
-msgid "Presence State Settings"
-msgstr "Paramètres état de la présence"
 
 #: page.presencestate.php:6
 msgid "Presence States"
 msgstr "États de présence"
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:211
 msgid "Reset"
-msgstr "Réinitialiser"
+msgstr "Reset"
 
 #: views/form.php:38
 msgid "State type"
 msgstr "Type d'état"
 
-#: ucp/assets/js/global.js:35
-msgid "Status Not Set"
-msgstr "Statut non défini"
-
-#: Presencestate.class.php:202
+#: Presencestate.class.php:216
 msgid "Submit"
-msgstr "Soumettre"
+msgstr "Envoyer"
 
 #: views/bootnav.php:14 views/form.php:24 views/grid.php:14
 msgid "Type"
 msgstr "Type"
 
-#: functions.inc.php:12 ucp/Presencestate.class.php:123
-#: ucp/Presencestate.class.php:216
+#: functions.inc.php:12
 msgid "Unavailable"
 msgstr "Absence"
 
@@ -188,9 +171,20 @@ msgstr ""
 msgid "Yes"
 msgstr "Oui"
 
-#: ucp/assets/js/global.js:109
-msgid "Your settings have been saved"
-msgstr "Vos paramètres ont été enregistrés"
+#~ msgid "Actions List"
+#~ msgstr "Liste des actions"
+
+#~ msgid "Offline"
+#~ msgstr "Hors ligne"
+
+#~ msgid "Presence State Settings"
+#~ msgstr "Paramètres état de la présence"
+
+#~ msgid "Status Not Set"
+#~ msgstr "Statut non défini"
+
+#~ msgid "Your settings have been saved"
+#~ msgstr "Vos paramètres ont été enregistrés"
 
 #~ msgid "New Presence State"
 #~ msgstr "Nouvel état de présence"

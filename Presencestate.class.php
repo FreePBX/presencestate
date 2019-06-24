@@ -31,7 +31,21 @@ class Presencestate implements BMO {
 	}
 
 	public function install() {
-
+		/* Check for first install */
+		$q = $this->db->query('SELECT count(*) as count FROM presencestate_list;');
+		$res = $q->fetch(\PDO::FETCH_ASSOC);
+		if ($res['count'] == 0) {
+			/* Add default presence states */
+			$sql = 'INSERT INTO presencestate_list (`type`) VALUES
+			 ("available"),
+			 ("chat"),
+			 ("away"),
+			 ("dnd"),
+			 ("xa"),
+			 ("unavailable")
+			;';
+			$this->db->query($sql);
+		}
 	}
 	public function uninstall() {
 

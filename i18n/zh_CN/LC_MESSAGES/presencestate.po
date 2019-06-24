@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-23 12:25-0400\n"
-"PO-Revision-Date: 2017-07-31 07:35+0800\n"
+"POT-Creation-Date: 2018-07-19 18:14-0400\n"
+"PO-Revision-Date: 2018-03-14 14:52+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
 "freepbx/framework/zh_CN/>\n"
@@ -25,10 +25,6 @@ msgstr ""
 msgid "Actions"
 msgstr "操作"
 
-#: ucp/assets/js/global.js:81
-msgid "Actions List"
-msgstr ""
-
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr ""
@@ -37,18 +33,15 @@ msgstr ""
 msgid "Admin"
 msgstr "管理"
 
-#: functions.inc.php:7 ucp/Presencestate.class.php:118
-#: ucp/Presencestate.class.php:211
+#: functions.inc.php:7
 msgid "Available"
 msgstr "在线"
 
-#: functions.inc.php:9 ucp/Presencestate.class.php:121
-#: ucp/Presencestate.class.php:214
+#: functions.inc.php:9
 msgid "Away"
 msgstr "离开"
 
-#: functions.inc.php:8 ucp/Presencestate.class.php:119
-#: ucp/Presencestate.class.php:212
+#: functions.inc.php:8
 msgid "Chat"
 msgstr "聊天"
 
@@ -56,24 +49,23 @@ msgstr "聊天"
 msgid "DND"
 msgstr "免打扰"
 
-#: ucp/views/settings.php:25
+#: ucp/views/settings.php:23
 msgid "Define Actions on A Status Change"
 msgstr "定义一个状态修改命令"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:206
 msgid "Delete"
 msgstr "删除"
 
-#: ucp/views/settings.php:9 ucp/views/settings.php:18
+#: ucp/views/settings.php:7 ucp/views/settings.php:16
 msgid "Do Not Change"
 msgstr ""
 
-#: ucp/Presencestate.class.php:91 ucp/Presencestate.class.php:122
-#: ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:220
 msgid "Do Not Disturb"
 msgstr "免打扰"
 
-#: ucp/Presencestate.class.php:90
+#: ucp/Presencestate.class.php:219
 msgid "Do Nothing"
 msgstr "不做"
 
@@ -81,12 +73,11 @@ msgstr "不做"
 msgid "Enable Presence"
 msgstr ""
 
-#: functions.inc.php:11 ucp/Presencestate.class.php:120
-#: ucp/Presencestate.class.php:213
+#: functions.inc.php:11
 msgid "Extended Away"
 msgstr ""
 
-#: ucp/Presencestate.class.php:92
+#: ucp/Presencestate.class.php:221
 msgid "Findme/Follow Me"
 msgstr "分机随行"
 
@@ -94,7 +85,7 @@ msgstr "分机随行"
 msgid "Inherit"
 msgstr "继承"
 
-#: Presencestate.class.php:178
+#: Presencestate.class.php:192
 msgid "Invalid Request"
 msgstr "无效请求"
 
@@ -114,15 +105,11 @@ msgstr "消息"
 msgid "No"
 msgstr "否"
 
-#: ucp/Presencestate.class.php:124 ucp/Presencestate.class.php:217
-msgid "Offline"
-msgstr ""
-
-#: ucp/views/settings.php:16
+#: ucp/views/settings.php:14
 msgid "On Browser Close or UCP Logout Set Status to"
 msgstr ""
 
-#: ucp/views/settings.php:7
+#: ucp/views/settings.php:5
 msgid "On UCP Login Set Status to"
 msgstr ""
 
@@ -134,24 +121,25 @@ msgstr ""
 msgid "Optional message, example: Lunch"
 msgstr ""
 
-#: ucp/Presencestate.class.php:248
+#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
+#: ucp/Presencestate.class.php:193
 msgid "Presence"
 msgstr ""
 
-#: Presencestate.class.php:118 presencestate.i18n.php:4
+#: ucp/Presencestate.class.php:228
+msgid "Presence Settings"
+msgstr ""
+
+#: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Presence 状态"
-
-#: ucp/views/settings.php:2
-msgid "Presence State Settings"
-msgstr "Presence 状态设置"
 
 #: page.presencestate.php:6
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:197
+#: Presencestate.class.php:211
 msgid "Reset"
 msgstr "重置"
 
@@ -159,11 +147,7 @@ msgstr "重置"
 msgid "State type"
 msgstr ""
 
-#: ucp/assets/js/global.js:35
-msgid "Status Not Set"
-msgstr ""
-
-#: Presencestate.class.php:202
+#: Presencestate.class.php:216
 msgid "Submit"
 msgstr "提交"
 
@@ -171,8 +155,7 @@ msgstr "提交"
 msgid "Type"
 msgstr "类型"
 
-#: functions.inc.php:12 ucp/Presencestate.class.php:123
-#: ucp/Presencestate.class.php:216
+#: functions.inc.php:12
 msgid "Unavailable"
 msgstr "不在线"
 
@@ -186,9 +169,8 @@ msgstr ""
 msgid "Yes"
 msgstr "是"
 
-#: ucp/assets/js/global.js:109
-msgid "Your settings have been saved"
-msgstr ""
+#~ msgid "Presence State Settings"
+#~ msgstr "Presence 状态设置"
 
 #~ msgid "New Presence State"
 #~ msgstr "新在线状态״̬"
