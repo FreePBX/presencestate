@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 23:15+0000\n"
+"POT-Creation-Date: 2019-09-10 23:25+0530\n"
 "PO-Revision-Date: 2016-10-08 12:16+0200\n"
 "Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -28,6 +28,10 @@ msgstr "عملیات"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "افزودن وضعیت"
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr "مدیر"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -89,6 +93,10 @@ msgstr "درخواست نامعتبر"
 msgid "List States"
 msgstr "فهرست وضعیت ها"
 
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "مدیریت فهرست وضعیت های حضور."
+
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
 msgstr "پیام"
@@ -123,7 +131,8 @@ msgstr "حضور"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127
+#: Presencestate.class.php:127 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "وضعیت حضور"
 
@@ -161,12 +170,6 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "بله"
-
-#~ msgid "Admin"
-#~ msgstr "مدیر"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "مدیریت فهرست وضعیت های حضور."
 
 #~ msgid "Actions List"
 #~ msgstr "فهرست عملیات"

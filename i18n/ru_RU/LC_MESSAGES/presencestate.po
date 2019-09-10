@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 23:15+0000\n"
+"POT-Creation-Date: 2019-09-10 23:25+0530\n"
 "PO-Revision-Date: 2017-05-17 02:01+0200\n"
 "Last-Translator: Evgeniy <yen81@mail.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
@@ -29,6 +29,10 @@ msgstr "Действия"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Добавить состояние"
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr "Администратор"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -90,6 +94,10 @@ msgstr "Недопустимый запрос"
 msgid "List States"
 msgstr "Список состояний"
 
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "Управление списком сотояний присуствия."
+
 #: views/bootnav.php:15 views/grid.php:15
 msgid "Message"
 msgstr "Сообщение"
@@ -123,7 +131,8 @@ msgstr "Присутствие"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127
+#: Presencestate.class.php:127 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Состояние присутствия"
 
@@ -160,12 +169,6 @@ msgstr "Разрешать этому пользователю менять ст
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Да"
-
-#~ msgid "Admin"
-#~ msgstr "Администратор"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "Управление списком сотояний присуствия."
 
 #~ msgid "Actions List"
 #~ msgstr "Список действий"
