@@ -20,19 +20,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 17:44-0400\n"
+"POT-Creation-Date: 2019-12-04 16:50+0530\n"
 "PO-Revision-Date: 2017-03-08 21:13+0200\n"
 "Last-Translator: Kingvoice <suporte@kingvoice.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.freepbx.org/projects/"
 "freepbx/presencestate/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: views/grid.php:16
+#: views/grid.php:17
 msgid "Actions"
 msgstr "Ações"
 
@@ -117,7 +117,7 @@ msgstr "Listar Estados"
 msgid "Manage list of presence states."
 msgstr "Gerencia lista dos estados de presença."
 
-#: views/bootnav.php:15 views/grid.php:15
+#: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "Mensagem"
 
@@ -178,7 +178,7 @@ msgstr "Estado Não Configurado"
 msgid "Submit"
 msgstr "Enviar"
 
-#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
+#: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"
 msgstr "Tipo"
 

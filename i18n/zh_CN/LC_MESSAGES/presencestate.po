@@ -9,19 +9,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 17:44-0400\n"
+"POT-Creation-Date: 2019-12-04 16:50+0530\n"
 "PO-Revision-Date: 2017-07-31 07:35+0800\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
 "freepbx/framework/zh_CN/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.2-dev\n"
 
-#: views/grid.php:16
+#: views/grid.php:17
 msgid "Actions"
 msgstr "操作"
 
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Manage list of presence states."
 msgstr "管理在线状态列表"
 
-#: views/bootnav.php:15 views/grid.php:15
+#: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "消息"
 
@@ -167,7 +167,7 @@ msgstr ""
 msgid "Submit"
 msgstr "提交"
 
-#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
+#: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"
 msgstr "类型"
 
