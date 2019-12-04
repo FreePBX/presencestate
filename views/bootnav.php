@@ -7,6 +7,7 @@
   data-cache="false"
   data-toggle="table"
   data-search="true"
+  data-escape="true" 
   data-toolbar="#toolbar-rnav"
   class="table">
     <thead>

@@ -6,7 +6,8 @@
   data-cache="false"
   data-toggle="table"
   data-pagination="true"
-  data-search="true"
+  data-search="true" 
+  data-escape="true" 
   data-toolbar="#toolbar-all"
   class="table table-striped">
     <thead>
