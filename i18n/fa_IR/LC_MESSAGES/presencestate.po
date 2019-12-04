@@ -9,18 +9,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-24 17:50-0400\n"
+"POT-Creation-Date: 2019-12-04 16:51+0530\n"
 "PO-Revision-Date: 2019-01-25 09:48+0000\n"
 "Last-Translator: Media Mousavi <mousavi.media@gmail.com>\n"
 "Language-Team: Persian <http://*/projects/freepbx/presencestate/fa/>\n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fa_IR\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: views/grid.php:16
+#: views/grid.php:17
 msgid "Actions"
 msgstr "عملیات"
 
@@ -96,7 +96,7 @@ msgstr "فهرست وضعیت ها"
 msgid "Manage list of presence states."
 msgstr "مدیریت فهرست وضعیت های حضور."
 
-#: views/bootnav.php:15 views/grid.php:15
+#: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "پیام"
 
@@ -151,7 +151,7 @@ msgstr "نوع وضعیت"
 msgid "Submit"
 msgstr "ثبت"
 
-#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
+#: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"
 msgstr "نوع"
 
