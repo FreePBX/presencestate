@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 23:25+0530\n"
+"POT-Creation-Date: 2019-12-04 16:52+0530\n"
 "PO-Revision-Date: 2017-07-25 21:58+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: views/grid.php:16
+#: views/grid.php:17
 msgid "Actions"
 msgstr "Các thao tác"
 
@@ -97,7 +97,7 @@ msgstr "Danh sách các trạng thái"
 msgid "Manage list of presence states."
 msgstr "Quản lý danh sách các trạng thái hiển thị."
 
-#: views/bootnav.php:15 views/grid.php:15
+#: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "Tin nhắn"
 
@@ -151,7 +151,7 @@ msgstr "Kiểu trạng thái"
 msgid "Submit"
 msgstr "Gửi đi"
 
-#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
+#: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"
 msgstr "Kiểu"
 

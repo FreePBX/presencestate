@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 23:25+0530\n"
+"POT-Creation-Date: 2019-12-04 16:52+0530\n"
 "PO-Revision-Date: 2018-01-03 15:24+0200\n"
 "Last-Translator: Petr <petrv@atlantis.cz>\n"
 "Language-Team: Czech <http://weblate.freepbx.org/projects/freepbx/"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 2.4\n"
 
-#: views/grid.php:16
+#: views/grid.php:17
 msgid "Actions"
 msgstr "Akce"
 
@@ -97,7 +97,7 @@ msgstr "Přehled stavů"
 msgid "Manage list of presence states."
 msgstr "Upravit seznam prezenčních stavů."
 
-#: views/bootnav.php:15 views/grid.php:15
+#: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "Zpráva"
 
@@ -151,7 +151,7 @@ msgstr "Typ stavu"
 msgid "Submit"
 msgstr "Potvrdit"
 
-#: views/bootnav.php:14 views/form.php:24 views/grid.php:14
+#: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"
 msgstr "Typ"
 

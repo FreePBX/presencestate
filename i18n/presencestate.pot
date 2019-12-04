@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 23:25+0530\n"
+"POT-Creation-Date: 2019-12-04 16:52+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: views/grid.php:16
+#: views/grid.php:17
 msgid "Actions"
 msgstr ""
 
@@ -96,8 +96,8 @@ msgstr ""
 msgid "Manage list of presence states."
 msgstr ""
 
-#: views/bootnav.php:15
-#: views/grid.php:15
+#: views/bootnav.php:16
+#: views/grid.php:16
 msgid "Message"
 msgstr ""
 
@@ -153,9 +153,9 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: views/bootnav.php:14
+#: views/bootnav.php:15
 #: views/form.php:24
-#: views/grid.php:14
+#: views/grid.php:15
 msgid "Type"
 msgstr ""
 
