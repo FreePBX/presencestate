@@ -90,7 +90,7 @@ var PresencestateC = UCPMC.extend({
 
 $(document).ready(function() {
 	$(window).bind("beforeunload", function() {
-		if (UCP.Modules.Presencestate.presenceSpecials.endSessionStatus !== null && navigator.onLine) {
+		if ((typeof UCP.Modules.Presencestate !== 'undefined') && UCP.Modules.Presencestate.presenceSpecials.endSessionStatus !== null && navigator.onLine) {
 			$.ajax({
 				url: UCP.ajaxUrl + "?module=presencestate&command=set",
 				type: "POST",
@@ -103,13 +103,15 @@ $(document).ready(function() {
 });
 
 $(document).on("logIn", function() {
-	UCP.Modules.Presencestate.presenceSpecials.startSessionStatus = UCP.Modules.Presencestate.staticsettings.startSessionStatus;
-	UCP.Modules.Presencestate.presenceSpecials.endSessionStatus = UCP.Modules.Presencestate.staticsettings.endSessionStatus;
-	if (UCP.Modules.Presencestate.presenceSpecials.startSessionStatus !== null && navigator.onLine) {
-		$.ajax({
-			url: UCP.ajaxUrl + "?module=presencestate&command=set",
-			type: "POST",
-			data: { state: UCP.Modules.Presencestate.presenceSpecials.startSessionStatus }
-		});
+	if (typeof UCP.Modules.Presencestate !== 'undefined'){
+		UCP.Modules.Presencestate.presenceSpecials.startSessionStatus = UCP.Modules.Presencestate.staticsettings.startSessionStatus;
+		UCP.Modules.Presencestate.presenceSpecials.endSessionStatus = UCP.Modules.Presencestate.staticsettings.endSessionStatus;
+		if (UCP.Modules.Presencestate.presenceSpecials.startSessionStatus !== null && navigator.onLine) {
+			$.ajax({
+				url: UCP.ajaxUrl + "?module=presencestate&command=set",
+				type: "POST",
+				data: { state: UCP.Modules.Presencestate.presenceSpecials.startSessionStatus }
+			});
+		}		
 	}
 });
