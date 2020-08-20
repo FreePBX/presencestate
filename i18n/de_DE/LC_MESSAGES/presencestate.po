@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-21 17:08+0530\n"
+"POT-Creation-Date: 2020-08-20 03:59+0000\n"
 "PO-Revision-Date: 2018-10-19 13:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/presencestate/de/>\n"
@@ -27,6 +27,10 @@ msgstr "Aktionen"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Status hinzufügen"
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr "Administrator"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -88,6 +92,10 @@ msgstr "Ungültige Anfrage"
 msgid "List States"
 msgstr "Statusliste"
 
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "Liste der Anwesenheitsstatus verwalten."
+
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "Nachricht"
@@ -123,7 +131,8 @@ msgstr "Anwesenheit"
 msgid "Presence Settings"
 msgstr "Anwesenheitseinstellungen"
 
-#: Presencestate.class.php:132
+#: Presencestate.class.php:132 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Anwesenheitsstatus"
 
@@ -161,12 +170,6 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Ja"
-
-#~ msgid "Admin"
-#~ msgstr "Administrator"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "Liste der Anwesenheitsstatus verwalten."
 
 #~ msgid "Actions List"
 #~ msgstr "Aktionsliste"

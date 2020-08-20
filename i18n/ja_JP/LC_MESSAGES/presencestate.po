@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-21 17:08+0530\n"
+"POT-Creation-Date: 2020-08-20 03:59+0000\n"
 "PO-Revision-Date: 2015-10-30 06:23+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -39,6 +39,10 @@ msgstr "アクション"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr ""
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr "アドミン"
 
 #: functions.inc.php:7
 msgid "Available"
@@ -100,6 +104,10 @@ msgstr ""
 msgid "List States"
 msgstr ""
 
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "ステータスのリストを管理します。"
+
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "メッセージ"
@@ -133,7 +141,8 @@ msgstr ""
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:132
+#: Presencestate.class.php:132 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "プレゼンスステータス"
 
@@ -170,12 +179,6 @@ msgstr "このユーザーがUCPで自分のステータスを変更できるか
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "はい"
-
-#~ msgid "Admin"
-#~ msgstr "アドミン"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "ステータスのリストを管理します。"
 
 #~ msgid "Offline"
 #~ msgstr "オフライン"
