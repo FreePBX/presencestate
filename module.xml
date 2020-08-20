@@ -8,6 +8,7 @@
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Admin</category>
 	<description>Manage list of presence states.</description>
+  	<more-info>https://wiki.freepbx.org/display/FPG/Presence+State+Module</more-info>
 	<menuitems>
 		<presencestate needsenginedb="yes">Presence State</presencestate>
 	</menuitems>
