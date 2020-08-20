@@ -2,7 +2,7 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>13.0.8.4</version>
+	<version>13.0.8.5</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -16,6 +16,7 @@
 		<version>13.0.195.11</version>
 	</depends>
 	<changelog>
+		*13.0.8.5* Packaging of ver 13.0.8.5
 		*13.0.8.4* FREEI-924 Fix XSS Bootstrap Datatable Issues 
 		*13.0.8.3* FREEPBX-18982 Fix sorting issue with empty presence state list.
 		*13.0.8.1* Get all device states
