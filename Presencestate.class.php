@@ -309,8 +309,8 @@ class Presencestate implements BMO {
 		}
 		$states = $this->getAllStates();
 		if(!empty($state) && !empty($states[$state])) {
-			$type = $this->states[$state]['type'];
-			$msg = !empty($this->states[$state]['message']) ? $this->states[$state]['message'] : '';
+			$type = $states[$state]['type'];
+			$msg = !empty($states[$state]['message']) ? $states[$state]['message'] : '';
 			$msg = !empty($message) ? $message : $msg;
 			$this->FreePBX->astman->set_global($this->FreePBX->Config->get_conf_setting('AST_FUNC_PRESENCE_STATE') . '(CustomPresence:' . $device . ')', '"'.$type . ',,' . $msg.'"');
 		} else {
