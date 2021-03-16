@@ -2,7 +2,7 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>15.0.11</version>
+	<version>16.0.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -13,21 +13,11 @@
 		<presencestate needsenginedb="yes">Presence State</presencestate>
 	</menuitems>
 	<depends>
-		<phpversion>5.6.0</phpversion>
-		<version>14.0.1rc1.2</version>
+		<phpversion>7.4.0</phpversion>
+		<version>16.0</version>
 	</depends>
 	<changelog>
-		*15.0.11* FREEPBX-22320 - Possible bug in presencestate module: 
-		*15.0.10* Packaging of ver 15.0.10
-		*15.0.9* FREEI-1143 Getting : Cannot read property presenceSpecials of undefined error while trying to login to UCP 
-		*15.0.8* FREEI-924 Fix XSS Bootstrap Datatable Issues 
-		*15.0.7* Related to FREEPBX-20414: removed $jobid from runRestore() 
-		*15.0.6* FREEPBX-18982 Fix sorting issue with empty presence state list.
-		*15.0.5* fixing legacy restore 
-		*15.0.4* backup and restore 
-		*15.0.3* Rest Api 
-		*15.0.2* Packaging of ver 15.0.2
-		*15.0.1* Backup 15
+		*16.0.1* 16.0 
 	</changelog>
 	<hooks>
 		<ucp class="Ucp">
@@ -53,6 +43,6 @@
 		</table>
 	</database>
 	<supported>
-		<version>15.0</version>
+		<version>16.0</version>
 	</supported>
 </module>
