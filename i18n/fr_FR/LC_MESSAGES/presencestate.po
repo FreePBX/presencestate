@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 03:59+0000\n"
-"PO-Revision-Date: 2017-12-11 22:57+0200\n"
-"Last-Translator: JCattan <jeremie@famillecattan.com>\n"
+"PO-Revision-Date: 2021-08-26 12:17+0000\n"
+"Last-Translator: jeremie cattan <freepbx@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
-"presencestate/fr_FR/>\n"
+"presencestate/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.4\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: views/grid.php:17
 msgid "Actions"
@@ -128,7 +128,7 @@ msgstr "Présence"
 
 #: ucp/Presencestate.class.php:228
 msgid "Presence Settings"
-msgstr ""
+msgstr "Paramètres Présence"
 
 #: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
