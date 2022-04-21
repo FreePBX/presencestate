@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 03:59+0000\n"
-"PO-Revision-Date: 2021-11-23 08:00+0000\n"
+"PO-Revision-Date: 2022-04-21 08:18+0000\n"
 "Last-Translator: Dmitriy Q <krotesk@ya.ru>\n"
 "Language-Team: Russian <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/ru/>\n"
@@ -76,11 +76,11 @@ msgstr "Включить отображение присутствия"
 
 #: functions.inc.php:11
 msgid "Extended Away"
-msgstr ""
+msgstr "Расширенный"
 
 #: ucp/Presencestate.class.php:221
 msgid "Findme/Follow Me"
-msgstr ""
+msgstr "Найди-меня/Следуй-сюда"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
@@ -129,7 +129,7 @@ msgstr "Присутствие"
 
 #: ucp/Presencestate.class.php:228
 msgid "Presence Settings"
-msgstr ""
+msgstr "Настройки присутствия"
 
 #: Presencestate.class.php:132 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
