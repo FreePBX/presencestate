@@ -14,7 +14,7 @@
             <tr>
             <th data-field="type"><?php echo _("Type")?></th>
             <th data-field="message"><?php echo _("Message")?></th>
-            <th data-field="id" data-formatter="actionFormatter" class="col-xs-2"><?php echo _("Actions")?></th>
+            <th data-field="id" data-formatter="actionFormatter"><?php echo _("Actions")?></th>
         </tr>
     </thead>
 </table>
