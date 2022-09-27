@@ -6,6 +6,6 @@
 
 		$selected = $state['type'] == $currentState['State'] && $state['message'] == $currentState['Message'];
 	?>
-	<option title="<?php echo $icon . ' ' . $state['nice']?>" <?php echo $selected ? 'selected' : ''?> class="presence-item" data-id="<?php echo $state['id']?>" data-content="<?php echo $icon . ' ' . $state['nice'] . $subtext?>"><?php echo $state['type'] . $subtext?></option>
+	<option <?php echo $selected ? 'selected' : ''?> class="presence-item" data-id="<?php echo $state['id']?>" data-content="<?php echo $icon . ' ' . $state['nice'] . $subtext?>"><?php echo $state['type'] . $subtext?></option>
 <?php } ?>
 </select>
