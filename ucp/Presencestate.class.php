@@ -11,6 +11,9 @@ class Presencestate extends Modules{
 	private $states = null;
 	private $types = null;
 	private $enabled = true;
+	private $user = null;
+	private $userId = false;
+	private $userName = '';
 
 	function __construct($Modules) {
 		$this->Modules = $Modules;
@@ -18,8 +21,10 @@ class Presencestate extends Modules{
 		$this->states = $this->UCP->FreePBX->Presencestate->getAllStates();
 		$this->types = $this->UCP->FreePBX->Presencestate->getAllTypes();
 
-		$user = $this->UCP->User->getUser();
-		$this->enabled = $this->UCP->getCombinedSettingByID($user['id'],$this->module,'enabled');
+		$this->user = $this->UCP->User->getUser();
+		$this->userId = $this->user ? $this->user["id"] : false;
+		$this->userName = $this->user ? $this->user["username"] : '';
+		$this->enabled = $this->UCP->getCombinedSettingByID($this->userId,$this->module,'enabled');
 
 		$this->UCP->Modgettext->push_textdomain("presencestate");
 		foreach($this->states as &$state) {
@@ -50,13 +55,15 @@ class Presencestate extends Modules{
 
 	private function sort($a,$b) {
 		$t = array_keys($this->types);
-		return array_search($a['type'],$t) > array_search($b['type'],$t);
+		$x = array_search($a['type'],$t);
+		$y = array_search($b['type'],$t);
+		if ($x == $y) return 0;
+  		return ($x < $y) ? -1 : 1;
 	}
 
 	function logout() {
 		if(!empty($this->device) && $this->enabled) {
-			$user = $this->UCP->User->getUser();
-			$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
+			$state = $this->UCP->getSetting($this->userName,$this->module,'endsessionstatus');
 			if(!empty($state) && !empty($this->states[$state])) {
 				$type = $this->states[$state]['type'];
 				$message = !empty($this->states[$state]['message']) ? $this->states[$state]['message'] : '';
@@ -73,18 +80,16 @@ class Presencestate extends Modules{
 		if(!empty($this->device) && $this->enabled) {
 			$menu = array();
 			if(!empty($this->device)) {
-				$user = $this->UCP->User->getUser();
-
 				$t = $this->UCP->FreePBX->astman->PresenceState('CustomPresence:'.$this->device);
 				$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
 
 				$menu['status'] = true;
 				$menu['presence'] = $t;
 
-				$state = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
+				$state = $this->UCP->getSetting($this->userName,$this->module,'startsessionstatus');
 				$menu['startsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
 
-				$state = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
+				$state = $this->UCP->getSetting($this->userName,$this->module,'endsessionstatus');
 				$menu['endsessionstatus'] = !empty($state) && !empty($this->states[$state]) ? $this->states[$state] : null;
 			}
 			return array('status' => true, 'presence' => $t, 'states' => $this->states, 'menu' => $menu);
@@ -127,9 +132,8 @@ class Presencestate extends Modules{
 		}
 		switch($_REQUEST['command']) {
 			case 'savesettings':
-				$user = $this->UCP->User->getUser();
-				$this->UCP->setSetting($user['username'],$this->module,'startsessionstatus',$_POST['startsessionstatus']);
-				$this->UCP->setSetting($user['username'],$this->module,'endsessionstatus',$_POST['endsessionstatus']);
+				$this->UCP->setSetting($this->userName,$this->module,'startsessionstatus',$_POST['startsessionstatus']);
+				$this->UCP->setSetting($this->userName,$this->module,'endsessionstatus',$_POST['endsessionstatus']);
 				$this->UCP->FreePBX->Presencestate->presencestatePrefsSetMultiple($this->device,$_POST['events']);
 
 				$startsessionstatus = !empty($_POST['startsessionstatus']) && !empty($this->states[$_POST['startsessionstatus']]) ? $this->states[$_POST['startsessionstatus']] : null;
@@ -152,10 +156,9 @@ class Presencestate extends Modules{
 	}
 
 	public function getStaticSettings() {
-		$user = $this->UCP->User->getUser();
 		return array(
-			'startSessionStatus' => $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus'),
-			'endSessionStatus' => $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus')
+			'startSessionStatus' => $this->UCP->getSetting($this->userName,$this->module,'startsessionstatus'),
+			'endSessionStatus' => $this->UCP->getSetting($this->userName,$this->module,'endsessionstatus')
 		);
 	}
 
@@ -220,9 +223,8 @@ class Presencestate extends Modules{
 			"dnd" => _('Do Not Disturb'),
 			"fm" => _('Findme/Follow Me'),
 		);
-		$user = $this->UCP->User->getUser();
-		$displayvars['startsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'startsessionstatus');
-		$displayvars['endsessionstatus'] = $this->UCP->getSetting($user['username'],$this->module,'endsessionstatus');
+		$displayvars['startsessionstatus'] = $this->UCP->getSetting($this->userName,$this->module,'startsessionstatus');
+		$displayvars['endsessionstatus'] = $this->UCP->getSetting($this->userName,$this->module,'endsessionstatus');
 
 		$display = array();
 		$display['title'] = _('Presence Settings');
