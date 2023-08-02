@@ -7,14 +7,10 @@ $heading = _("Presence States");
 
 $request = $_REQUEST;
 $request['view'] = !empty($request['view']) ? $request['view'] : "";
-switch ($request['view']) {
-	case 'form':
-		$content = load_view(__DIR__.'/views/form.php', array('request' => $request));
-	break;
-	default:
-		$content = load_view(__DIR__.'/views/grid.php', array('request' => $request));
-	break;
-}
+$content = match ($request['view']) {
+    'form' => load_view(__DIR__.'/views/form.php', ['request' => $request]),
+    default => load_view(__DIR__.'/views/grid.php', ['request' => $request]),
+};
 
 ?>
 <div class="container-fluid">

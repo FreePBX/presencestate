@@ -13,7 +13,7 @@ class Presencestate extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$presencestates = presencestate_list_get();
 
-			$presencestates = $presencestates ? $presencestates : false;
+			$presencestates = $presencestates ?: false;
 			return $response->withJson($presencestates);
 		})->add($this->checkAllReadScopeMiddleware());
 
@@ -26,7 +26,7 @@ class Presencestate extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$types = presencestate_types_get();
 
-			$types = $types ? $types : false;
+			$types = $types ?: false;
 			return $response->withJson($types);
 		})->add($this->checkAllReadScopeMiddleware());
 
@@ -39,7 +39,7 @@ class Presencestate extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$prefs = presencestate_prefs_get($args['extension']);
 
-			$prefs = $prefs ? $prefs : false;
+			$prefs = $prefs ?: false;
 			return $response->withJson($prefs);
 		})->add($this->checkAllReadScopeMiddleware());
 

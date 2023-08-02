@@ -12,13 +12,7 @@ class Presencestate implements BMO {
 
 	public function doConfigPageInit($page) {
 		if($page == 'presencestate'){
-			$vars = array(
-				'action' => !empty($_REQUEST['action'])?$_REQUEST['action']:'',
-				'submit' => '',
-				'id' => !empty($_REQUEST['id'])?$_REQUEST['id']:'',
-				'type' => !empty($_REQUEST['type'])?$_REQUEST['type']:'',
-				'message' => !empty($_REQUEST['message'])?$_REQUEST['message']:NULL
-			);
+			$vars = ['action' => !empty($_REQUEST['action'])?$_REQUEST['action']:'', 'submit' => '', 'id' => !empty($_REQUEST['id'])?$_REQUEST['id']:'', 'type' => !empty($_REQUEST['type'])?$_REQUEST['type']:'', 'message' => !empty($_REQUEST['message'])?$_REQUEST['message']:NULL];
 			switch ($vars['action']) {
 				case 'delete':
 					presencestate_item_del($vars['id']);
@@ -122,12 +116,8 @@ class Presencestate implements BMO {
 			}
 		}
 
-		$html = array();
-		$html[0] = array(
-			"title" => _("Presence State"),
-			"rawname" => "presencestate",
-			"content" => load_view(dirname(__FILE__)."/views/ucp_config.php",array("mode" => $mode, "enabled" => $enabled))
-		);
+		$html = [];
+		$html[0] = ["title" => _("Presence State"), "rawname" => "presencestate", "content" => load_view(__DIR__."/views/ucp_config.php",["mode" => $mode, "enabled" => $enabled])];
 		return $html;
 	}
 
@@ -139,7 +129,7 @@ class Presencestate implements BMO {
 	public function presencestatePrefsSetMultiple($extension, $array) {
 		$this->FreePBX->Modules->loadFunctionsInc('presencestate');
 		foreach($array as $id => $val) {
-			$this->presencestatePrefsSet($extension, array('id'=>$id,'pref'=>$val));
+			$this->presencestatePrefsSet($extension, ['id'=>$id, 'pref'=>$val]);
 		}
 	}
 
@@ -192,49 +182,33 @@ class Presencestate implements BMO {
 				case 'grid':
 					$list = presencestate_list_get();
 					$types = presencestate_types_get();
-					$ret = array();
+					$ret = [];
 					foreach ($list as $item) {
-						$ret[] = array('id' => $item['id'], 'message' => $item['message'], 'type' => $types[$item['type']]);
+						$ret[] = ['id' => $item['id'], 'message' => $item['message'], 'type' => $types[$item['type']]];
 					}
 
 					return $ret;
 				break;
 
 				default:
-					print json_encode(_("Invalid Request"));
+					print json_encode(_("Invalid Request"), JSON_THROW_ON_ERROR);
 				break;
 			}
 		}
 	}
 	public function getActionBar($request) {
-		$buttons = array();
+		$buttons = [];
 		switch($request['display']) {
 			//this is usually your module's rawname
 			case 'presencestate':
-				$buttons = array(
-					'delete' => array(
-						'name' => 'delete',
-						'id' => 'delete',
-						'value' => _('Delete')
-					),
-					'reset' => array(
-						'name' => 'reset',
-						'id' => 'reset',
-						'value' => _('Reset')
-					),
-					'submit' => array(
-						'name' => 'submit',
-						'id' => 'submit',
-						'value' => _('Submit')
-					)
-				);
+				$buttons = ['delete' => ['name' => 'delete', 'id' => 'delete', 'value' => _('Delete')], 'reset' => ['name' => 'reset', 'id' => 'reset', 'value' => _('Reset')], 'submit' => ['name' => 'submit', 'id' => 'submit', 'value' => _('Submit')]];
 				//We hide the delete button if we are not editing an item. "id" should be whatever your unique element is.
 				if (empty($request['id'])) {
 					unset($buttons['delete']);
 				}
 				//If we are not in the form view lets 86 the buttons
 				if (empty($request['view'])){
-					$buttons = array();
+					$buttons = [];
 				}
 			break;
 		}
@@ -249,20 +223,16 @@ class Presencestate implements BMO {
 	public function getAllDevicesStates() {
 		$devices = $this->FreePBX->astman->PresenceStateList();
 		$states = $this->getAllStates();
-		$final = array();
+		$final = [];
 		foreach($devices as $t) {
 			$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
-			$result = array(
-				"id" => null,
-				"type" => $t['Status'],
-				"message" => $t['Message']
-			);
+			$result = ["id" => null, "type" => $t['Status'], "message" => $t['Message']];
 			foreach($states as $state) {
 				if($t['Message'] == $state['message'] && $state['type'] == $t['Status']) {
 					$result['id'] = $state['id'];
 				}
 			}
-			$parts = explode(":",$t['Presentity']);
+			$parts = explode(":",(string) $t['Presentity']);
 			$final[$parts[1]] = $result;
 		}
 		return $final;
@@ -282,11 +252,7 @@ class Presencestate implements BMO {
 		$t = $this->FreePBX->astman->PresenceState('CustomPresence:'.$device);
 		$t['Message'] = ($t['Message'] != 'Presence State') ? $t['Message'] : '';
 		$states = $this->getAllStates();
-		$result = array(
-			"id" => null,
-			"type" => $t['State'],
-			"message" => $t['Message']
-		);
+		$result = ["id" => null, "type" => $t['State'], "message" => $t['Message']];
 		foreach($states as $state) {
 			if($t['Message'] == $state['message'] && $state['type'] == $t['State']) {
 				$result['id'] = $state['id'];
@@ -320,7 +286,7 @@ class Presencestate implements BMO {
 
 	public function getRightNav($request) {
 	  if(isset($request['view']) && $request['view'] == 'form'){
-	    return load_view(__DIR__."/views/bootnav.php",array());
+	    return load_view(__DIR__."/views/bootnav.php",[]);
 	  }
     }
     public function dumpPrefs(){
@@ -330,7 +296,7 @@ class Presencestate implements BMO {
     public function loadPrefs($prefs){
         $stmt = $this->db->prepare('REPLACE INTO presencestate_prefs (extension, item_id, pref) VALUES (:extension, :item_id, :pref)');
         foreach ($prefs as $item) {
-            if(count($item) !== 3){
+            if((is_countable($item) ? count($item) : 0) !== 3){
                 continue;
             }
             $stmt->execute([

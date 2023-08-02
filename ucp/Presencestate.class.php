@@ -21,10 +21,15 @@ class Presencestate extends Modules{
 		$this->states = $this->UCP->FreePBX->Presencestate->getAllStates();
 		$this->types = $this->UCP->FreePBX->Presencestate->getAllTypes();
 
+<<<<<<< Updated upstream
 		$this->user = $this->UCP->User->getUser();
 		$this->userId = $this->user ? $this->user["id"] : false;
 		$this->userName = $this->user ? $this->user["username"] : '';
 		$this->enabled = $this->UCP->getCombinedSettingByID($this->userId,$this->module,'enabled');
+=======
+		$user = $this->UCP->User->getUser();
+		$this->enabled = $this->UCP->getCombinedSettingByID($user['id'] ?? '',$this->module,'enabled');
+>>>>>>> Stashed changes
 
 		$this->UCP->Modgettext->push_textdomain("presencestate");
 		foreach($this->states as &$state) {
@@ -53,12 +58,25 @@ class Presencestate extends Modules{
 		uasort($this->states, array($this,'sort'));
 	}
 
-	private function sort($a,$b) {
+	private function sort($a, $b) {
 		$t = array_keys($this->types);
+<<<<<<< Updated upstream
 		$x = array_search($a['type'],$t);
 		$y = array_search($b['type'],$t);
 		if ($x == $y) return 0;
   		return ($x < $y) ? -1 : 1;
+=======
+		$aIndex = array_search($a['type'], $t);
+		$bIndex = array_search($b['type'], $t);
+	
+		if ($aIndex === $bIndex) {
+			return 0; // $a and $b are equal
+		} elseif ($aIndex < $bIndex) {
+			return -1; // $a comes before $b
+		} else {
+			return 1; // $a comes after $b
+		}
+>>>>>>> Stashed changes
 	}
 
 	function logout() {
@@ -157,8 +175,13 @@ class Presencestate extends Modules{
 
 	public function getStaticSettings() {
 		return array(
+<<<<<<< Updated upstream
 			'startSessionStatus' => $this->UCP->getSetting($this->userName,$this->module,'startsessionstatus'),
 			'endSessionStatus' => $this->UCP->getSetting($this->userName,$this->module,'endsessionstatus')
+=======
+			'startSessionStatus' => $this->UCP->getSetting($user['username'] ?? '',$this->module,'startsessionstatus'),
+			'endSessionStatus' => $this->UCP->getSetting($user['username'] ?? '',$this->module,'endsessionstatus')
+>>>>>>> Stashed changes
 		);
 	}
 
