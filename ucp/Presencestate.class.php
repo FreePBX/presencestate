@@ -4,7 +4,7 @@
 //
 namespace UCP\Modules;
 use \UCP\Modules as Modules;
-
+#[\AllowDynamicProperties]
 class Presencestate extends Modules{
 	protected $module = 'Presencestate';
 	private $device = null;
