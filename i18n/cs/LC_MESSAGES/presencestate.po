@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 04:01+0000\n"
+"POT-Creation-Date: 2023-09-13 10:49+0000\n"
 "PO-Revision-Date: 2018-01-03 15:24+0200\n"
 "Last-Translator: Petr <petrv@atlantis.cz>\n"
 "Language-Team: Czech <http://weblate.freepbx.org/projects/freepbx/"
@@ -29,23 +29,19 @@ msgstr "Akce"
 msgid "Add State"
 msgstr "Přidat stav"
 
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "Administrator"
-
-#: functions.inc.php:7
+#: functions.inc.php:6
 msgid "Available"
 msgstr "Online"
 
-#: functions.inc.php:9
+#: functions.inc.php:6
 msgid "Away"
 msgstr "Přijdu hned"
 
-#: functions.inc.php:8
+#: functions.inc.php:6
 msgid "Chat"
 msgstr "Chat"
 
-#: functions.inc.php:10
+#: functions.inc.php:6
 msgid "DND"
 msgstr "DND"
 
@@ -53,7 +49,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "Definujte akce na změnu stavu"
 
-#: Presencestate.class.php:218
+#: Presencestate.class.php:205
 msgid "Delete"
 msgstr "Smazat"
 
@@ -61,11 +57,11 @@ msgstr "Smazat"
 msgid "Do Not Change"
 msgstr "Neměnit"
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:229
 msgid "Do Not Disturb"
 msgstr "Nerušit"
 
-#: ucp/Presencestate.class.php:219
+#: ucp/Presencestate.class.php:228
 msgid "Do Nothing"
 msgstr "Nedělat nic"
 
@@ -73,11 +69,11 @@ msgstr "Nedělat nic"
 msgid "Enable Presence"
 msgstr "Povolit prezenci"
 
-#: functions.inc.php:11
+#: functions.inc.php:6
 msgid "Extended Away"
 msgstr "Pryč"
 
-#: ucp/Presencestate.class.php:221
+#: ucp/Presencestate.class.php:230
 msgid "Findme/Follow Me"
 msgstr "Find me/Follow Me"
 
@@ -85,17 +81,13 @@ msgstr "Find me/Follow Me"
 msgid "Inherit"
 msgstr "Zdědit"
 
-#: Presencestate.class.php:204
+#: Presencestate.class.php:195
 msgid "Invalid Request"
 msgstr "Neplatná žádost"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr "Přehled stavů"
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "Upravit seznam prezenčních stavů."
 
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
@@ -121,17 +113,16 @@ msgstr "Volitelná zpráva"
 msgid "Optional message, example: Lunch"
 msgstr "Volitelná zpráva, příklad: Oběd"
 
-#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
-#: ucp/Presencestate.class.php:193
+#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
+#: ucp/Presencestate.class.php:202
 msgid "Presence"
 msgstr "Prezence"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:236
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:121
 msgid "Presence State"
 msgstr "Stav prezence"
 
@@ -139,7 +130,7 @@ msgstr "Stav prezence"
 msgid "Presence States"
 msgstr "Prezence stavy"
 
-#: Presencestate.class.php:223
+#: Presencestate.class.php:205
 msgid "Reset"
 msgstr "Resetovat"
 
@@ -147,7 +138,7 @@ msgstr "Resetovat"
 msgid "State type"
 msgstr "Typ stavu"
 
-#: Presencestate.class.php:228
+#: Presencestate.class.php:205
 msgid "Submit"
 msgstr "Potvrdit"
 
@@ -155,7 +146,7 @@ msgstr "Potvrdit"
 msgid "Type"
 msgstr "Typ"
 
-#: functions.inc.php:12
+#: functions.inc.php:6
 msgid "Unavailable"
 msgstr "Nedostupný"
 
@@ -168,6 +159,12 @@ msgstr "Povolit uživateli, aby mohl změnit stav přítomnosti / stavu v UCP"
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Ano"
+
+#~ msgid "Admin"
+#~ msgstr "Administrator"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "Upravit seznam prezenčních stavů."
 
 #~ msgid "Actions List"
 #~ msgstr "Seznam akcí"

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 04:01+0000\n"
+"POT-Creation-Date: 2023-09-13 10:49+0000\n"
 "PO-Revision-Date: 2015-10-30 06:23+0200\n"
 "Last-Translator: Kevin <kevin@qloog.com>\n"
 "Language-Team: Japanese <http://weblate.freepbx.org/projects/freepbx/"
@@ -40,23 +40,19 @@ msgstr "アクション"
 msgid "Add State"
 msgstr ""
 
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "アドミン"
-
-#: functions.inc.php:7
+#: functions.inc.php:6
 msgid "Available"
 msgstr "オンライン"
 
-#: functions.inc.php:9
+#: functions.inc.php:6
 msgid "Away"
 msgstr "不在"
 
-#: functions.inc.php:8
+#: functions.inc.php:6
 msgid "Chat"
 msgstr "チャット"
 
-#: functions.inc.php:10
+#: functions.inc.php:6
 msgid "DND"
 msgstr "取込中"
 
@@ -64,7 +60,7 @@ msgstr "取込中"
 msgid "Define Actions on A Status Change"
 msgstr "ステータス変更のアクションを定義します"
 
-#: Presencestate.class.php:218
+#: Presencestate.class.php:205
 msgid "Delete"
 msgstr "削除"
 
@@ -72,11 +68,11 @@ msgstr "削除"
 msgid "Do Not Change"
 msgstr ""
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:229
 msgid "Do Not Disturb"
 msgstr "着信拒否"
 
-#: ucp/Presencestate.class.php:219
+#: ucp/Presencestate.class.php:228
 msgid "Do Nothing"
 msgstr "何もしない"
 
@@ -84,11 +80,11 @@ msgstr "何もしない"
 msgid "Enable Presence"
 msgstr "プレゼンスを有効にする"
 
-#: functions.inc.php:11
+#: functions.inc.php:6
 msgid "Extended Away"
 msgstr "長期不在"
 
-#: ucp/Presencestate.class.php:221
+#: ucp/Presencestate.class.php:230
 msgid "Findme/Follow Me"
 msgstr "ファインドミー／フォローミー"
 
@@ -96,17 +92,13 @@ msgstr "ファインドミー／フォローミー"
 msgid "Inherit"
 msgstr "引き継ぐ"
 
-#: Presencestate.class.php:204
+#: Presencestate.class.php:195
 msgid "Invalid Request"
 msgstr ""
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr ""
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "ステータスのリストを管理します。"
 
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
@@ -132,17 +124,16 @@ msgstr ""
 msgid "Optional message, example: Lunch"
 msgstr ""
 
-#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
-#: ucp/Presencestate.class.php:193
+#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
+#: ucp/Presencestate.class.php:202
 msgid "Presence"
 msgstr ""
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:236
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:121
 msgid "Presence State"
 msgstr "プレゼンスステータス"
 
@@ -150,7 +141,7 @@ msgstr "プレゼンスステータス"
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:223
+#: Presencestate.class.php:205
 msgid "Reset"
 msgstr "リセット"
 
@@ -158,7 +149,7 @@ msgstr "リセット"
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:228
+#: Presencestate.class.php:205
 msgid "Submit"
 msgstr "送信"
 
@@ -166,7 +157,7 @@ msgstr "送信"
 msgid "Type"
 msgstr "種類"
 
-#: functions.inc.php:12
+#: functions.inc.php:6
 msgid "Unavailable"
 msgstr "オフライン"
 
@@ -179,6 +170,12 @@ msgstr "このユーザーがUCPで自分のステータスを変更できるか
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "はい"
+
+#~ msgid "Admin"
+#~ msgstr "アドミン"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "ステータスのリストを管理します。"
 
 #~ msgid "Offline"
 #~ msgstr "オフライン"

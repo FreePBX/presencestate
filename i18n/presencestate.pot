@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for presencestate
-# Copyright (C) 2008-2022 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2023 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 10:18+0000\n"
+"POT-Creation-Date: 2023-09-13 10:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,23 +27,19 @@ msgstr ""
 msgid "Add State"
 msgstr ""
 
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr ""
-
-#: functions.inc.php:7
+#: functions.inc.php:6
 msgid "Available"
 msgstr ""
 
-#: functions.inc.php:9
+#: functions.inc.php:6
 msgid "Away"
 msgstr ""
 
-#: functions.inc.php:8
+#: functions.inc.php:6
 msgid "Chat"
 msgstr ""
 
-#: functions.inc.php:10
+#: functions.inc.php:6
 msgid "DND"
 msgstr ""
 
@@ -51,7 +47,7 @@ msgstr ""
 msgid "Define Actions on A Status Change"
 msgstr ""
 
-#: Presencestate.class.php:218
+#: Presencestate.class.php:205
 msgid "Delete"
 msgstr ""
 
@@ -60,11 +56,11 @@ msgstr ""
 msgid "Do Not Change"
 msgstr ""
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:229
 msgid "Do Not Disturb"
 msgstr ""
 
-#: ucp/Presencestate.class.php:219
+#: ucp/Presencestate.class.php:228
 msgid "Do Nothing"
 msgstr ""
 
@@ -72,11 +68,11 @@ msgstr ""
 msgid "Enable Presence"
 msgstr ""
 
-#: functions.inc.php:11
+#: functions.inc.php:6
 msgid "Extended Away"
 msgstr ""
 
-#: ucp/Presencestate.class.php:221
+#: ucp/Presencestate.class.php:230
 msgid "Findme/Follow Me"
 msgstr ""
 
@@ -84,16 +80,12 @@ msgstr ""
 msgid "Inherit"
 msgstr ""
 
-#: Presencestate.class.php:204
+#: Presencestate.class.php:195
 msgid "Invalid Request"
 msgstr ""
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
 msgstr ""
 
 #: views/bootnav.php:16
@@ -121,19 +113,17 @@ msgstr ""
 msgid "Optional message, example: Lunch"
 msgstr ""
 
-#: ucp/Presencestate.class.php:175
-#: ucp/Presencestate.class.php:179
-#: ucp/Presencestate.class.php:193
+#: ucp/Presencestate.class.php:184
+#: ucp/Presencestate.class.php:188
+#: ucp/Presencestate.class.php:202
 msgid "Presence"
 msgstr ""
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:236
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127
-#: presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:121
 msgid "Presence State"
 msgstr ""
 
@@ -141,7 +131,7 @@ msgstr ""
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:223
+#: Presencestate.class.php:205
 msgid "Reset"
 msgstr ""
 
@@ -149,7 +139,7 @@ msgstr ""
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:228
+#: Presencestate.class.php:205
 msgid "Submit"
 msgstr ""
 
@@ -159,7 +149,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: functions.inc.php:12
+#: functions.inc.php:6
 msgid "Unavailable"
 msgstr ""
 

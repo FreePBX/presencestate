@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 04:01+0000\n"
+"POT-Creation-Date: 2023-09-13 10:49+0000\n"
 "PO-Revision-Date: 2016-10-08 12:16+0200\n"
 "Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -29,23 +29,19 @@ msgstr "عملیات"
 msgid "Add State"
 msgstr "افزودن وضعیت"
 
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "مدیر"
-
-#: functions.inc.php:7
+#: functions.inc.php:6
 msgid "Available"
 msgstr "در دسترس"
 
-#: functions.inc.php:9
+#: functions.inc.php:6
 msgid "Away"
 msgstr "دور"
 
-#: functions.inc.php:8
+#: functions.inc.php:6
 msgid "Chat"
 msgstr "چت"
 
-#: functions.inc.php:10
+#: functions.inc.php:6
 msgid "DND"
 msgstr "DND"
 
@@ -53,7 +49,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "تعریف رفتار بر اساس تغییر در وضعیت"
 
-#: Presencestate.class.php:218
+#: Presencestate.class.php:205
 msgid "Delete"
 msgstr "حذف"
 
@@ -61,11 +57,11 @@ msgstr "حذف"
 msgid "Do Not Change"
 msgstr "تغییر ندهید"
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:229
 msgid "Do Not Disturb"
 msgstr "مزاحم نشوید (DND)"
 
-#: ucp/Presencestate.class.php:219
+#: ucp/Presencestate.class.php:228
 msgid "Do Nothing"
 msgstr "هیچ کاری نکنید"
 
@@ -73,11 +69,11 @@ msgstr "هیچ کاری نکنید"
 msgid "Enable Presence"
 msgstr "فعال کردن حضور"
 
-#: functions.inc.php:11
+#: functions.inc.php:6
 msgid "Extended Away"
 msgstr "خیلی دور"
 
-#: ucp/Presencestate.class.php:221
+#: ucp/Presencestate.class.php:230
 msgid "Findme/Follow Me"
 msgstr "مرا پیدا کن/مرا دنبال کن"
 
@@ -85,17 +81,13 @@ msgstr "مرا پیدا کن/مرا دنبال کن"
 msgid "Inherit"
 msgstr "موروثی"
 
-#: Presencestate.class.php:204
+#: Presencestate.class.php:195
 msgid "Invalid Request"
 msgstr "درخواست نامعتبر"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr "فهرست وضعیت ها"
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "مدیریت فهرست وضعیت های حضور."
 
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
@@ -122,17 +114,16 @@ msgstr "پیام اختیاری"
 msgid "Optional message, example: Lunch"
 msgstr "پیام اختیاری، مثال: زمان نهار"
 
-#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
-#: ucp/Presencestate.class.php:193
+#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
+#: ucp/Presencestate.class.php:202
 msgid "Presence"
 msgstr "حضور"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:236
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:121
 msgid "Presence State"
 msgstr "وضعیت حضور"
 
@@ -140,7 +131,7 @@ msgstr "وضعیت حضور"
 msgid "Presence States"
 msgstr "وضعیت های حضور"
 
-#: Presencestate.class.php:223
+#: Presencestate.class.php:205
 msgid "Reset"
 msgstr "بازنشانی"
 
@@ -148,7 +139,7 @@ msgstr "بازنشانی"
 msgid "State type"
 msgstr "نوع وضعیت"
 
-#: Presencestate.class.php:228
+#: Presencestate.class.php:205
 msgid "Submit"
 msgstr "ثبت"
 
@@ -156,7 +147,7 @@ msgstr "ثبت"
 msgid "Type"
 msgstr "نوع"
 
-#: functions.inc.php:12
+#: functions.inc.php:6
 msgid "Unavailable"
 msgstr "خارج از دسترس"
 
@@ -170,6 +161,12 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "بله"
+
+#~ msgid "Admin"
+#~ msgstr "مدیر"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "مدیریت فهرست وضعیت های حضور."
 
 #~ msgid "Actions List"
 #~ msgstr "فهرست عملیات"

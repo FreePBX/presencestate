@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 04:01+0000\n"
+"POT-Creation-Date: 2023-09-13 10:49+0000\n"
 "PO-Revision-Date: 2018-02-16 20:01+0200\n"
 "Last-Translator: Nils <Nils@heckenkamp.info>\n"
 "Language-Team: German <http://weblate.freepbx.org/projects/freepbx/"
@@ -29,23 +29,19 @@ msgstr "Aktionen"
 msgid "Add State"
 msgstr "Status hinzufügen"
 
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "Administrator"
-
-#: functions.inc.php:7
+#: functions.inc.php:6
 msgid "Available"
 msgstr "Verfügbar"
 
-#: functions.inc.php:9
+#: functions.inc.php:6
 msgid "Away"
 msgstr "Abwesend"
 
-#: functions.inc.php:8
+#: functions.inc.php:6
 msgid "Chat"
 msgstr "Chat"
 
-#: functions.inc.php:10
+#: functions.inc.php:6
 msgid "DND"
 msgstr "DND"
 
@@ -53,7 +49,7 @@ msgstr "DND"
 msgid "Define Actions on A Status Change"
 msgstr "Aktion bei Statusänderung"
 
-#: Presencestate.class.php:218
+#: Presencestate.class.php:205
 msgid "Delete"
 msgstr "Löschen"
 
@@ -61,11 +57,11 @@ msgstr "Löschen"
 msgid "Do Not Change"
 msgstr "Nichts ändern"
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:229
 msgid "Do Not Disturb"
 msgstr "Bitte nicht stören"
 
-#: ucp/Presencestate.class.php:219
+#: ucp/Presencestate.class.php:228
 msgid "Do Nothing"
 msgstr "Nichts tun"
 
@@ -73,11 +69,11 @@ msgstr "Nichts tun"
 msgid "Enable Presence"
 msgstr "Aktiviere Anwesenheitsstatus"
 
-#: functions.inc.php:11
+#: functions.inc.php:6
 msgid "Extended Away"
 msgstr "Länger abwesend"
 
-#: ucp/Presencestate.class.php:221
+#: ucp/Presencestate.class.php:230
 msgid "Findme/Follow Me"
 msgstr "Finde Mich/Folge Mir"
 
@@ -85,17 +81,13 @@ msgstr "Finde Mich/Folge Mir"
 msgid "Inherit"
 msgstr "Übernehmen"
 
-#: Presencestate.class.php:204
+#: Presencestate.class.php:195
 msgid "Invalid Request"
 msgstr "ungültige Anfrage"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr "Statusliste"
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "Liste der Anwesenheitsstatus verwalten."
 
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
@@ -121,17 +113,16 @@ msgstr "Optionale Nachricht"
 msgid "Optional message, example: Lunch"
 msgstr "Optionale Nachricht, z.B. Mittag"
 
-#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
-#: ucp/Presencestate.class.php:193
+#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
+#: ucp/Presencestate.class.php:202
 msgid "Presence"
 msgstr "Anwesenheit"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:236
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:121
 msgid "Presence State"
 msgstr "Anwesenheitsstatus"
 
@@ -139,7 +130,7 @@ msgstr "Anwesenheitsstatus"
 msgid "Presence States"
 msgstr "Anwesenheitsstatus"
 
-#: Presencestate.class.php:223
+#: Presencestate.class.php:205
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -147,7 +138,7 @@ msgstr "Zurücksetzen"
 msgid "State type"
 msgstr "Status Typ"
 
-#: Presencestate.class.php:228
+#: Presencestate.class.php:205
 msgid "Submit"
 msgstr "Absenden"
 
@@ -155,7 +146,7 @@ msgstr "Absenden"
 msgid "Type"
 msgstr "Typ"
 
-#: functions.inc.php:12
+#: functions.inc.php:6
 msgid "Unavailable"
 msgstr "Nicht verfügbar"
 
@@ -169,6 +160,12 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Ja"
+
+#~ msgid "Admin"
+#~ msgstr "Administrator"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "Liste der Anwesenheitsstatus verwalten."
 
 #~ msgid "Actions List"
 #~ msgstr "Aktionsliste"

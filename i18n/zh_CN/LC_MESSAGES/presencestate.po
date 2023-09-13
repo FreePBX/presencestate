@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 04:01+0000\n"
+"POT-Creation-Date: 2023-09-13 10:49+0000\n"
 "PO-Revision-Date: 2018-03-14 14:52+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -29,23 +29,19 @@ msgstr "操作"
 msgid "Add State"
 msgstr ""
 
-#: presencestate.i18n.php:6
-msgid "Admin"
-msgstr "管理"
-
-#: functions.inc.php:7
+#: functions.inc.php:6
 msgid "Available"
 msgstr "在线"
 
-#: functions.inc.php:9
+#: functions.inc.php:6
 msgid "Away"
 msgstr "离开"
 
-#: functions.inc.php:8
+#: functions.inc.php:6
 msgid "Chat"
 msgstr "聊天"
 
-#: functions.inc.php:10
+#: functions.inc.php:6
 msgid "DND"
 msgstr "免打扰"
 
@@ -53,7 +49,7 @@ msgstr "免打扰"
 msgid "Define Actions on A Status Change"
 msgstr "定义一个状态修改命令"
 
-#: Presencestate.class.php:218
+#: Presencestate.class.php:205
 msgid "Delete"
 msgstr "删除"
 
@@ -61,11 +57,11 @@ msgstr "删除"
 msgid "Do Not Change"
 msgstr ""
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:229
 msgid "Do Not Disturb"
 msgstr "免打扰"
 
-#: ucp/Presencestate.class.php:219
+#: ucp/Presencestate.class.php:228
 msgid "Do Nothing"
 msgstr "不做"
 
@@ -73,11 +69,11 @@ msgstr "不做"
 msgid "Enable Presence"
 msgstr ""
 
-#: functions.inc.php:11
+#: functions.inc.php:6
 msgid "Extended Away"
 msgstr ""
 
-#: ucp/Presencestate.class.php:221
+#: ucp/Presencestate.class.php:230
 msgid "Findme/Follow Me"
 msgstr "分机随行"
 
@@ -85,17 +81,13 @@ msgstr "分机随行"
 msgid "Inherit"
 msgstr "继承"
 
-#: Presencestate.class.php:204
+#: Presencestate.class.php:195
 msgid "Invalid Request"
 msgstr "无效请求"
 
 #: views/bootnav.php:3
 msgid "List States"
 msgstr ""
-
-#: presencestate.i18n.php:8
-msgid "Manage list of presence states."
-msgstr "管理在线状态列表"
 
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
@@ -121,17 +113,16 @@ msgstr ""
 msgid "Optional message, example: Lunch"
 msgstr ""
 
-#: ucp/Presencestate.class.php:175 ucp/Presencestate.class.php:179
-#: ucp/Presencestate.class.php:193
+#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
+#: ucp/Presencestate.class.php:202
 msgid "Presence"
 msgstr ""
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:236
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:127 presencestate.i18n.php:4
-#: presencestate.i18n.php:10
+#: Presencestate.class.php:121
 msgid "Presence State"
 msgstr "Presence 状态"
 
@@ -139,7 +130,7 @@ msgstr "Presence 状态"
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:223
+#: Presencestate.class.php:205
 msgid "Reset"
 msgstr "重置"
 
@@ -147,7 +138,7 @@ msgstr "重置"
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:228
+#: Presencestate.class.php:205
 msgid "Submit"
 msgstr "提交"
 
@@ -155,7 +146,7 @@ msgstr "提交"
 msgid "Type"
 msgstr "类型"
 
-#: functions.inc.php:12
+#: functions.inc.php:6
 msgid "Unavailable"
 msgstr "不在线"
 
@@ -168,6 +159,12 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "是"
+
+#~ msgid "Admin"
+#~ msgstr "管理"
+
+#~ msgid "Manage list of presence states."
+#~ msgstr "管理在线状态列表"
 
 #~ msgid "Presence State Settings"
 #~ msgstr "Presence 状态设置"
