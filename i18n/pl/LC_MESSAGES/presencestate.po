@@ -1,0 +1,174 @@
+# This file is part of FreePBX.
+#
+# For licensing information, please see the file named LICENSE located in the module directory
+#
+# FreePBX language template for presencestate
+# Copyright (C) 2008-2020 Sangoma Technologies, Inc.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-20 03:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: views/grid.php:17
+msgid "Actions"
+msgstr ""
+
+#: views/bootnav.php:2
+#: views/grid.php:2
+msgid "Add State"
+msgstr ""
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr ""
+
+#: functions.inc.php:7
+msgid "Available"
+msgstr ""
+
+#: functions.inc.php:9
+msgid "Away"
+msgstr ""
+
+#: functions.inc.php:8
+msgid "Chat"
+msgstr ""
+
+#: functions.inc.php:10
+msgid "DND"
+msgstr ""
+
+#: ucp/views/settings.php:23
+msgid "Define Actions on A Status Change"
+msgstr ""
+
+#: Presencestate.class.php:206
+msgid "Delete"
+msgstr ""
+
+#: ucp/views/settings.php:7
+#: ucp/views/settings.php:16
+msgid "Do Not Change"
+msgstr ""
+
+#: ucp/Presencestate.class.php:220
+msgid "Do Not Disturb"
+msgstr ""
+
+#: ucp/Presencestate.class.php:219
+msgid "Do Nothing"
+msgstr ""
+
+#: views/ucp_config.php:7
+msgid "Enable Presence"
+msgstr ""
+
+#: functions.inc.php:11
+msgid "Extended Away"
+msgstr ""
+
+#: ucp/Presencestate.class.php:221
+msgid "Findme/Follow Me"
+msgstr ""
+
+#: views/ucp_config.php:18
+msgid "Inherit"
+msgstr ""
+
+#: Presencestate.class.php:192
+msgid "Invalid Request"
+msgstr ""
+
+#: views/bootnav.php:3
+msgid "List States"
+msgstr ""
+
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr ""
+
+#: views/bootnav.php:16
+#: views/grid.php:16
+msgid "Message"
+msgstr ""
+
+#: views/ucp_config.php:15
+msgid "No"
+msgstr ""
+
+#: ucp/views/settings.php:14
+msgid "On Browser Close or UCP Logout Set Status to"
+msgstr ""
+
+#: ucp/views/settings.php:5
+msgid "On UCP Login Set Status to"
+msgstr ""
+
+#: views/form.php:50
+msgid "Optional Message"
+msgstr ""
+
+#: views/form.php:62
+msgid "Optional message, example: Lunch"
+msgstr ""
+
+#: ucp/Presencestate.class.php:175
+#: ucp/Presencestate.class.php:179
+#: ucp/Presencestate.class.php:193
+msgid "Presence"
+msgstr ""
+
+#: ucp/Presencestate.class.php:228
+msgid "Presence Settings"
+msgstr ""
+
+#: Presencestate.class.php:132
+#: presencestate.i18n.php:4
+#: presencestate.i18n.php:10
+msgid "Presence State"
+msgstr ""
+
+#: page.presencestate.php:6
+msgid "Presence States"
+msgstr ""
+
+#: Presencestate.class.php:211
+msgid "Reset"
+msgstr ""
+
+#: views/form.php:38
+msgid "State type"
+msgstr ""
+
+#: Presencestate.class.php:216
+msgid "Submit"
+msgstr ""
+
+#: views/bootnav.php:15
+#: views/form.php:24
+#: views/grid.php:15
+msgid "Type"
+msgstr ""
+
+#: functions.inc.php:12
+msgid "Unavailable"
+msgstr ""
+
+#: views/ucp_config.php:28
+msgid ""
+"Whether to allow this user to be able to change their presence state/status "
+"in UCP"
+msgstr ""
+
+#: views/ucp_config.php:13
+msgid "Yes"
+msgstr ""
