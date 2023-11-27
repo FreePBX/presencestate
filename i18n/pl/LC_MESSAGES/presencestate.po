@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 03:59+0000\n"
-"PO-Revision-Date: 2023-11-18 16:02+0000\n"
+"PO-Revision-Date: 2023-11-27 23:57+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/pl/>\n"
@@ -29,7 +29,7 @@ msgstr "Działania"
 #: views/bootnav.php:2
 #: views/grid.php:2
 msgid "Add State"
-msgstr ""
+msgstr "Dodaj stan"
 
 #: presencestate.i18n.php:6
 msgid "Admin"
@@ -41,138 +41,140 @@ msgstr "Dostępny"
 
 #: functions.inc.php:9
 msgid "Away"
-msgstr ""
+msgstr "Nieobecny"
 
 #: functions.inc.php:8
 msgid "Chat"
-msgstr ""
+msgstr "Czat"
 
 #: functions.inc.php:10
 msgid "DND"
-msgstr ""
+msgstr "Nie przeszkadzać"
 
 #: ucp/views/settings.php:23
 msgid "Define Actions on A Status Change"
-msgstr ""
+msgstr "Zdefiniuj działania w przypadku zmiany statusu"
 
 #: Presencestate.class.php:206
 msgid "Delete"
-msgstr ""
+msgstr "Usuń"
 
 #: ucp/views/settings.php:7
 #: ucp/views/settings.php:16
 msgid "Do Not Change"
-msgstr ""
+msgstr "Nie zmieniaj"
 
 #: ucp/Presencestate.class.php:220
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Nie przeszkadzać"
 
 #: ucp/Presencestate.class.php:219
 msgid "Do Nothing"
-msgstr ""
+msgstr "Nie rób nic"
 
 #: views/ucp_config.php:7
 msgid "Enable Presence"
-msgstr ""
+msgstr "Włącz obecność"
 
 #: functions.inc.php:11
 msgid "Extended Away"
-msgstr ""
+msgstr "Nieobecny rozszerzony"
 
 #: ucp/Presencestate.class.php:221
 msgid "Findme/Follow Me"
-msgstr ""
+msgstr "Znajdź mnie/Podążaj za mną"
 
 #: views/ucp_config.php:18
 msgid "Inherit"
-msgstr ""
+msgstr "Dziedzicz"
 
 #: Presencestate.class.php:192
 msgid "Invalid Request"
-msgstr ""
+msgstr "Nieprawidłowe żądanie"
 
 #: views/bootnav.php:3
 msgid "List States"
-msgstr ""
+msgstr "Lista statusów"
 
 #: presencestate.i18n.php:8
 msgid "Manage list of presence states."
-msgstr ""
+msgstr "Zarządzaj listą statusów obecności."
 
 #: views/bootnav.php:16
 #: views/grid.php:16
 msgid "Message"
-msgstr ""
+msgstr "Komunikat"
 
 #: views/ucp_config.php:15
 msgid "No"
-msgstr ""
+msgstr "Nie"
 
 #: ucp/views/settings.php:14
 msgid "On Browser Close or UCP Logout Set Status to"
-msgstr ""
+msgstr "Po zamknięciu przeglądarki lub wylogowaniu się z UCP Ustaw status na"
 
 #: ucp/views/settings.php:5
 msgid "On UCP Login Set Status to"
-msgstr ""
+msgstr "Gdy zalogowany do UCP ustaw status na"
 
 #: views/form.php:50
 msgid "Optional Message"
-msgstr ""
+msgstr "Opcjonalna wiadomość"
 
 #: views/form.php:62
 msgid "Optional message, example: Lunch"
-msgstr ""
+msgstr "Opcjonalna wiadomość, przykładowo: Obiad"
 
 #: ucp/Presencestate.class.php:175
 #: ucp/Presencestate.class.php:179
 #: ucp/Presencestate.class.php:193
 msgid "Presence"
-msgstr ""
+msgstr "Obecność"
 
 #: ucp/Presencestate.class.php:228
 msgid "Presence Settings"
-msgstr ""
+msgstr "Ustawienia obecności"
 
 #: Presencestate.class.php:132
 #: presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
-msgstr ""
+msgstr "Status obecności"
 
 #: page.presencestate.php:6
 msgid "Presence States"
-msgstr ""
+msgstr "Statusy obecności"
 
 #: Presencestate.class.php:211
 msgid "Reset"
-msgstr ""
+msgstr "Zresetuj"
 
 #: views/form.php:38
 msgid "State type"
-msgstr ""
+msgstr "Typ obecności"
 
 #: Presencestate.class.php:216
 msgid "Submit"
-msgstr ""
+msgstr "Zatwierdź"
 
 #: views/bootnav.php:15
 #: views/form.php:24
 #: views/grid.php:15
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: functions.inc.php:12
 msgid "Unavailable"
-msgstr ""
+msgstr "Niedostępny"
 
 #: views/ucp_config.php:28
 msgid ""
 "Whether to allow this user to be able to change their presence state/status "
 "in UCP"
 msgstr ""
+"Określa, czy zezwolić temu użytkownikowi na zmianę stanu/statusu obecności w "
+"UCP"
 
 #: views/ucp_config.php:13
 msgid "Yes"
-msgstr ""
+msgstr "Tak"
