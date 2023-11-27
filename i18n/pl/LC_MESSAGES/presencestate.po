@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-20 03:59+0000\n"
-"PO-Revision-Date: 2023-11-27 23:57+0000\n"
+"PO-Revision-Date: 2023-11-29 00:01+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/pl/>\n"
@@ -103,7 +103,7 @@ msgstr "Zarządzaj listą statusów obecności."
 #: views/bootnav.php:16
 #: views/grid.php:16
 msgid "Message"
-msgstr "Komunikat"
+msgstr "Wiadomość"
 
 #: views/ucp_config.php:15
 msgid "No"
