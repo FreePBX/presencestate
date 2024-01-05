@@ -1,0 +1,180 @@
+# This file is part of FreePBX.
+#
+# For licensing information, please see the file named LICENSE located in the module directory
+#
+# FreePBX language template for presencestate
+# Copyright (C) 2008-2020 Sangoma Technologies, Inc.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-20 03:59+0000\n"
+"PO-Revision-Date: 2023-11-29 00:01+0000\n"
+"Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
+"Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
+"presencestate/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.0.1\n"
+
+#: views/grid.php:17
+msgid "Actions"
+msgstr "Działania"
+
+#: views/bootnav.php:2
+#: views/grid.php:2
+msgid "Add State"
+msgstr "Dodaj stan"
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr "Administrator"
+
+#: functions.inc.php:7
+msgid "Available"
+msgstr "Dostępny"
+
+#: functions.inc.php:9
+msgid "Away"
+msgstr "Nieobecny"
+
+#: functions.inc.php:8
+msgid "Chat"
+msgstr "Czat"
+
+#: functions.inc.php:10
+msgid "DND"
+msgstr "Nie przeszkadzać"
+
+#: ucp/views/settings.php:23
+msgid "Define Actions on A Status Change"
+msgstr "Zdefiniuj działania w przypadku zmiany statusu"
+
+#: Presencestate.class.php:206
+msgid "Delete"
+msgstr "Usuń"
+
+#: ucp/views/settings.php:7
+#: ucp/views/settings.php:16
+msgid "Do Not Change"
+msgstr "Nie zmieniaj"
+
+#: ucp/Presencestate.class.php:220
+msgid "Do Not Disturb"
+msgstr "Nie przeszkadzać"
+
+#: ucp/Presencestate.class.php:219
+msgid "Do Nothing"
+msgstr "Nie rób nic"
+
+#: views/ucp_config.php:7
+msgid "Enable Presence"
+msgstr "Włącz obecność"
+
+#: functions.inc.php:11
+msgid "Extended Away"
+msgstr "Nieobecny rozszerzony"
+
+#: ucp/Presencestate.class.php:221
+msgid "Findme/Follow Me"
+msgstr "Znajdź mnie/Podążaj za mną"
+
+#: views/ucp_config.php:18
+msgid "Inherit"
+msgstr "Dziedzicz"
+
+#: Presencestate.class.php:192
+msgid "Invalid Request"
+msgstr "Nieprawidłowe żądanie"
+
+#: views/bootnav.php:3
+msgid "List States"
+msgstr "Lista statusów"
+
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "Zarządzaj listą statusów obecności."
+
+#: views/bootnav.php:16
+#: views/grid.php:16
+msgid "Message"
+msgstr "Wiadomość"
+
+#: views/ucp_config.php:15
+msgid "No"
+msgstr "Nie"
+
+#: ucp/views/settings.php:14
+msgid "On Browser Close or UCP Logout Set Status to"
+msgstr "Po zamknięciu przeglądarki lub wylogowaniu się z UCP Ustaw status na"
+
+#: ucp/views/settings.php:5
+msgid "On UCP Login Set Status to"
+msgstr "Gdy zalogowany do UCP ustaw status na"
+
+#: views/form.php:50
+msgid "Optional Message"
+msgstr "Opcjonalna wiadomość"
+
+#: views/form.php:62
+msgid "Optional message, example: Lunch"
+msgstr "Opcjonalna wiadomość, przykładowo: Obiad"
+
+#: ucp/Presencestate.class.php:175
+#: ucp/Presencestate.class.php:179
+#: ucp/Presencestate.class.php:193
+msgid "Presence"
+msgstr "Obecność"
+
+#: ucp/Presencestate.class.php:228
+msgid "Presence Settings"
+msgstr "Ustawienia obecności"
+
+#: Presencestate.class.php:132
+#: presencestate.i18n.php:4
+#: presencestate.i18n.php:10
+msgid "Presence State"
+msgstr "Status obecności"
+
+#: page.presencestate.php:6
+msgid "Presence States"
+msgstr "Statusy obecności"
+
+#: Presencestate.class.php:211
+msgid "Reset"
+msgstr "Zresetuj"
+
+#: views/form.php:38
+msgid "State type"
+msgstr "Typ obecności"
+
+#: Presencestate.class.php:216
+msgid "Submit"
+msgstr "Zatwierdź"
+
+#: views/bootnav.php:15
+#: views/form.php:24
+#: views/grid.php:15
+msgid "Type"
+msgstr "Typ"
+
+#: functions.inc.php:12
+msgid "Unavailable"
+msgstr "Niedostępny"
+
+#: views/ucp_config.php:28
+msgid ""
+"Whether to allow this user to be able to change their presence state/status "
+"in UCP"
+msgstr ""
+"Określa, czy zezwolić temu użytkownikowi na zmianę stanu/statusu obecności w "
+"UCP"
+
+#: views/ucp_config.php:13
+msgid "Yes"
+msgstr "Tak"
