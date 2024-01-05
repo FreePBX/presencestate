@@ -2,7 +2,7 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>17.0.2</version>
+	<version>17.0.2.1</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
@@ -13,10 +13,11 @@
 		<presencestate needsenginedb="yes">Presence State</presencestate>
 	</menuitems>
 	<depends>
-		<phpversion>7.4.0</phpversion>
-		<version>16.0</version>
+		<phpversion>8.2.0</phpversion>
+		<version>17.0</version>
 	</depends>
 	<changelog>
+		*17.0.2.1* Packaging of ver 17.0.2.1
 		*17.0.2* Packaging of ver 17.0.2
 		*17.0.1* 17.0
 	</changelog>
