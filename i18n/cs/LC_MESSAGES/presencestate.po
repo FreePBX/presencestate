@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 10:49+0000\n"
+"POT-Creation-Date: 2024-01-05 01:02-0500\n"
 "PO-Revision-Date: 2018-01-03 15:24+0200\n"
 "Last-Translator: Petr <petrv@atlantis.cz>\n"
 "Language-Team: Czech <http://weblate.freepbx.org/projects/freepbx/"
@@ -28,6 +28,10 @@ msgstr "Akce"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Přidat stav"
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr "Administrator"
 
 #: functions.inc.php:6
 msgid "Available"
@@ -89,6 +93,10 @@ msgstr "Neplatná žádost"
 msgid "List States"
 msgstr "Přehled stavů"
 
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "Upravit seznam prezenčních stavů."
+
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "Zpráva"
@@ -122,7 +130,8 @@ msgstr "Prezence"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:121
+#: Presencestate.class.php:121 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Stav prezence"
 
@@ -159,12 +168,6 @@ msgstr "Povolit uživateli, aby mohl změnit stav přítomnosti / stavu v UCP"
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Ano"
-
-#~ msgid "Admin"
-#~ msgstr "Administrator"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "Upravit seznam prezenčních stavů."
 
 #~ msgid "Actions List"
 #~ msgstr "Seznam akcí"

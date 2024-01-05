@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-20 03:59+0000\n"
+"POT-Creation-Date: 2024-01-05 01:02-0500\n"
 "PO-Revision-Date: 2023-11-29 00:01+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
 "presencestate/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
@@ -26,8 +26,7 @@ msgstr ""
 msgid "Actions"
 msgstr "Działania"
 
-#: views/bootnav.php:2
-#: views/grid.php:2
+#: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Dodaj stan"
 
@@ -35,19 +34,19 @@ msgstr "Dodaj stan"
 msgid "Admin"
 msgstr "Administrator"
 
-#: functions.inc.php:7
+#: functions.inc.php:6
 msgid "Available"
 msgstr "Dostępny"
 
-#: functions.inc.php:9
+#: functions.inc.php:6
 msgid "Away"
 msgstr "Nieobecny"
 
-#: functions.inc.php:8
+#: functions.inc.php:6
 msgid "Chat"
 msgstr "Czat"
 
-#: functions.inc.php:10
+#: functions.inc.php:6
 msgid "DND"
 msgstr "Nie przeszkadzać"
 
@@ -55,20 +54,19 @@ msgstr "Nie przeszkadzać"
 msgid "Define Actions on A Status Change"
 msgstr "Zdefiniuj działania w przypadku zmiany statusu"
 
-#: Presencestate.class.php:206
+#: Presencestate.class.php:205
 msgid "Delete"
 msgstr "Usuń"
 
-#: ucp/views/settings.php:7
-#: ucp/views/settings.php:16
+#: ucp/views/settings.php:7 ucp/views/settings.php:16
 msgid "Do Not Change"
 msgstr "Nie zmieniaj"
 
-#: ucp/Presencestate.class.php:220
+#: ucp/Presencestate.class.php:229
 msgid "Do Not Disturb"
 msgstr "Nie przeszkadzać"
 
-#: ucp/Presencestate.class.php:219
+#: ucp/Presencestate.class.php:228
 msgid "Do Nothing"
 msgstr "Nie rób nic"
 
@@ -76,11 +74,11 @@ msgstr "Nie rób nic"
 msgid "Enable Presence"
 msgstr "Włącz obecność"
 
-#: functions.inc.php:11
+#: functions.inc.php:6
 msgid "Extended Away"
 msgstr "Nieobecny rozszerzony"
 
-#: ucp/Presencestate.class.php:221
+#: ucp/Presencestate.class.php:230
 msgid "Findme/Follow Me"
 msgstr "Znajdź mnie/Podążaj za mną"
 
@@ -88,7 +86,7 @@ msgstr "Znajdź mnie/Podążaj za mną"
 msgid "Inherit"
 msgstr "Dziedzicz"
 
-#: Presencestate.class.php:192
+#: Presencestate.class.php:195
 msgid "Invalid Request"
 msgstr "Nieprawidłowe żądanie"
 
@@ -100,8 +98,7 @@ msgstr "Lista statusów"
 msgid "Manage list of presence states."
 msgstr "Zarządzaj listą statusów obecności."
 
-#: views/bootnav.php:16
-#: views/grid.php:16
+#: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "Wiadomość"
 
@@ -125,18 +122,16 @@ msgstr "Opcjonalna wiadomość"
 msgid "Optional message, example: Lunch"
 msgstr "Opcjonalna wiadomość, przykładowo: Obiad"
 
-#: ucp/Presencestate.class.php:175
-#: ucp/Presencestate.class.php:179
-#: ucp/Presencestate.class.php:193
+#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
+#: ucp/Presencestate.class.php:202
 msgid "Presence"
 msgstr "Obecność"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:236
 msgid "Presence Settings"
 msgstr "Ustawienia obecności"
 
-#: Presencestate.class.php:132
-#: presencestate.i18n.php:4
+#: Presencestate.class.php:121 presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Status obecności"
@@ -145,7 +140,7 @@ msgstr "Status obecności"
 msgid "Presence States"
 msgstr "Statusy obecności"
 
-#: Presencestate.class.php:211
+#: Presencestate.class.php:205
 msgid "Reset"
 msgstr "Zresetuj"
 
@@ -153,17 +148,15 @@ msgstr "Zresetuj"
 msgid "State type"
 msgstr "Typ obecności"
 
-#: Presencestate.class.php:216
+#: Presencestate.class.php:205
 msgid "Submit"
 msgstr "Zatwierdź"
 
-#: views/bootnav.php:15
-#: views/form.php:24
-#: views/grid.php:15
+#: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"
 msgstr "Typ"
 
-#: functions.inc.php:12
+#: functions.inc.php:6
 msgid "Unavailable"
 msgstr "Niedostępny"
 

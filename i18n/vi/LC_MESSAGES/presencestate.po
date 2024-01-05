@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-13 10:49+0000\n"
+"POT-Creation-Date: 2024-01-05 01:02-0500\n"
 "PO-Revision-Date: 2017-07-25 21:58+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -28,6 +28,10 @@ msgstr "Các thao tác"
 #: views/bootnav.php:2 views/grid.php:2
 msgid "Add State"
 msgstr "Thêm State"
+
+#: presencestate.i18n.php:6
+msgid "Admin"
+msgstr "Quản trị viên"
 
 #: functions.inc.php:6
 msgid "Available"
@@ -89,6 +93,10 @@ msgstr "Yêu cầu không hợp lệ"
 msgid "List States"
 msgstr "Danh sách các trạng thái"
 
+#: presencestate.i18n.php:8
+msgid "Manage list of presence states."
+msgstr "Quản lý danh sách các trạng thái hiển thị."
+
 #: views/bootnav.php:16 views/grid.php:16
 msgid "Message"
 msgstr "Tin nhắn"
@@ -122,7 +130,8 @@ msgstr "Hiên thị"
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:121
+#: Presencestate.class.php:121 presencestate.i18n.php:4
+#: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Hiển thị trạng thái"
 
@@ -161,12 +170,6 @@ msgstr ""
 #: views/ucp_config.php:13
 msgid "Yes"
 msgstr "Có"
-
-#~ msgid "Admin"
-#~ msgstr "Quản trị viên"
-
-#~ msgid "Manage list of presence states."
-#~ msgstr "Quản lý danh sách các trạng thái hiển thị."
 
 #~ msgid "Actions List"
 #~ msgstr "Danh sách thao tác"
