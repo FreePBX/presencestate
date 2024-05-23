@@ -2,13 +2,13 @@
 	<rawname>presencestate</rawname>
 	<repo>standard</repo>
 	<name>Presence State</name>
-	<version>17.0.2.1</version>
+	<version>17.0.2.2</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>https://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<category>Admin</category>
 	<description>Manage list of presence states.</description>
-  	<more-info>https://wiki.freepbx.org/display/FPG/Presence+State+Module</more-info>
+  	<more-info>https://sangomakb.atlassian.net/wiki/spaces/PG/pages/20611576/Presence+State+Module</more-info>
 	<menuitems>
 		<presencestate needsenginedb="yes">Presence State</presencestate>
 	</menuitems>
@@ -17,7 +17,7 @@
 		<version>17.0</version>
 	</depends>
 	<changelog>
-		*17.0.2.1* Packaging of ver 17.0.2.1
+		*17.0.2.2* bump 
 		*17.0.2* Packaging of ver 17.0.2
 		*17.0.1* 17.0
 	</changelog>
