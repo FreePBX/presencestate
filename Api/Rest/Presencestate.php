@@ -13,8 +13,9 @@ class Presencestate extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$presencestates = presencestate_list_get();
 
-			$presencestates = $presencestates ?: false;
-			return $response->withJson($presencestates);
+			$presencestates = $presencestates ?? false;
+			$response->getBody()->write(json_encode($presencestates));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -26,8 +27,9 @@ class Presencestate extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$types = presencestate_types_get();
 
-			$types = $types ?: false;
-			return $response->withJson($types);
+			$types = $types ?? false;
+			$response->getBody()->write(json_encode($types));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -39,8 +41,9 @@ class Presencestate extends Base {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$prefs = presencestate_prefs_get($args['extension']);
 
-			$prefs = $prefs ?: false;
-			return $response->withJson($prefs);
+			$prefs = $prefs ?? false;
+			$response->getBody()->write(json_encode($prefs));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllReadScopeMiddleware());
 
 		/**
@@ -50,7 +53,8 @@ class Presencestate extends Base {
 		$app->put('/presencestate/prefs/{extension}', function ($request, $response, $args) {
 			\FreePBX::Modules()->loadFunctionsInc('presencestate');
 			$params = $request->getParsedBody();
-			return $response->withJson(presencestate_prefs_set($args['extension'], $params));
+			$response->getBody()->write(json_encode(presencestate_prefs_set($args['extension'] ?? '', $params)));
+			return $response->withHeader('Content-Type', 'application/json');
 		})->add($this->checkAllWriteScopeMiddleware());
 	}
 }
