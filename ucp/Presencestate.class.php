@@ -175,28 +175,55 @@ class Presencestate extends Modules{
 	}
 
 	public function getSimpleWidgetList() {
-		if(!$this->enabled || empty($this->device)) {
-			return array();
-		}
-
-		$widgets = array(
+		$responseData = array(
 			"rawname" => "presencestate",
 			"display" => _("Presence"),
 			"icon" => "fa fa-user",
-			"list" => array(
-				"presencestate" => array(
-					"display" => _("Presence"),
-					"hasSettings" => true,
-					"defaultsize" => array("height" => 2, "width" => 1),
-					"minsize" => array("height" => 2, "width" => 1)
-				)
-			)
+			"list" => []
+		);
+		$errors = $this->validate();
+		if ($errors['hasError']) {
+			return array_merge($responseData, $errors);
+		}
+
+		$widgets['presencestate'] = [
+			"display" => _("Presence"),
+			"hasSettings" => true,
+			"defaultsize" => array("height" => 2, "width" => 1),
+			"minsize" => array("height" => 2, "width" => 1)
+		];
+
+		$responseData['list'] = $widgets;
+		return $responseData;
+	}
+
+	/**
+	 * validate against rules
+	 */
+	private function validate() {
+		$data = array(
+			'hasError' => false,
+			'errorMessages' => []
 		);
 
-		return $widgets;
+		if (!$this->enabled) {
+			$data['hasError'] = true;
+			$data['errorMessages'][] = _('Presence State is not enabled for this user.');
+		}
+		if (empty($this->device)) {
+			$data['hasError'] = true;
+			$data['errorMessages'][] = _("This user doesn't have a default extension.");
+		}
+
+		return $data;
 	}
 
 	public function getWidgetDisplay($id) {
+		$errors = $this->validate();
+		if ($errors['hasError']) {
+			return $errors;
+		}
+
 		$display = array();
 
 		$display['title'] = _('Presence');
