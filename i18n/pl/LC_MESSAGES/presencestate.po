@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 01:02-0500\n"
+"POT-Creation-Date: 2024-05-28 09:47-0400\n"
 "PO-Revision-Date: 2023-11-29 00:01+0000\n"
 "Last-Translator: Szymon Wysokinski <szymon.wysokinski@sqspolska.pl>\n"
 "Language-Team: Polish <http://weblate.freepbx.org/projects/freepbx/"
@@ -62,11 +62,11 @@ msgstr "Usuń"
 msgid "Do Not Change"
 msgstr "Nie zmieniaj"
 
-#: ucp/Presencestate.class.php:229
+#: ucp/Presencestate.class.php:256
 msgid "Do Not Disturb"
 msgstr "Nie przeszkadzać"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:255
 msgid "Do Nothing"
 msgstr "Nie rób nic"
 
@@ -78,7 +78,7 @@ msgstr "Włącz obecność"
 msgid "Extended Away"
 msgstr "Nieobecny rozszerzony"
 
-#: ucp/Presencestate.class.php:230
+#: ucp/Presencestate.class.php:257
 msgid "Findme/Follow Me"
 msgstr "Znajdź mnie/Podążaj za mną"
 
@@ -122,12 +122,12 @@ msgstr "Opcjonalna wiadomość"
 msgid "Optional message, example: Lunch"
 msgstr "Opcjonalna wiadomość, przykładowo: Obiad"
 
-#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
-#: ucp/Presencestate.class.php:202
+#: ucp/Presencestate.class.php:180 ucp/Presencestate.class.php:190
+#: ucp/Presencestate.class.php:229
 msgid "Presence"
 msgstr "Obecność"
 
-#: ucp/Presencestate.class.php:236
+#: ucp/Presencestate.class.php:263
 msgid "Presence Settings"
 msgstr "Ustawienia obecności"
 
@@ -135,6 +135,10 @@ msgstr "Ustawienia obecności"
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Status obecności"
+
+#: ucp/Presencestate.class.php:211
+msgid "Presence State is not enabled for this user."
+msgstr ""
 
 #: page.presencestate.php:6
 msgid "Presence States"
@@ -151,6 +155,10 @@ msgstr "Typ obecności"
 #: Presencestate.class.php:205
 msgid "Submit"
 msgstr "Zatwierdź"
+
+#: ucp/Presencestate.class.php:215
+msgid "This user doesn't have a default extension."
+msgstr ""
 
 #: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"

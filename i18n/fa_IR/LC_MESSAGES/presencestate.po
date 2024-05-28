@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 01:02-0500\n"
+"POT-Creation-Date: 2024-05-28 09:47-0400\n"
 "PO-Revision-Date: 2016-10-08 12:16+0200\n"
 "Last-Translator: psdk <hyavari26@gmail.com>\n"
 "Language-Team: Persian (Iran) <http://weblate.freepbx.org/projects/freepbx/"
@@ -61,11 +61,11 @@ msgstr "حذف"
 msgid "Do Not Change"
 msgstr "تغییر ندهید"
 
-#: ucp/Presencestate.class.php:229
+#: ucp/Presencestate.class.php:256
 msgid "Do Not Disturb"
 msgstr "مزاحم نشوید (DND)"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:255
 msgid "Do Nothing"
 msgstr "هیچ کاری نکنید"
 
@@ -77,7 +77,7 @@ msgstr "فعال کردن حضور"
 msgid "Extended Away"
 msgstr "خیلی دور"
 
-#: ucp/Presencestate.class.php:230
+#: ucp/Presencestate.class.php:257
 msgid "Findme/Follow Me"
 msgstr "مرا پیدا کن/مرا دنبال کن"
 
@@ -122,12 +122,12 @@ msgstr "پیام اختیاری"
 msgid "Optional message, example: Lunch"
 msgstr "پیام اختیاری، مثال: زمان نهار"
 
-#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
-#: ucp/Presencestate.class.php:202
+#: ucp/Presencestate.class.php:180 ucp/Presencestate.class.php:190
+#: ucp/Presencestate.class.php:229
 msgid "Presence"
 msgstr "حضور"
 
-#: ucp/Presencestate.class.php:236
+#: ucp/Presencestate.class.php:263
 msgid "Presence Settings"
 msgstr ""
 
@@ -135,6 +135,10 @@ msgstr ""
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "وضعیت حضور"
+
+#: ucp/Presencestate.class.php:211
+msgid "Presence State is not enabled for this user."
+msgstr ""
 
 #: page.presencestate.php:6
 msgid "Presence States"
@@ -151,6 +155,10 @@ msgstr "نوع وضعیت"
 #: Presencestate.class.php:205
 msgid "Submit"
 msgstr "ثبت"
+
+#: ucp/Presencestate.class.php:215
+msgid "This user doesn't have a default extension."
+msgstr ""
 
 #: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"

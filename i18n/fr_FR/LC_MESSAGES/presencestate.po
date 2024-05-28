@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 01:02-0500\n"
+"POT-Creation-Date: 2024-05-28 09:47-0400\n"
 "PO-Revision-Date: 2017-12-11 22:57+0200\n"
 "Last-Translator: JCattan <jeremie@famillecattan.com>\n"
 "Language-Team: French <http://weblate.freepbx.org/projects/freepbx/"
@@ -61,11 +61,11 @@ msgstr "Supprimer"
 msgid "Do Not Change"
 msgstr "Ne rien changer"
 
-#: ucp/Presencestate.class.php:229
+#: ucp/Presencestate.class.php:256
 msgid "Do Not Disturb"
 msgstr "Ne-pas-Déranger (DND)"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:255
 msgid "Do Nothing"
 msgstr "Ne rien faire"
 
@@ -77,7 +77,7 @@ msgstr "Activer la présence"
 msgid "Extended Away"
 msgstr "Absence prolongée"
 
-#: ucp/Presencestate.class.php:230
+#: ucp/Presencestate.class.php:257
 msgid "Findme/Follow Me"
 msgstr "Trouvez-moi/Suivez-moi"
 
@@ -121,12 +121,12 @@ msgstr "Message optionnel"
 msgid "Optional message, example: Lunch"
 msgstr "Message optionnel, exemple : Repas"
 
-#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
-#: ucp/Presencestate.class.php:202
+#: ucp/Presencestate.class.php:180 ucp/Presencestate.class.php:190
+#: ucp/Presencestate.class.php:229
 msgid "Presence"
 msgstr "Présence"
 
-#: ucp/Presencestate.class.php:236
+#: ucp/Presencestate.class.php:263
 msgid "Presence Settings"
 msgstr ""
 
@@ -134,6 +134,10 @@ msgstr ""
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "État de la présence"
+
+#: ucp/Presencestate.class.php:211
+msgid "Presence State is not enabled for this user."
+msgstr ""
 
 #: page.presencestate.php:6
 msgid "Presence States"
@@ -150,6 +154,10 @@ msgstr "Type d'état"
 #: Presencestate.class.php:205
 msgid "Submit"
 msgstr "Envoyer"
+
+#: ucp/Presencestate.class.php:215
+msgid "This user doesn't have a default extension."
+msgstr ""
 
 #: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"

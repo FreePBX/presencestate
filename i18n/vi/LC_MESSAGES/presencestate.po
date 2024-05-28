@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 01:02-0500\n"
+"POT-Creation-Date: 2024-05-28 09:47-0400\n"
 "PO-Revision-Date: 2017-07-25 21:58+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -61,11 +61,11 @@ msgstr "Xóa"
 msgid "Do Not Change"
 msgstr "Không được thay đổi"
 
-#: ucp/Presencestate.class.php:229
+#: ucp/Presencestate.class.php:256
 msgid "Do Not Disturb"
 msgstr "Không làm phiền"
 
-#: ucp/Presencestate.class.php:228
+#: ucp/Presencestate.class.php:255
 msgid "Do Nothing"
 msgstr "Không làm gì"
 
@@ -77,7 +77,7 @@ msgstr "Kích hoạt tính năng Hiển thị Presence"
 msgid "Extended Away"
 msgstr "Rời khỏi trong thời gian lâu"
 
-#: ucp/Presencestate.class.php:230
+#: ucp/Presencestate.class.php:257
 msgid "Findme/Follow Me"
 msgstr "Tính năng theo dõi Findme/Follow Me"
 
@@ -121,12 +121,12 @@ msgstr "Tin nhắn tùy chọn"
 msgid "Optional message, example: Lunch"
 msgstr "Tin nhắn tùy chọn, ví dụ: Lunch"
 
-#: ucp/Presencestate.class.php:184 ucp/Presencestate.class.php:188
-#: ucp/Presencestate.class.php:202
+#: ucp/Presencestate.class.php:180 ucp/Presencestate.class.php:190
+#: ucp/Presencestate.class.php:229
 msgid "Presence"
 msgstr "Hiên thị"
 
-#: ucp/Presencestate.class.php:236
+#: ucp/Presencestate.class.php:263
 msgid "Presence Settings"
 msgstr ""
 
@@ -134,6 +134,10 @@ msgstr ""
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr "Hiển thị trạng thái"
+
+#: ucp/Presencestate.class.php:211
+msgid "Presence State is not enabled for this user."
+msgstr ""
 
 #: page.presencestate.php:6
 msgid "Presence States"
@@ -150,6 +154,10 @@ msgstr "Kiểu trạng thái"
 #: Presencestate.class.php:205
 msgid "Submit"
 msgstr "Gửi đi"
+
+#: ucp/Presencestate.class.php:215
+msgid "This user doesn't have a default extension."
+msgstr ""
 
 #: views/bootnav.php:15 views/form.php:24 views/grid.php:15
 msgid "Type"
