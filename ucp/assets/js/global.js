@@ -45,6 +45,9 @@ var PresencestateC = UCPMC.extend({
 		this.displayWidgetSettings(widget_id);
 	},
 	statusUpdate: function(type, message) {
+		if(type == 'not_set') {
+			type = 'Offline';
+		}
 		$(".grid-stack-item[data-rawname='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
 		$(".widget-extra-menu[data-module='presencestate'] select[name='status']").selectpicker('val', type + (message !== '' ? ' (' + message + ')' : ''));
 	},
