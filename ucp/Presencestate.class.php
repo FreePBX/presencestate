@@ -4,7 +4,6 @@
 //
 namespace UCP\Modules;
 use \UCP\Modules as Modules;
-#[\AllowDynamicProperties]
 class Presencestate extends Modules{
 	protected $module = 'Presencestate';
 	private $device = null;
@@ -14,6 +13,8 @@ class Presencestate extends Modules{
 	private $user = null;
 	private $userId = false;
 	private $userName = '';
+	protected $Modules;
+	protected $UCP;
 
 	function __construct($Modules) {
 		$this->Modules = $Modules;
