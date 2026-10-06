@@ -3,13 +3,13 @@
 # For licensing information, please see the file named LICENSE located in the module directory
 #
 # FreePBX language template for presencestate
-# Copyright (C) 2008-2024 Sangoma Technologies, Inc.
+# Copyright (C) 2008-2026 Sangoma Technologies, Inc.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-06 05:43-0400\n"
+"POT-Creation-Date: 2026-10-06 07:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Define Actions on A Status Change"
 msgstr ""
 
-#: Presencestate.class.php:205
+#: Presencestate.class.php:207
 msgid "Delete"
 msgstr ""
 
@@ -60,11 +60,11 @@ msgstr ""
 msgid "Do Not Change"
 msgstr ""
 
-#: ucp/Presencestate.class.php:256
+#: ucp/Presencestate.class.php:257
 msgid "Do Not Disturb"
 msgstr ""
 
-#: ucp/Presencestate.class.php:255
+#: ucp/Presencestate.class.php:256
 msgid "Do Nothing"
 msgstr ""
 
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Extended Away"
 msgstr ""
 
-#: ucp/Presencestate.class.php:257
+#: ucp/Presencestate.class.php:258
 msgid "Findme/Follow Me"
 msgstr ""
 
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Inherit"
 msgstr ""
 
-#: Presencestate.class.php:195
+#: Presencestate.class.php:197
 msgid "Invalid Request"
 msgstr ""
 
@@ -121,23 +121,23 @@ msgstr ""
 msgid "Optional message, example: Lunch"
 msgstr ""
 
-#: ucp/Presencestate.class.php:180
-#: ucp/Presencestate.class.php:190
-#: ucp/Presencestate.class.php:229
+#: ucp/Presencestate.class.php:181
+#: ucp/Presencestate.class.php:191
+#: ucp/Presencestate.class.php:230
 msgid "Presence"
 msgstr ""
 
-#: ucp/Presencestate.class.php:263
+#: ucp/Presencestate.class.php:264
 msgid "Presence Settings"
 msgstr ""
 
-#: Presencestate.class.php:121
+#: Presencestate.class.php:123
 #: presencestate.i18n.php:4
 #: presencestate.i18n.php:10
 msgid "Presence State"
 msgstr ""
 
-#: ucp/Presencestate.class.php:211
+#: ucp/Presencestate.class.php:212
 msgid "Presence State is not enabled for this user."
 msgstr ""
 
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Presence States"
 msgstr ""
 
-#: Presencestate.class.php:205
+#: Presencestate.class.php:207
 msgid "Reset"
 msgstr ""
 
@@ -153,11 +153,11 @@ msgstr ""
 msgid "State type"
 msgstr ""
 
-#: Presencestate.class.php:205
+#: Presencestate.class.php:207
 msgid "Submit"
 msgstr ""
 
-#: ucp/Presencestate.class.php:215
+#: ucp/Presencestate.class.php:216
 msgid "This user doesn't have a default extension."
 msgstr ""
 
